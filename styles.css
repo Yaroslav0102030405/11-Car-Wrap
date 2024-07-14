@@ -1,0 +1,49 @@
+/* body {
+  background-color: black;
+  color: white;
+} */
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.wapper {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* .left {
+  height: 250px;
+} */
+
+.right {
+  display: flex;
+  width: 111px;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.car {
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  padding: 5px;
+  width: 106px;
+  border-radius: 8px;
+  /* color: white;
+  background-color: black; */
+}
+
+.active {
+  background-color: yellow;
+}
