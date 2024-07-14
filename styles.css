@@ -1,7 +1,69 @@
-/* body {
+body {
+  /* padding: 0; */
+  margin: 0;
   background-color: black;
   color: white;
-} */
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* display: flex; */
+
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.header-wapper {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.img-video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  /* width: 400px; */
+  border: 1px solid black;
+}
+
+.btn-wapper {
+  display: flex;
+}
+
+.btn {
+  margin-left: 40px;
+  width: 140px;
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 
 h1 {
   text-align: center;
@@ -10,7 +72,7 @@ h1 {
 }
 
 .wapper {
-  padding-top: 100px;
+  /* padding-top: 100px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,11 +99,12 @@ h1 {
 }
 
 button {
+  border: 1px solid white;
   padding: 5px;
   width: 106px;
   border-radius: 8px;
-  /* color: white;
-  background-color: black; */
+  color: white;
+  background-color: black;
 }
 
 .active {
