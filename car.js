@@ -8,6 +8,9 @@ const refs = {
   car5: document.querySelector(".car-5"),
   car6: document.querySelector(".car-6"),
   car7: document.querySelector(".car-7"),
+
+  bmv1: document.querySelector(".bmv-1"),
+  bmv2: document.querySelector(".bmv-2"),
 };
 
 refs.car1.addEventListener("click", onCar);
@@ -22,30 +25,44 @@ refs.right.addEventListener("click", onActiveButton);
 
 function onCar() {
   refs.img.src = "images/car-1.png";
+  refs.bmv1.src = "images/violet1.png";
+  refs.bmv2.src = "images/violet-2.png";
   //   refs.car1.style.backgroundColor = "yellow";
 }
 
 function onCar2() {
   refs.img.src = "images/car-2.png";
+  refs.bmv1.src = "images/green-1.png";
+  refs.bmv2.src = "images/green-2.png";
 }
 function onCar3() {
   refs.img.src = "images/car-3.png";
+  refs.bmv1.src = "images/yellow-1.png";
+  refs.bmv2.src = "images/yellow-2.png";
 }
 
 function onCar4() {
   refs.img.src = "images/car-4.png";
+  refs.bmv1.src = "images/blue-1.png";
+  refs.bmv2.src = "images/blue-2.png";
 }
 
 function onCar5() {
   refs.img.src = "images/car-5.png";
+  refs.bmv1.src = "images/green-1.png";
+  refs.bmv2.src = "images/green-2.png";
 }
 
 function onCar6() {
   refs.img.src = "images/car-6.png";
+  refs.bmv1.src = "images/violet1.png";
+  refs.bmv2.src = "images/violet-2.png";
 }
 
 function onCar7() {
   refs.img.src = "images/car-7.png";
+  refs.bmv1.src = "images/red-01.png";
+  refs.bmv2.src = "images/red-02.png";
 }
 
 function onActiveButton(e) {

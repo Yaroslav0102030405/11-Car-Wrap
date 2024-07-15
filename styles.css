@@ -7,7 +7,7 @@ body {
 
 .header {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
   /* display: flex; */
 
   background-color: black;
@@ -68,7 +68,8 @@ ul {
 h1 {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+  /* color: #008080; */
 }
 
 .wapper {
@@ -77,20 +78,36 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  padding-bottom: 75px;
 }
 
-/* .left {
-  height: 250px;
-} */
+.btn {
+  box-shadow: 6px 4px 9px #008080;
+  background-color: #008080;
+}
+
+.menu a {
+  box-shadow: 0px 4px 10px #008080;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  /* color: #0000ff; */
+}
 
 .right {
   display: flex;
-  width: 111px;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* gap: 4px; */
+  align-items: center;
+  /* align-self: flex-end; */
+}
+
+.text {
   padding: 0;
   margin: 0;
-  list-style: none;
+  font-size: 30px;
 }
 
 .car {
@@ -101,12 +118,59 @@ h1 {
 button {
   border: 1px solid white;
   padding: 5px;
-  width: 106px;
+  width: 197px;
   border-radius: 8px;
   color: white;
   background-color: black;
+  margin-bottom: 4px;
+  /* color: #0000ff; */
+  /* background-color: #008080; */
+}
+
+button:hover {
+  background-color: #008080;
 }
 
 .active {
-  background-color: yellow;
+  background-color: gold;
 }
+
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* align-self: flex-end; */
+  /* align-self: flex-end; */
+}
+
+/* .right li:nth-child(1) {
+  box-shadow: 0px 4px 10px #00ff00;
+}
+
+.right li:nth-child(2) {
+  box-shadow: 0px 4px 10px #0000ff;
+}
+
+.right li:nth-child(3) {
+  box-shadow: 0px 4px 10px #ffff00;
+}
+
+.right li:nth-child(4) {
+  box-shadow: 0px 4px 10px #00ffff;
+}
+
+.right li:nth-child(5) {
+  box-shadow: 0px 4px 10px #00ff00;
+}
+
+.right li:nth-child(6) {
+  box-shadow: 0px 4px 10px #ff00ff;
+}
+
+.right li:nth-child(7) {
+  box-shadow: 0px 4px 10px #ff0000;
+} */
+
+/* .car:hover {
+  transform: scale(1.3);
+} */
