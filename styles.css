@@ -18,6 +18,12 @@ body {
   /* background-color: white; */
 }
 
+.box {
+  display: block;
+  background-color: black;
+  height: 25px;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -169,6 +175,7 @@ button:hover {
 
 .service {
   background-color: black;
+  background-color: #00ff00;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -180,6 +187,7 @@ button:hover {
   text-align: center;
   text-transform: uppercase;
   color: white;
+  color: black;
   /* box-shadow: 0px 8px 10px #00ff00; */
 }
 
@@ -205,6 +213,7 @@ a {
   border: 1px solid white;
   border-radius: 8px;
   padding: 20px;
+  background-color: black;
 }
 
 .service-list li:hover {
@@ -224,10 +233,12 @@ a {
   /* padding-top: 0; */
   background-color: white;
   color: black;
+  background-color: black;
 }
 
 .title {
   color: black;
+  color: white;
 }
 
 .service-works {
@@ -238,7 +249,7 @@ a {
 
 .service-works li {
   width: 374px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 8px;
   padding: 20px;
 }
