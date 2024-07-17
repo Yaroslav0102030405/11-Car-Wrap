@@ -173,9 +173,17 @@ button:hover {
   padding-top: 65px;
 }
 
+.car {
+  cursor: zoom-in;
+}
+
+.car.active-car {
+  transform: scale(1.6);
+}
+
 .service {
   background-color: black;
-  background-color: #00ff00;
+  /* background-color: #00ff00; */
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -187,8 +195,7 @@ button:hover {
   text-align: center;
   text-transform: uppercase;
   color: white;
-  color: black;
-  /* box-shadow: 0px 8px 10px #00ff00; */
+  /* color: black; */
 }
 
 a {
@@ -201,7 +208,8 @@ a {
   gap: 30px;
   display: flex;
   justify-content: space-between;
-  color: white;
+  /* color: white; */
+  color: black;
 }
 
 .item-title {
@@ -213,7 +221,9 @@ a {
   border: 1px solid white;
   border-radius: 8px;
   padding: 20px;
-  background-color: black;
+  /* background-color: black; */
+  /* background-color: #00ff00; */
+  background-color: white;
 }
 
 .service-list li:hover {

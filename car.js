@@ -11,6 +11,9 @@ const refs = {
 
   bmv1: document.querySelector(".bmv-1"),
   bmv2: document.querySelector(".bmv-2"),
+
+  // btn: document.querySelector(".btn"),
+  // menu: document.querySelectorAll(".menu a"),
 };
 
 refs.car1.addEventListener("click", onCar);
@@ -22,6 +25,20 @@ refs.car6.addEventListener("click", onCar6);
 refs.car7.addEventListener("click", onCar7);
 
 refs.right.addEventListener("click", onActiveButton);
+
+refs.img.addEventListener("click", onClickZoom);
+
+function onClickZoom() {
+  if (!refs.img.classList.contains("active-car")) {
+    refs.img.classList.add("active-car");
+    document.body.style.backgroundColor = "gray";
+    refs.bmv1.style.opacity = "0";
+  } else if (refs.img.classList.contains("active-car")) {
+    refs.img.classList.remove("active-car");
+    document.body.style.backgroundColor = "white";
+    refs.bmv1.style.opacity = "1";
+  }
+}
 
 function onCar() {
   refs.img.src = "images/car-1.png";
@@ -39,6 +56,9 @@ function onCar3() {
   refs.img.src = "images/car-3.png";
   refs.bmv1.src = "images/yellow-1.png";
   refs.bmv2.src = "images/yellow-2.png";
+
+  // refs.btn.style.backgroundColor = "gold";
+  // refs.menu.style.boxShadow = "gold";
 }
 
 function onCar4() {
