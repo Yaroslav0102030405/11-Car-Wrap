@@ -94,7 +94,8 @@ h1 {
 }
 
 .btn {
-  background-color: #00ff00;
+  /* background-color: #00ff00; */
+  background-color: white;
 }
 
 .menu a {
@@ -227,11 +228,12 @@ a {
 }
 
 .service-list li:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  background-color: #00ff00;
 }
 
-.service-works img:hover {
-  transform: scale(1.9);
+.service-works li:hover {
+  transform: scale(1.1);
 }
 
 .item-text {
