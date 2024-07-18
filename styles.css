@@ -1,9 +1,43 @@
 body {
   margin: 0;
-  background-color: black;
-  color: white;
   background-color: white;
   color: black;
+  cursor: url(/images/cursor/1.png), auto;
+}
+
+/* add scrollbar */
+.window {
+  overflow: auto;
+  border: 1px solid #fff;
+  border-radius: 5px 0 0 5px;
+}
+
+::-webkit-scrollbar {
+  border: 1px solid #fff;
+  /* background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(89, 84, 12, 0.6615896358543417) 0%,
+    rgba(92, 8, 79, 1) 0%,
+    rgba(153, 84, 209, 0) 100%
+  ); */
+
+  background: white
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  /* background: #962fbf; */
+  background: black;
+  border: 1px solid #fff;
+}
+
+a {
+  cursor: url(/images/cursor/2.png), auto;
+}
+
+button {
+  cursor: url(/images/cursor/2.png), auto;
 }
 
 .header {
@@ -83,11 +117,16 @@ h1 {
 }
 
 .btn {
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 
 .menu a {
-  box-shadow: 0px 8px 10px #44bcbb;
+  box-shadow: 0px 8px 10px #f0f2f2;
+}
+
+.menu a:hover {
+  color: blueviolet;
 }
 
 h1 {
@@ -109,14 +148,34 @@ ul {
 .right {
   display: flex;
   flex-wrap: wrap;
-  width: 125px;
+  width: 145px;
   align-items: center;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.control {
+  color: gray;
+ margin-left: auto;
+ margin-right: auto;
+ font-size: 18px;
+}
+
+
+h3 {
+  color: white;
 }
 
 .text {
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
   font-size: 15px;
+margin-top: 0;
+margin-bottom: 0;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h3 {
@@ -128,6 +187,7 @@ h3 {
 .car {
   display: block;
   margin: 0 auto;
+  /* cursor: url(/images/cursor/plus.png), auto; */
 }
 
 button {
@@ -135,17 +195,19 @@ button {
   padding: 5px;
   width: 57px;
   border-radius: 8px;
-  color: white;
+  color: #d9d9d9;
   background-color: black;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 button:hover {
-  background-color: #44bcbb;
+  background-color: orangered;
+  /* background-color: blueviolet; */
 }
 
 .active {
-  background-color: gold;
+  background-color: #0BDA51;
+  /* background-color: orangered; */
 }
 
 .div {
@@ -218,12 +280,13 @@ a {
 .product-thumb {
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: aquamarine;
+  background-color: black;
   transform: translateY(-100%);
   transition: transform 250ms linear;
 }
@@ -235,6 +298,7 @@ a {
 .product-thumb p {
   margin-bottom: 0;
   text-align: center;
+  color: white;
 }
 
 .service-works li:hover {
@@ -267,6 +331,7 @@ a {
   border: 1px solid white;
   border-radius: 8px;
   padding: 20px;
+
 }
 
 .footer {
@@ -284,19 +349,19 @@ a {
 .wapper-address > h3 {
   font-size: 25px;
   display: inline-flex;
-  box-shadow: 0px 8px 10px #44bcbb;
+  box-shadow: 0px 8px 10px #f0f2f2;
 }
 
 .wapper-works > h3 {
   font-size: 25px;
   display: inline-flex;
-  box-shadow: 0px 8px 10px #44bcbb;
+  box-shadow: 0px 8px 10px #f0f2f2;
 }
 
 .wapper-social > h3 {
   font-size: 25px;
   display: inline-flex;
-  box-shadow: 0px 8px 10px #44bcbb;
+  box-shadow: 0px 8px 10px #f0f2f2;
 }
 
 
