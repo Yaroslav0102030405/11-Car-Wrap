@@ -12,6 +12,8 @@ const refs = {
   bmv1: document.querySelector(".bmv-1"),
   bmv2: document.querySelector(".bmv-2"),
 
+  div: document.querySelector(".div")
+
   // btn: document.querySelector(".btn"),
   // menu: document.querySelectorAll(".menu a"),
 };
@@ -32,11 +34,15 @@ function onClickZoom() {
   if (!refs.img.classList.contains("active-car")) {
     refs.img.classList.add("active-car");
     document.body.style.backgroundColor = "gray";
-    refs.bmv1.style.opacity = "0";
+    // refs.bmv1.style.opacity = "0";
+    refs.div.style.display = "none"
+    refs.img.style.cursor = "zoom-out"
   } else if (refs.img.classList.contains("active-car")) {
     refs.img.classList.remove("active-car");
     document.body.style.backgroundColor = "white";
-    refs.bmv1.style.opacity = "1";
+    // refs.bmv1.style.opacity = "1";
+    refs.div.style.display = "flex";
+     refs.img.style.cursor = "zoom-in"
   }
 }
 
