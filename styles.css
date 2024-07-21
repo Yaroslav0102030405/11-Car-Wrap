@@ -55,10 +55,7 @@ h1 {
   margin-bottom: 80px;
   text-transform: uppercase;
   font-size: 42px;
-  font-weight: 700;
-  /* color: var(--bg-color-1); */
-  /* color: #44bcbc; */
-  /* color: #33e36e; */
+  font-weight: 700; 
 }
 
 /* add scrollbar */
@@ -285,6 +282,7 @@ button {
 
 button:hover {
 background-color: blueviolet;
+/* transform: scale(1.4); */
 }
 
 .active {
