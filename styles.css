@@ -8,7 +8,7 @@ body {
   margin: 0;
   background-color: white;
   color: black;
-  cursor: url(/images/cursor/1.png), auto;
+  cursor: url(/images/cursor/cursor-1.png), auto;
 }
 
 
@@ -36,11 +36,11 @@ a {
 }
 
 a {
-  cursor: url(/images/cursor/2.png), auto;
+  cursor: url(/images/cursor/cursor-2.png), auto;
 }
 
 button {
-  cursor: url(/images/cursor/2.png), auto;
+  cursor: url(/images/cursor/cursor-2.png), auto;
 }
 
 ul {
@@ -215,6 +215,7 @@ padding: 20px;
 
   /* background-color: #44bcbc; */
   background-color: blueviolet;
+  background-color: #33e36e;
 }
 
 .wapper {
@@ -280,11 +281,13 @@ button {
 }
 
 button:hover {
-  background-color: orangered;
+background-color: blueviolet;
 }
 
 .active {
-  background-color: #0BDA51;
+  /* background-color: #0BDA51; */
+  background-color: orangered;
+  transform: scale(1.4);
 }
 
 .div {
