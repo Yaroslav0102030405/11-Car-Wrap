@@ -56,6 +56,9 @@ h1 {
   text-transform: uppercase;
   font-size: 42px;
   font-weight: 700;
+  /* color: var(--bg-color-1); */
+  /* color: #44bcbc; */
+  /* color: #33e36e; */
 }
 
 /* add scrollbar */
@@ -222,11 +225,14 @@ padding: 20px;
 .menu a {
   box-shadow: 0px 8px 10px white;
   font-size: 20px;
+ transition: color 250ms linear;
+ color: white;
+
+ transition: color 250ms linear;
 }
 
 .menu a:hover {
   color: blueviolet;
-  /* box-shadow: 0px 8px 10px  blueviolet; */
   transform: scale(1.3);
 }
 
@@ -273,6 +279,8 @@ button {
   color: #d9d9d9;
   /* background-color: black; */
   background-color: transparent;
+
+  transition: background-color 250ms linear;
 }
 
 button:hover {
@@ -297,6 +305,9 @@ background-color: blueviolet;
 
 .car {
   cursor: zoom-in;
+  transform: scale(1);
+
+  transition: transform 250ms linear;
 }
 
 .car.active-car {
@@ -339,15 +350,15 @@ justify-content: center;
   fill: #44bcbc;
 }
 
-/* .icons-center li:nth-child(2) {
+.icons-center li:nth-child(2) {
   width: 50px;
   height: 50px;
 border: 4px solid white;
 border-radius: 12px;
-} */
+}
 
 
-/* .icons-center li:nth-child(2):hover {
+/* .icons-center li:hover:nth-child(2) {
   fill: #44bcbc;
 } */
 
