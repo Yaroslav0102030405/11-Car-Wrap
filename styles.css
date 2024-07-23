@@ -234,9 +234,7 @@ background-color: #E5E4E2;
 .menu a {
   box-shadow: 0px 8px 10px white;
   font-size: 20px;
-  transition: color 250ms linear;
   color: white;
-
   transition: color 250ms linear;
 }
 
@@ -298,9 +296,7 @@ button {
   width: 70px;
   border-radius: 8px;
   color: #d9d9d9;
-  /* background-color: black; */
   background-color: transparent;
-
   transition: background-color 250ms linear;
 }
 
@@ -310,7 +306,6 @@ button:hover {
 }
 
 .active {
-  /* background-color: #0BDA51; */
   background-color: orangered;
   transform: scale(1.4);
 }
@@ -339,7 +334,6 @@ button:hover {
 .service {
   background: var(--bg-color-1);
   padding-top: 50px;
-  /* padding-bottom: 50px; */
 }
 
 .service-title {
@@ -379,10 +373,6 @@ button:hover {
   border-radius: 12px;
 }
 
-/* .icons-center li:hover:nth-child(2) {
-  fill: #44bcbc;
-} */
-
 a {
   display: inline-block;
   vertical-align: middle;
@@ -394,8 +384,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   color: black;
-  /* align-content: stretch; */
-  /* min-height: 440px; */
 }
 
 .item-title {
@@ -410,6 +398,10 @@ a {
   border: 1px solid white;
   border-radius: 8px;
   padding: 10px;
+
+  background-color: transparent;
+
+  transition: background-color 250ms linear;
 }
 
 .service-list li:hover {
@@ -458,7 +450,7 @@ span {
   justify-content: center;
   background-color: black;
   transform: translateY(-100%);
-  transition: transform 250ms linear;
+  transition: transform 250ms linear 200ms;
 }
 
 .service-list li:hover .product-thumb {
@@ -469,10 +461,6 @@ span {
   margin-bottom: 0;
   text-align: center;
   color: white;
-}
-
-.service-works li:hover {
-  transform: scale(1.1);
 }
 
 .item-text {
@@ -503,6 +491,14 @@ span {
   border: 1px solid white;
   border-radius: 8px;
   padding: 10px;
+
+  transform: scale(1);
+
+  transition: transform 250ms linear;
+}
+
+.service-works li:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1300px) {
@@ -802,6 +798,6 @@ background-color: black;
   color: var(--white-color);
 }
 
-.product-thumb a:hover {
+/* .product-thumb a:hover {
   transform: scale(1.3);
-}
+} */
