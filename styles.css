@@ -193,6 +193,12 @@ background-color: #E5E4E2;
   gap: 30px;
 }
 
+@media screen and (max-width: 1300px) {
+  .menu {
+    gap: 15px;
+  }
+}
+
 .img-video {
   display: block;
   margin-left: auto;
@@ -252,6 +258,13 @@ background-color: #E5E4E2;
   padding: 15px;
 }
 
+@media screen and (max-width: 1300px) {
+  .right {
+    display: block;
+    text-align: center;
+  }
+}
+
 .text {
   padding: 0;
   font-size: 17px;
@@ -259,6 +272,12 @@ background-color: #E5E4E2;
   margin-bottom: 0;
   color: white;
   /* margin-right: 14px; */
+}
+
+@media screen and (max-width: 1300px) {
+  .text {
+    margin-bottom: 15px;
+  }
 }
 
 .text-2023 {
@@ -387,7 +406,7 @@ a {
 .service-list li {
   display: flex;
   flex-direction: column;
-  width: 402px;
+  max-width: 402px;
   border: 1px solid white;
   border-radius: 8px;
   padding: 10px;
@@ -398,9 +417,9 @@ a {
   background-color: rgb(151, 59, 237);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .service-list li {
-    width: 354px;
+    max-width: 354px;
   }
 }
 
@@ -460,6 +479,8 @@ span {
   margin-bottom: 0;
 }
 
+/* --------------------------------------------------------------- */
+
 .works {
   color: black;
   background: var(--bg-color-2);
@@ -478,15 +499,25 @@ span {
 }
 
 .service-works li {
-  width: 402px;
+  max-width: 402px;
   border: 1px solid white;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .service-works li {
-    width: 354px;
+    max-width: 353px;
+  }
+}
+
+.iframe {
+  max-width: 380px;
+}
+
+@media screen and (max-width: 1300px) {
+  .iframe {
+    max-width: 320px;
   }
 }
 
@@ -511,6 +542,14 @@ span {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .wapper-0 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
 .wapper-address > h3 {
   font-size: 25px;
   display: inline-flex;
@@ -523,6 +562,12 @@ span {
   display: inline-flex;
   box-shadow: 0px 8px 10px #f0f2f2;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .wapper-works {
+    margin-bottom: 30px;
+  }
 }
 
 .wapper-social > h3 {
@@ -594,14 +639,16 @@ background-color: black;
 
 .contact__container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* flex-direction: column; */
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1300px) {
   .contact__container {
-    flex-direction: row;
+    /* flex-direction: row; */
     gap: 32px;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
@@ -626,10 +673,10 @@ background-color: black;
   border-radius: 16px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .contact__map {
     width: 320px;
-    height: 500px;
+    height: 150px;
   }
 }
 
@@ -668,6 +715,7 @@ background-color: black;
 }
 
 /* -------------------------------- */
+
 .form__field {
   margin-bottom: 40px;
 }
@@ -676,7 +724,7 @@ background-color: black;
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1300) {
   .form__field {
     margin-bottom: 32px;
   }
@@ -687,7 +735,7 @@ background-color: black;
 }
 
 .form__input {
-  padding: 8px 24px;
+  padding: 22px 24px;
   width: 100%;
   border-radius: 8px;
   border: 1px solid var(--white-color);
@@ -697,7 +745,7 @@ background-color: black;
   color: white;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   .form__input {
     padding: 22px 42px;
   }
@@ -713,11 +761,11 @@ background-color: black;
   background-color: #44bcbc;
 }
 
-.form__terms {
+/* .form__terms {
   display: none;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .form__terms {
     display: block;
     margin: 0 auto;
@@ -727,6 +775,17 @@ background-color: black;
     line-height: 1.5;
     color: var(--white-color);
   }
+} */
+
+.form__terms {
+  display: block;
+  margin: 0 auto;
+  width: 214px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--white-color);
+  /* vertical-align: middle; */
 }
 
 .form__link {
