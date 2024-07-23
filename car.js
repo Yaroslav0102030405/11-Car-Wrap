@@ -14,9 +14,28 @@ const refs = {
 
   div: document.querySelector('.div'),
 
-  // btn: document.querySelector(".btn"),
+  // linkAll: [...document.querySelectorAll('.link')].forEach(link =>
+  //   console.log(link),
+  // ),
+
+  linkAll: document.querySelector('.link'),
+
+  // btn: document.querySelector('.btn'),
   // menu: document.querySelectorAll(".menu a"),
 };
+
+// //Получаем точку
+// var point = document.getElementById("pointId");
+
+// //Вешаем обработчик
+// //срабатывает при заходе курсора на элемент
+// point.addEventListener("mouseover",function() {
+//    this.style.backgroundColor = "gray";
+// })
+// //срабатывает при уходе курсора с элемента
+// point.addEventListener("mouseout",function() {
+//    this.style.backgroundColor = "white";
+// })
 
 refs.car1.addEventListener('click', onCar);
 refs.car2.addEventListener('click', onCar2);
@@ -105,3 +124,11 @@ function onActiveButton(e) {
 
   e.target.classList.add('active');
 }
+
+refs.linkAll.addEventListener('mouseover', function () {
+  this.style.color = 'red';
+});
+
+refs.linkAll.addEventListener('mouseout', function () {
+  this.style.color = 'white';
+});
