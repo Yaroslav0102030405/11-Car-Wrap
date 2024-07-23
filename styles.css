@@ -724,6 +724,25 @@ background-color: black;
       color: var(--white-color);
     }
 
+    .product-thumb a:hover {
+transform: scale(1.3);
+    }
+
+   /* .price {
+    display: inline-block;
+    margin-right: auto;
+    color: black;
+    font-size: 17px;
+    margin-top: 10px;
+   } */
+
+   span {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    margin-top: 10px;
+   }
+  
 
 
 
