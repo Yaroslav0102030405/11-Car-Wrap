@@ -66,6 +66,12 @@ h1 {
   font-weight: 700;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
 /* add scrollbar */
 .window {
   overflow: auto;
@@ -251,6 +257,12 @@ background-color: #E5E4E2;
   align-items: center;
   gap: 50px;
   padding-bottom: 68px;
+}
+
+@media screen and (max-width: 768px) {
+  .wapper {
+    padding-bottom: 24px;
+  }
 }
 
 .menu a {
