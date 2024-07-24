@@ -18,7 +18,7 @@ const refs = {
   //   console.log(link),
   // ),
 
-  linkAll: document.querySelector('.link'),
+  // linkAll: document.querySelector('.link'),
 
   // btn: document.querySelector('.btn'),
   // menu: document.querySelectorAll(".menu a"),
@@ -52,7 +52,7 @@ refs.img.addEventListener('click', onClickZoom);
 function onClickZoom() {
   if (!refs.img.classList.contains('active-car')) {
     refs.img.classList.add('active-car');
-    document.body.style.backgroundColor = 'gray';
+    // document.body.style.backgroundColor = 'gray';
     // refs.bmv1.style.opacity = "0";
     refs.div.style.display = 'none';
     refs.img.style.cursor = 'zoom-out';
@@ -125,10 +125,10 @@ function onActiveButton(e) {
   e.target.classList.add('active');
 }
 
-refs.linkAll.addEventListener('mouseover', function () {
-  this.style.color = 'red';
-});
+// refs.linkAll.addEventListener('mouseover', function () {
+//   this.style.color = 'red';
+// });
 
-refs.linkAll.addEventListener('mouseout', function () {
-  this.style.color = 'white';
-});
+// refs.linkAll.addEventListener('mouseout', function () {
+//   this.style.color = 'white';
+// });
