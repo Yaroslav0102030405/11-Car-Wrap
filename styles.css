@@ -60,15 +60,17 @@ ul {
 h1 {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 700;
+  /* color: blueviolet; */
 }
 
 @media screen and (max-width: 768px) {
   h1 {
-    margin-bottom: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -256,12 +258,12 @@ background-color: #E5E4E2;
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding-bottom: 68px;
+  padding-bottom: 34px;
 }
 
 @media screen and (max-width: 768px) {
   .wapper {
-    padding-bottom: 40px;
+    padding-bottom: 16px;
   }
 }
 
@@ -278,7 +280,9 @@ background-color: #E5E4E2;
 }
 
 .right {
-  display: flex;
+  /* display: flex; */
+  display: block;
+  text-align: center;
   max-width: 854px;
   align-items: center;
   justify-content: space-around;
@@ -290,12 +294,18 @@ background-color: #E5E4E2;
   padding: 15px;
 }
 
-@media screen and (max-width: 1300px) {
+.right-text {
+  text-align: center;
+  margin-top: 6px;
+  /* max-width: 290px; */
+}
+
+/* @media screen and (max-width: 1300px) {
   .right {
     display: block;
     text-align: center;
   }
-}
+} */
 
 .text {
   padding: 0;
@@ -368,7 +378,7 @@ button:hover {
 }
 
 .car.active-car {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .service {
@@ -435,7 +445,7 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 402px;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 8px;
   padding: 10px;
 
