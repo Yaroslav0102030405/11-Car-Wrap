@@ -12,6 +12,11 @@
     rgba(252, 176, 69, 1) 100%
   );
   --white-color: white;
+  --bg-color-3: linear-gradient(
+    90deg,
+    rgba(149, 26, 189, 1) 0%,
+    rgba(29, 253, 153, 1) 100%
+  );
 }
 
 body {
@@ -251,6 +256,7 @@ background-color: #E5E4E2;
   text-align: center;
   color: white;
   background-color: #33e36e;
+  /* background-color: #44bcbc; */
 }
 
 .wapper {
@@ -299,6 +305,8 @@ background-color: #E5E4E2;
   text-align: center;
   margin-top: 6px;
   /* max-width: 290px; */
+  /* color: #44bcbc; */
+  color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -453,22 +461,21 @@ a {
 
   background-color: transparent;
   transition:
-    border 250ms linear,
-    background-color 250ms linear;
+    /* border 250ms linear, */ background-color 250ms linear;
 }
 
 .service-list li:hover {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background: var(--bg-color-1);
 }
 
-.service-list li:hover span {
+/* .service-list li:hover span {
   color: white;
-}
+} */
 
-.service-list li:hover .price p {
+/* .service-list li:hover .price p {
   color: white;
-}
+} */
 
 @media screen and (max-width: 1300px) {
   .service-list li {
