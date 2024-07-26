@@ -78,7 +78,7 @@ h1 {
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 }
 
@@ -295,6 +295,7 @@ background-color: #E5E4E2;
 
 @media screen and (max-width: 768px) {
   .wapper {
+    border: 1px solid black;
     padding-bottom: 16px;
     padding-top: 16px;
     background: azure;
