@@ -272,7 +272,6 @@ background-color: #E5E4E2;
 }
 
 .wapper {
-  /* max-width: 900px; */
   padding-bottom: 34px;
   /* border: 1px solid black; */
   border-radius: 12px;
@@ -969,3 +968,9 @@ background-color: black;
 /* .line-green {
   border: 1px solid #44bcbc;
 } */
+
+@media screen and (max-width: 768px) {
+  .line-white {
+    border: none;
+  }
+}
