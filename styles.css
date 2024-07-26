@@ -34,7 +34,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 18px;
 }
 
 img {
@@ -208,7 +208,10 @@ background-color: #E5E4E2;
 } */
 
 .section {
-  margin-top: 20px;
+  /* padding-top: 20px; */
+  background: var(--bg-color-1);
+  padding-bottom: 20px;
+  /* padding-top: 10px; */
 }
 
 .header-wapper {
@@ -261,15 +264,27 @@ background-color: #E5E4E2;
 
 .wapper {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-around;
   align-items: center;
-  gap: 50px;
+  /* gap: 50px; */
   padding-bottom: 34px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.wapper {
+  padding-top: 30px;
+  /* background-color: #545b5b; */
+  background-color: #d9d9d9;
+  background-color: #f0f2f2;
+  background-color: aliceblue;
 }
 
 @media screen and (max-width: 768px) {
   .wapper {
     padding-bottom: 16px;
+    padding-top: 20px;
   }
 }
 
@@ -289,15 +304,15 @@ background-color: #E5E4E2;
   /* display: flex; */
   display: block;
   text-align: center;
-  max-width: 854px;
+  /* max-width: 854px; */
   align-items: center;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  background: var(--bg-color-1);
+  /* background: var(--bg-color-1); */
   border-radius: 8px;
-  margin-bottom: 20px;
-  padding: 15px;
+  /* margin-bottom: 20px; */
+  /* padding: 15px; */
 }
 
 .right-text {
@@ -307,6 +322,15 @@ background-color: #E5E4E2;
   /* max-width: 290px; */
   /* color: #44bcbc; */
   color: white;
+}
+
+@media screen and (min-width: 1300px) {
+  .right-text {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -319,7 +343,7 @@ background-color: #E5E4E2;
 
 .text {
   padding: 0;
-  font-size: 17px;
+  font-size: 21px;
   margin-top: 0;
   margin-bottom: 0;
   color: white;
@@ -327,7 +351,15 @@ background-color: #E5E4E2;
 
 @media screen and (max-width: 1300px) {
   .text {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .text {
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 10px;
   }
 }
 
@@ -346,11 +378,18 @@ background-color: #E5E4E2;
 button {
   border: 1px solid white;
   padding: 10px;
-  width: 70px;
+  /* width: 70px; */
+  width: 166px;
   border-radius: 8px;
   color: #d9d9d9;
   background-color: transparent;
   transition: background-color 250ms linear;
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    width: 70px;
+  }
 }
 
 button:hover {
