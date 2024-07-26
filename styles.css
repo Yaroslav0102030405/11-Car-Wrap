@@ -295,17 +295,19 @@ background-color: #E5E4E2;
 }
 
 .right-text {
+  display: block;
   text-align: center;
   margin-top: 6px;
   /* max-width: 290px; */
 }
 
-/* @media screen and (max-width: 1300px) {
-  .right {
-    display: block;
-    text-align: center;
+@media screen and (max-width: 768px) {
+  .right-text {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 290px;
   }
-} */
+}
 
 .text {
   padding: 0;
