@@ -285,12 +285,6 @@ background-color: #E5E4E2;
   margin-right: auto;
 }
 
-@media screen and (max-width: 768px) {
-  .wapper {
-    background: azure;
-  }
-}
-
 .www {
   display: flex;
   /* justify-content: center; */
@@ -302,7 +296,8 @@ background-color: #E5E4E2;
 @media screen and (max-width: 768px) {
   .wapper {
     padding-bottom: 16px;
-    padding-top: 20px;
+    padding-top: 16px;
+    background: azure;
   }
 }
 
