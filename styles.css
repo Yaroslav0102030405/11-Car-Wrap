@@ -386,6 +386,12 @@ background-color: #E5E4E2;
   gap: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .q {
+    padding-top: 35px;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .q {
     display: block;
