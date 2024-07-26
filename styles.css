@@ -272,18 +272,24 @@ background-color: #E5E4E2;
 }
 
 .wapper {
+  /* max-width: 900px; */
   padding-bottom: 34px;
   /* border: 1px solid black; */
   border-radius: 12px;
   padding-top: 30px;
-  /* background-color: aliceblue; */
-  background-color: azure;
   background: linear-gradient(
     180deg,
     rgba(6, 10, 16, 0) 52.56%,
     #0a1321 95.35%
   );
-  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .wapper {
+    background: azure;
+  }
 }
 
 .www {
