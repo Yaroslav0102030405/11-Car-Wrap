@@ -441,21 +441,26 @@ button:hover {
   gap: 54px;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .div {
     display: none;
   }
-}
+} */
 
 .car {
   cursor: zoom-in;
   transform: scale(1);
-
   transition: transform 250ms linear;
 }
 
 .car.active-car {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 1300px) {
+  .car.active-car {
+    transform: scale(1.05);
+  }
 }
 
 .service {
