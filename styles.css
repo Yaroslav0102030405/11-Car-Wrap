@@ -860,10 +860,10 @@ background-color: black;
 .wapper-contact {
   display: flex;
   flex-direction: column;
-
   text-align: center;
   gap: 30px;
   color: white;
+  border-radius: 12px;
 }
 
 .margin-0 {
