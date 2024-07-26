@@ -457,7 +457,7 @@ button:hover {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 768px) {
   .car.active-car {
     transform: scale(1.05);
   }
