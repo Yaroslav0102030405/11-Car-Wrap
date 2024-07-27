@@ -295,10 +295,10 @@ background-color: #E5E4E2;
 
 @media screen and (max-width: 768px) {
   .wapper {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding-bottom: 16px;
     padding-top: 16px;
-    background: azure;
+    /* background: azure; */
   }
 }
 
@@ -455,16 +455,22 @@ button:hover {
   gap: 54px;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .div {
     display: none;
   }
-} */
+}
 
 .car {
   cursor: zoom-in;
   transform: scale(1);
   transition: transform 250ms linear;
+}
+
+@media screen and (max-width: 768px) {
+  .car {
+    transform: scale(1.1);
+  }
 }
 
 .car.active-car {
