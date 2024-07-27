@@ -455,11 +455,11 @@ button:hover {
   gap: 54px;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .div {
     display: none;
   }
-}
+} */
 
 .car {
   cursor: zoom-in;
@@ -467,11 +467,11 @@ button:hover {
   transition: transform 250ms linear;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .car {
     transform: scale(1.1);
   }
-}
+} */
 
 .car.active-car {
   transform: scale(1.2);
