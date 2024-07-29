@@ -596,7 +596,7 @@ a {
 .service-list li:hover {
   border: 1px solid black;
   /* background: var(--bg-color-1); */
-  background-color: #44bcbc;
+  /* background-color: #44bcbc; */
 }
 
 /* .service-list li:hover span {
