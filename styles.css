@@ -65,7 +65,7 @@ ul {
 h1 {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 700;
@@ -110,7 +110,7 @@ h1 {
 
 .header {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   color: white;
   background: var(--bg-color-1);
 }
@@ -272,17 +272,20 @@ background-color: #E5E4E2;
 }
 
 .wapper {
+  /* width: 900px; */
   padding-bottom: 34px;
   /* border: 1px solid black; */
   border-radius: 12px;
   padding-top: 30px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(6, 10, 16, 0) 52.56%,
     #0a1321 95.35%
-  );
-  margin-left: auto;
-  margin-right: auto;
+  ); */
+  /* margin-left: auto;
+  margin-right: auto; */
+  background-color: white;
+  /* height: 424px; */
 }
 
 .www {
@@ -388,7 +391,7 @@ background-color: #E5E4E2;
 
 @media screen and (max-width: 768px) {
   .q {
-    padding-top: 35px;
+    padding-top: 12px;
   }
 }
 
@@ -455,11 +458,11 @@ button:hover {
   gap: 54px;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .div {
     display: none;
   }
-} */
+}
 
 .car {
   cursor: zoom-in;
@@ -467,11 +470,11 @@ button:hover {
   transition: transform 250ms linear;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .car {
     transform: scale(1.1);
   }
-} */
+}
 
 .car.active-car {
   transform: scale(1.2);
