@@ -90,56 +90,64 @@ function onClickZoom() {
 }
 
 function onCar() {
-  refs.img.src = 'images/car-1.png';
+  // refs.img.src = 'images/car-1.png';
+  refs.img.src = 'images/a/999-2.jpg';
   refs.bmv1.src = 'images/violet1.png';
   refs.bmv2.src = 'images/violet-2.png';
   //   refs.car1.style.backgroundColor = "yellow";
-  onBackroundColor(onActiveBackgroundColor1);
+  // onBackroundColor(onActiveBackgroundColor1);
 }
 
 function onCar2() {
-  refs.img.src = 'images/car-2.png';
+  // refs.img.src = 'images/car-2.png';
+  refs.img.src = 'images/a/999-3.jpg';
   refs.bmv1.src = 'images/green-1.png';
   refs.bmv2.src = 'images/green-2.png';
   // onBackroundColor(onActiveBackgroundColor2);
-  onBackroundColor(onActiveBackgroundColor2);
+  // onBackroundColor(onActiveBackgroundColor2);
 }
 function onCar3() {
-  refs.img.src = 'images/car-3.png';
+  // refs.img.src = 'images/car-3.png';
+  refs.img.src = 'images/a/999-4.jpg';
   refs.bmv1.src = 'images/yellow-1.png';
   refs.bmv2.src = 'images/yellow-2.png';
 
   // refs.btn.style.backgroundColor = "gold";
   // refs.menu.style.boxShadow = "gold";
-  onBackroundColor(onActiveBackgroundColor3);
+  // onBackroundColor(onActiveBackgroundColor3);
 }
 
 function onCar4() {
-  refs.img.src = 'images/car-4.png';
+  // refs.img.src = 'images/car-4.png';
+  refs.img.src = 'images/a/999-5.jpg';
   refs.bmv1.src = 'images/blue-1.png';
   refs.bmv2.src = 'images/blue-2.png';
-  onBackroundColor(onActiveBackgroundColor4);
+  // onBackroundColor(onActiveBackgroundColor4);
 }
 
 function onCar5() {
-  refs.img.src = 'images/car-5.png';
+  // refs.img.src = 'images/car-5.png';
+  refs.img.src = 'images/a/999-6.jpg';
   refs.bmv1.src = 'images/green-1.png';
   refs.bmv2.src = 'images/green-2.png';
-  onBackroundColor(onActiveBackgroundColor5);
+  // onBackroundColor(onActiveBackgroundColor5);
 }
 
 function onCar6() {
-  refs.img.src = 'images/car-6.png';
+  // refs.img.src = 'images/car-6.png';
+  refs.img.src = 'images/a/999-8.jpg';
+
   refs.bmv1.src = 'images/violet1.png';
   refs.bmv2.src = 'images/violet-2.png';
   onBackroundColor(onActiveBackgroundColor7);
 }
 
 function onCar7() {
-  refs.img.src = 'images/car-7.png';
+  // refs.img.src = 'images/car-7.png';
+  refs.img.src = 'images/a/999-7.jpg';
   refs.bmv1.src = 'images/red-01.png';
   refs.bmv2.src = 'images/red-02.png';
-  onBackroundColor(onActiveBackgroundColor6);
+  // onBackroundColor(onActiveBackgroundColor6);
 }
 
 function onBackroundColor(background) {
