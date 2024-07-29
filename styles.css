@@ -17,6 +17,12 @@
     rgba(149, 26, 189, 1) 0%,
     rgba(29, 253, 153, 1) 100%
   );
+
+  --brand-color: linear-gradient(
+    90deg,
+    rgba(37, 197, 204, 1) 0%,
+    rgba(237, 81, 245, 1) 100%
+  );
 }
 
 body {
@@ -112,7 +118,17 @@ h1 {
   padding-top: 20px;
   padding-bottom: 15px;
   color: white;
-  background: var(--bg-color-1);
+  /* background: var(--bg-color-1); */
+
+  /* background: rgba(239, 166, 2, 1); */
+  /* background-color: goldenrod; */
+  /* background: linear-gradient(
+    90deg,
+    rgba(90, 162, 228, 1) 0%,
+    rgba(247, 241, 249, 1) 100%
+  ); */
+
+  background: var(--brand-color);
 }
 
 .container {
@@ -215,6 +231,12 @@ background-color: #E5E4E2;
   background: var(--bg-color-1);
   /* padding-bottom: 20px; */
   /* padding-top: 10px; */
+  /* background: linear-gradient(
+    90deg,
+    rgba(90, 162, 228, 1) 0%,
+    rgba(247, 241, 249, 1) 100%
+  ); */
+  background: var(--brand-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -267,8 +289,8 @@ background-color: #E5E4E2;
   border-radius: 8px;
   text-align: center;
   color: white;
-  background-color: #33e36e;
-  /* background-color: #44bcbc; */
+  /* background-color: #33e36e; */
+  background-color: #44bcbc;
 }
 
 .wapper {
@@ -487,8 +509,19 @@ button:hover {
 }
 
 .service {
-  background: var(--bg-color-1);
+  /* background: var(--bg-color-1); */
   padding-top: 50px;
+  /* background: linear-gradient(
+    90deg,
+    rgba(90, 162, 228, 1) 0%,
+    rgba(247, 241, 249, 1) 100%
+  ); */
+  /* background: linear-gradient(
+    90deg,
+    rgba(90, 162, 228, 1) 0%,
+    rgba(231, 98, 235, 1) 100%
+  ); */
+  background: var(--brand-color);
 }
 
 .service-title {
@@ -562,7 +595,8 @@ a {
 
 .service-list li:hover {
   border: 1px solid black;
-  background: var(--bg-color-1);
+  /* background: var(--bg-color-1); */
+  background-color: #44bcbc;
 }
 
 /* .service-list li:hover span {
@@ -671,8 +705,9 @@ span {
 
 .works {
   color: black;
-  background: var(--bg-color-2);
+  /* background: var(--bg-color-2); */
   padding-top: 50px;
+  background: var(--brand-color);
 }
 
 .title {
@@ -830,7 +865,13 @@ background-color: black;
 /* -------------------- */
 .contact {
   padding-top: 50px;
-  background: var(--bg-color-1);
+  /* background: var(--bg-color-1); */
+  /* background: linear-gradient(
+    90deg,
+    rgba(90, 162, 228, 1) 0%,
+    rgba(247, 241, 249, 1) 100%
+  ); */
+  background: var(--brand-color);
 }
 
 .contact__title {
