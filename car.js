@@ -100,7 +100,7 @@ function onCar() {
 
 function onCar2() {
   // refs.img.src = 'images/car-2.png';
-  refs.img.src = 'images/a/999-3.jpg';
+  refs.img.src = 'images/a/999-18.jpg';
   refs.bmv1.src = 'images/green-1.png';
   refs.bmv2.src = 'images/green-2.png';
   // onBackroundColor(onActiveBackgroundColor2);
@@ -108,7 +108,7 @@ function onCar2() {
 }
 function onCar3() {
   // refs.img.src = 'images/car-3.png';
-  refs.img.src = 'images/a/999-4.jpg';
+  refs.img.src = 'images/a/999-21.jpg';
   refs.bmv1.src = 'images/yellow-1.png';
   refs.bmv2.src = 'images/yellow-2.png';
 
@@ -119,7 +119,7 @@ function onCar3() {
 
 function onCar4() {
   // refs.img.src = 'images/car-4.png';
-  refs.img.src = 'images/a/999-5.jpg';
+  refs.img.src = 'images/a/999-17.jpg';
   refs.bmv1.src = 'images/blue-1.png';
   refs.bmv2.src = 'images/blue-2.png';
   // onBackroundColor(onActiveBackgroundColor4);
@@ -135,16 +135,16 @@ function onCar5() {
 
 function onCar6() {
   // refs.img.src = 'images/car-6.png';
-  refs.img.src = 'images/a/999-8.jpg';
+  refs.img.src = 'images/a/999-15.jpg';
 
   refs.bmv1.src = 'images/violet1.png';
   refs.bmv2.src = 'images/violet-2.png';
-  onBackroundColor(onActiveBackgroundColor7);
+  // onBackroundColor(onActiveBackgroundColor7);
 }
 
 function onCar7() {
   // refs.img.src = 'images/car-7.png';
-  refs.img.src = 'images/a/999-7.jpg';
+  refs.img.src = 'images/a/999-4.jpg';
   refs.bmv1.src = 'images/red-01.png';
   refs.bmv2.src = 'images/red-02.png';
   // onBackroundColor(onActiveBackgroundColor6);
