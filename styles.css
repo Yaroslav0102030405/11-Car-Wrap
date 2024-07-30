@@ -236,9 +236,20 @@ background-color: #E5E4E2;
 }
 
 .header-wapper {
-  display: flex;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 50%;
+  grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .header-wapper {
+    grid-template-columns: 22%;
+  }
 }
 
 .menu {
@@ -255,6 +266,7 @@ background-color: #E5E4E2;
 @media screen and (max-width: 1300px) {
   .menu {
     gap: 15px;
+    grid-template-columns: 22%;
   }
 }
 
@@ -524,9 +536,10 @@ a {
 }
 
 .service-list {
-  gap: 30px;
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+
   color: black;
 }
 
