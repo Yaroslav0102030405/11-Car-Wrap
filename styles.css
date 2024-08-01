@@ -136,9 +136,9 @@ h1 {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 370px) {
   .container {
-    width: 480px;
+    width: 370px;
   }
 }
 
@@ -948,7 +948,7 @@ background-color: black;
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 1300) {
+@media screen and (min-width: 1300px) {
   .form__field {
     margin-bottom: 32px;
   }
