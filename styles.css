@@ -77,7 +77,8 @@ ul {
 }
 
 h1 {
-  padding-top: 50px;
+  /* padding-top: 50px; */
+  /* padding-top: 20px; */
   text-align: center;
   margin-top: 0;
   margin-bottom: 20px;
@@ -85,6 +86,7 @@ h1 {
   font-size: 40px;
   font-weight: 700;
   color: white;
+  /* color: var(--brand-2); */
   /* color: var(--brand-3); */
 }
 
@@ -92,6 +94,12 @@ h1 {
   h1 {
     font-size: 20px;
     margin-bottom: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  h1 {
+    padding-top: 50px;
   }
 }
 
@@ -465,7 +473,7 @@ button:hover {
 }
 
 .car {
-  cursor: zoom-in;
+  /* cursor: zoom-in; */
   transform: scale(1);
   transition: transform 250ms linear;
 }
@@ -487,11 +495,13 @@ button:hover {
 }
 
 .service {
+  text-align: center;
   padding-top: 50px;
   background: var(--brand-color);
 }
 
 .service-title {
+  display: inline-block;
   margin-top: 0;
   font-size: 45px;
   margin-bottom: 39px;
@@ -499,6 +509,7 @@ button:hover {
   /* text-transform: uppercase; */
   color: white;
   color: var(--brand-3);
+  box-shadow: 0px 4px 10px var(--brand-2);
 }
 
 .wapper-social {
@@ -1011,3 +1022,100 @@ background-color: black;
 .form__input::placeholder {
   color: var(--white-color);
 }
+
+.a {
+  position: relative;
+}
+
+.b {
+  position: absolute;
+  width: 121px;
+  height: 318px;
+  top: 125px;
+  left: 32%;
+  /* background-color: #fff; */
+  z-index: 1;
+  opacity: 0;
+}
+
+.c {
+  width: 240px;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 20px;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 10px;
+  background-color: #f0f2f2;
+  border-radius: 10px;
+}
+
+.item-3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-left: 70px;
+}
+
+.c img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.b:hover {
+  opacity: 1;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.d {
+  width: 240px;
+  position: absolute;
+  top: 16%;
+  left: 0;
+  /* display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 20px;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f2f2;
+  border-radius: 10px;
+}
+
+.d img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.e {
+  position: absolute;
+  width: 67px;
+  height: 183px;
+  top: 274px;
+  left: 76%;
+  /* background-color: #fff; */
+  z-index: 1;
+  opacity: 0;
+}
+
+.e:hover {
+  opacity: 1;
+}
+
+/* .logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+} */
