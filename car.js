@@ -80,7 +80,11 @@ refs.load.addEventListener('click', onLoading);
 
 function onLoading() {
   refs.loading.forEach(loadin => loadin.classList.add('act'));
-  refs.load.style.display = 'none';
+  // console.log(refs.loading.length - 1);
+
+  if (refs.loading.length) {
+    refs.load.style.display = 'none';
+  }
 }
 
 function onClickZoom() {
@@ -198,3 +202,13 @@ function onActiveButton(e) {
 // refs.linkAll.addEventListener('mouseout', function () {
 //   this.style.color = 'white';
 // });
+
+const inputImg = document.querySelector('input#image_uploads.input-img');
+const fff = document.querySelector('.fff');
+inputImg.textContent = 'Choose File';
+
+console.log(input.textContent);
+
+if (document.readyState === 'loading') {
+  fff.textContent = 'Choose File';
+}

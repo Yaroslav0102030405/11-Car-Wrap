@@ -31,12 +31,14 @@ html {
   --brand-color: black;
   --brand-2: #ff01ff;
   --brand-3: #02ffff;
+
+  --gray-color: #899499;
 }
 
 body {
   margin: 0;
   background-color: white;
-  color: black;
+  /* color: black; */
   cursor: url(/images/cursor/cursor-1.png), auto;
 }
 
@@ -927,6 +929,14 @@ span {
   background: var(--brand-color);
 }
 
+.contact__form {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 20px 30px;
+  text-align: center;
+  /* max-width: 380px; */
+}
+
 .contact__title {
   color: white;
   text-align: center;
@@ -954,6 +964,7 @@ span {
 }
 
 .contact__title {
+  display: inline;
   margin: 0 auto 16px;
   font-size: 32px;
   width: 265px;
@@ -1200,13 +1211,15 @@ p {
 .contact-disc {
   margin-top: 0;
   font-size: 45px;
-  color: orange;
+  color: white;
   margin-bottom: 0;
   /* margin-bottom: 48px; */
 }
 
 .wapper-contact img {
   border-radius: 12px;
+  border: 1px solid white;
+  padding: 10px;
 }
 
 /* .contact-form {
@@ -1223,7 +1236,7 @@ p {
 }
 
 .w15 {
-  color: orange;
+  color: white;
   font-size: 60px;
   text-align: center;
   margin-top: 0;
@@ -1234,6 +1247,84 @@ p {
   display: none;
 }
 
-.loading.act {
+.act {
   display: block;
 }
+
+.load {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.label-img {
+  /* position: relative; */
+  margin-top: 20px;
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* .input-img {
+  display: block;
+  border: 1px solid white;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+} */
+
+/* input#file-upload-button {
+  opacity: 0;
+  overflow: hidden;
+} */
+
+input#image_uploads.input-img {
+  /* position: relative; */
+  padding: 10px;
+  display: block;
+  background-color: #ff01ff;
+  color: white;
+  /* border: 1px solid white; */
+}
+
+.input-img {
+  opacity: 0;
+}
+
+.text-img {
+  color: white;
+}
+
+.f {
+  position: relative;
+}
+
+.fff {
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  color: white;
+}
+
+/* form label,
+form button {
+  background-color: #7f9ccb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px ridge black;
+  font-size: 0.8rem;
+  height: auto;
+} */
+
+/* form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
+  color: white;
+} */
+
+/* form label:active,
+form button:active {
+  background-color: #0d3f8f;
+  color: white;
+} */
