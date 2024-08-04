@@ -546,7 +546,7 @@ button:hover {
   margin-bottom: 39px;
   text-align: center;
   color: white;
-  color: var(--brand-3);
+  /* color: var(--brand-3); */
 }
 
 .wapper-social {
@@ -724,7 +724,8 @@ span {
 }
 
 .title {
-  color: var(--brand-3);
+  /* color: var(--brand-3); */
+  color: white;
 }
 
 .service-works {
@@ -882,6 +883,7 @@ span {
   border-radius: 8px;
   padding: 20px 30px;
   text-align: center;
+  max-width: 400px;
 }
 
 .contact__title {
@@ -962,8 +964,21 @@ span {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: flex-end;
   color: white;
   border-radius: 12px;
+  gap: 40px;
+}
+
+.ccc {
+  max-width: 601px;
+  margin-top: 0;
+}
+
+.ab {
+  font-size: 35px;
+  text-shadow: 3px 6px 14px var(--brand-3);
+  margin-bottom: 0;
 }
 
 .margin-0 {
@@ -1012,8 +1027,8 @@ span {
   margin: 0 auto;
   width: 172px;
   padding: 20px;
-  margin-bottom: 30px;
-  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   background-color: var(--brand-2);
 }
 
@@ -1182,36 +1197,40 @@ p {
   margin-bottom: 5px;
 }
 
+/* .input-img {
+  opacity: 0;
+} */
+
 input#image_uploads.input-img {
+  /* position: relative; */
   padding: 10px;
   display: block;
-  background-color: #ff01ff;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #ff01ff; */
   color: white;
-}
-
-.input-img {
-  opacity: 0;
 }
 
 .text-img {
   color: white;
 }
 
-.f {
+/* .f {
   position: relative;
-}
+} */
 
 .fff {
-  position: absolute;
-  left: 0;
+  /* position: absolute; */
+  /* left: 0;
+  top: 39%; */
   color: white;
+  background-color: var(--brand-2);
+  padding: 10px;
+  /* pointer-events: none; */
 }
 
 .text-brand {
   text-align: center;
-  /* padding-top: 100px; */
-  /* padding-bottom: 30px; */
-  /* background-color: black; */
   font-size: 18px;
   color: white;
   margin-bottom: 15px;
