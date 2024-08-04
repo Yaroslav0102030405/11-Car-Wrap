@@ -72,7 +72,7 @@ refs.car5.addEventListener('click', onCar5);
 refs.car6.addEventListener('click', onCar6);
 refs.car7.addEventListener('click', onCar7);
 
-refs.right.addEventListener('click', onActiveButton);
+// refs.right.addEventListener('click', onActiveButton);
 
 refs.img.addEventListener('click', onClickZoom);
 
@@ -180,20 +180,20 @@ function onBackroundColor(background) {
 //   refs.contact.classList.add(`active-contact-${number}`);
 // }
 
-function onActiveButton(e) {
-  if (e.target.nodeName !== 'BUTTON') {
-    return;
-  }
+// function onActiveButton(e) {
+//   if (e.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
 
-  const currentActive = document.querySelector('.active');
-  console.log(currentActive);
+//   const currentActive = document.querySelector('.active');
+//   console.log(currentActive);
 
-  if (currentActive) {
-    currentActive.classList.remove('active');
-  }
+//   if (currentActive) {
+//     currentActive.classList.remove('active');
+//   }
 
-  e.target.classList.add('active');
-}
+//   e.target.classList.add('active');
+// }
 
 // refs.linkAll.addEventListener('mouseover', function () {
 //   this.style.color = 'red';
