@@ -169,7 +169,7 @@ body {
   padding-bottom: 10px;
   color: white;
   background: var(--brand-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -530,21 +530,21 @@ button:hover {
   border-radius: 12px;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .car {
     transform: scale(1.1);
   }
-}
+} */
 
 .car.active-car {
   transform: scale(1.2);
 }
-
+/* 
 @media screen and (max-width: 768px) {
   .car.active-car {
     transform: scale(1.1);
   }
-}
+} */
 
 .service {
   padding-top: 50px;
@@ -1228,6 +1228,7 @@ p {
 input#image_uploads.input-img {
   /* position: relative; */
   padding: 10px;
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
