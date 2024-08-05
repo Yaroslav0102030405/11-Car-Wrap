@@ -111,7 +111,7 @@ h1 {
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1290,7 +1290,7 @@ input#image_uploads.input-img {
 
 .text-brand {
   max-width: 500px;
-  font-size: 17px;
+  font-size: 16px;
   color: white;
   /* margin-bottom: 15px; */
 }
