@@ -36,10 +36,8 @@ html {
 }
 
 body {
-  /* overflow: hidden; */
   margin: 0;
   background-color: white;
-  /* color: black; */
   cursor: url(/images/cursor/cursor-1.png), auto;
 }
 
@@ -97,11 +95,9 @@ h1 {
   font-size: 26px;
   font-weight: 700;
   color: white;
-  /* top: 2%; */
   top: 0;
   left: 13%;
   z-index: 1;
-  /* text-shadow: 3px 6px 14px var(--brand-3); */
 }
 
 .qqq {
@@ -169,7 +165,6 @@ body {
   padding-bottom: 10px;
   color: white;
   background: var(--brand-color);
-  /* overflow: hidden; */
 }
 
 .container {
@@ -362,7 +357,6 @@ body {
   font-size: 20px;
   color: white;
   transition: color 250ms linear;
-  /* color: var(--brand-3); */
   color: var(--brand-3);
 }
 
@@ -385,7 +379,6 @@ body {
   display: block;
   text-align: center;
   margin-top: 6px;
-  /* font-weight: 700; */
   color: white;
 }
 
@@ -436,10 +429,6 @@ body {
 }
 
 .q {
-  /* display: flex;
-  align-items: center; */
-  /* justify-content: right; */
-  /* justify-content: center; */
   text-align: center;
   padding-top: 2px;
   gap: 10px;
@@ -464,22 +453,13 @@ body {
   margin-left: 30px;
 }
 
-/* .car {
-  display: block;
-  margin: 0 auto;
-} */
-
 button {
   font-weight: 700;
   width: 93.5px;
   border-radius: 8px;
-  /* color: white; */
   color: black;
   background-color: white;
-  /* background-color: black; */
   transition: background-color 250ms linear;
-  /* box-shadow: 0px 4px 10px var(--brand-3); */
-  /* border: 1px solid white; */
 }
 
 @media screen and (max-width: 768px) {
@@ -558,7 +538,6 @@ button:hover {
   margin-bottom: 39px;
   text-align: center;
   color: white;
-  /* color: var(--brand-3); */
 }
 
 .wapper-social {
@@ -591,7 +570,7 @@ button:hover {
 
 a {
   display: inline-block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   text-align: center;
 }
 
@@ -1345,4 +1324,9 @@ input#image_uploads.input-img {
 
 .mo {
   color: var(--brand-3);
+}
+
+.flex-1 {
+  display: flex;
+  align-items: center;
 }
