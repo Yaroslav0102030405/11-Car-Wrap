@@ -110,7 +110,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 35px;
   }
 }
@@ -1252,13 +1252,6 @@ input#image_uploads.input-img {
   /* pointer-events: none; */
 }
 
-.text-brand {
-  /* text-align: center; */
-  font-size: 18px;
-  color: white;
-  margin-bottom: 15px;
-}
-
 .more {
   display: inline;
   margin-left: 10px;
@@ -1270,16 +1263,20 @@ input#image_uploads.input-img {
   padding-top: 50px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 768px) and (max-width: 1300px) {
   .section {
     padding-top: 30px;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 20px;
+  }
+}
+
 .flex {
   display: flex;
-  /* height: 570px; */
-  /* flex-wrap: wrap; */
   gap: 20px;
   align-items: center;
   justify-content: center;
@@ -1292,18 +1289,28 @@ input#image_uploads.input-img {
 }
 
 .text-brand {
-  text-transform: uppercase;
-  /* width: 90%; */
   max-width: 500px;
-  line-height: 1.4;
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
+  font-size: 17px;
+  color: white;
+  /* margin-bottom: 15px; */
+}
+
+@media screen and (min-width: 768px) {
+  .text-brand {
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .text-brand {
+    max-width: 739px;
+  }
 }
 
 .car {
   display: grid;
-  /* align-self: end; */
 }
 
 .wapper {
@@ -1335,5 +1342,4 @@ input#image_uploads.input-img {
 
 .mo {
   color: var(--brand-3);
-  /* display: inline; */
 }

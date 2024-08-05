@@ -149,7 +149,7 @@ function onCar5() {
 
 function onCar6() {
   // refs.img.src = 'images/car-6.png';
-  refs.img.src = 'images/a/999-11.jpg';
+  refs.img.src = 'images/a/999-10.jpg';
 
   refs.bmv1.src = 'images/violet1.png';
   refs.bmv2.src = 'images/violet-2.png';
@@ -158,7 +158,7 @@ function onCar6() {
 
 function onCar7() {
   // refs.img.src = 'images/car-7.png';
-  refs.img.src = 'images/a/999-10.jpg';
+  refs.img.src = 'images/a/999-11.jpg';
   refs.bmv1.src = 'images/red-01.png';
   refs.bmv2.src = 'images/red-02.png';
   // onBackroundColor(onActiveBackgroundColor6);
