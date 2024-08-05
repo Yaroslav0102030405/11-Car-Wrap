@@ -23,6 +23,16 @@ const refs = {
   load: document.querySelector('.load'),
   loading: document.querySelectorAll('.loading'),
 
+  ac1: document.querySelector('.ac1'),
+  ac2: document.querySelector('.ac2'),
+  ac3: document.querySelector('.ac3'),
+  ac4: document.querySelector('.ac4'),
+  ac5: document.querySelector('.ac5'),
+  ac6: document.querySelector('.ac6'),
+  ac7: document.querySelector('.ac7'),
+  // prev: document.querySelector('.prev'),
+  // next: document.querySelector('.next'),
+
   // linkAll: [...document.querySelectorAll('.link')].forEach(link =>
   //   console.log(link),
   // ),
@@ -105,26 +115,53 @@ function onClickZoom() {
 
 function onCar() {
   // refs.img.src = 'images/car-1.png';
-  refs.img.src = 'images/a/999-2.jpg';
+  // refs.img.src = 'images/a/999-2.jpg';
   refs.bmv1.src = 'images/violet1.png';
   refs.bmv2.src = 'images/violet-2.png';
+  // refs.ac1.classList.add('active-car');
   //   refs.car1.style.backgroundColor = "yellow";
   // onBackroundColor(onActiveBackgroundColor1);
+  refs.ac1.classList.add('active-car');
+  refs.ac2.classList.remove('active-car');
+  refs.ac3.classList.remove('active-car');
+  refs.ac4.classList.remove('active-car');
+  refs.ac5.classList.remove('active-car');
+  refs.ac6.classList.remove('active-car');
+  refs.ac7.classList.remove('active-car');
+
+  // if (!refs.ac1.classList.contains('active-car')) {
+  //   refs.ac1.classList.add('active-car');
+  //   refs.ac2.classList.remove('active-car');
+  // }
 }
 
 function onCar2() {
   // refs.img.src = 'images/car-2.png';
-  refs.img.src = 'images/a/999-3.jpg';
+  // refs.img.src = 'images/a/999-3.jpg';
   refs.bmv1.src = 'images/green-1.png';
   refs.bmv2.src = 'images/green-2.png';
+  // refs.ac2.classList.add('active-car');
   // onBackroundColor(onActiveBackgroundColor2);
   // onBackroundColor(onActiveBackgroundColor2);
+  refs.ac2.classList.add('active-car');
+  refs.ac3.classList.remove('active-car');
+  refs.ac4.classList.remove('active-car');
+  refs.ac5.classList.remove('active-car');
+  refs.ac6.classList.remove('active-car');
+  refs.ac7.classList.remove('active-car');
 }
 function onCar3() {
   // refs.img.src = 'images/car-3.png';
   refs.img.src = 'images/a/999-0.jpg';
   refs.bmv1.src = 'images/yellow-1.png';
   refs.bmv2.src = 'images/yellow-2.png';
+
+  refs.ac3.classList.add('active-car');
+  refs.ac4.classList.remove('active-car');
+  refs.ac5.classList.remove('active-car');
+  refs.ac6.classList.remove('active-car');
+  refs.ac7.classList.remove('active-car');
+  // refs.ac3.classList.remove('active-car');
 
   // refs.btn.style.backgroundColor = "gold";
   // refs.menu.style.boxShadow = "gold";
@@ -137,31 +174,46 @@ function onCar4() {
   refs.bmv1.src = 'images/blue-1.png';
   refs.bmv2.src = 'images/blue-2.png';
   // onBackroundColor(onActiveBackgroundColor4);
+
+  refs.ac4.classList.add('active-car');
+  refs.ac5.classList.remove('active-car');
+  refs.ac6.classList.remove('active-car');
+  refs.ac7.classList.remove('active-car');
+  // refs.ac2.classList.remove('active-car');
+  // refs.ac3.classList.remove('active-car');
+  // refs.ac4.classList.remove('active-car');
 }
 
 function onCar5() {
   // refs.img.src = 'images/car-5.png';
-  refs.img.src = 'images/a/999-5.jpg';
+  // refs.img.src = 'images/a/999-5.jpg';
   refs.bmv1.src = 'images/green-1.png';
   refs.bmv2.src = 'images/green-2.png';
   // onBackroundColor(onActiveBackgroundColor5);
+  refs.ac5.classList.add('active-car');
+  refs.ac6.classList.remove('active-car');
+  refs.ac7.classList.remove('active-car');
 }
 
 function onCar6() {
   // refs.img.src = 'images/car-6.png';
-  refs.img.src = 'images/a/999-10.jpg';
+  // refs.img.src = 'images/a/999-10.jpg';
 
   refs.bmv1.src = 'images/violet1.png';
   refs.bmv2.src = 'images/violet-2.png';
   // onBackroundColor(onActiveBackgroundColor7);
+  refs.ac6.classList.add('active-car');
+  refs.ac7.classList.remove('active-car');
 }
 
 function onCar7() {
   // refs.img.src = 'images/car-7.png';
-  refs.img.src = 'images/a/999-11.jpg';
+  // refs.img.src = 'images/a/999-11.jpg';
   refs.bmv1.src = 'images/red-01.png';
   refs.bmv2.src = 'images/red-02.png';
   // onBackroundColor(onActiveBackgroundColor6);
+  refs.ac7.classList.add('active-car');
+  // refs.ac6.classList.remove('active-car');
 }
 
 function onBackroundColor(background) {

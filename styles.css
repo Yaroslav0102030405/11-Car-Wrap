@@ -503,12 +503,102 @@ button:hover {
   }
 }
 
+.p {
+  position: relative;
+  overflow: hidden;
+}
+
+.ac1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac1.active-car {
+  transform: translateX(0);
+}
+
+.ac2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac2.active-car {
+  transform: translateX(0);
+}
+
+.ac3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac3.active-car {
+  transform: translateX(0);
+}
+
+.ac4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac4.active-car {
+  transform: translateX(0);
+}
+
+.ac5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac5.active-car {
+  transform: translateX(0);
+}
+
+.ac6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac6.active-car {
+  transform: translateX(0);
+}
+
+.ac7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.ac7.active-car {
+  transform: translateX(0);
+}
+
 .car {
   cursor: zoom-in;
   transform: scale(1);
   transition: transform 250ms linear;
   overflow: hidden;
   border-radius: 12px;
+  /* transform: translateX(100%); */
 }
 
 /* @media screen and (max-width: 768px) {
@@ -517,8 +607,8 @@ button:hover {
   }
 } */
 
-.car.active-car {
-  transform: scale(1.2);
+.car {
+  display: grid;
 }
 /* 
 @media screen and (max-width: 768px) {
@@ -1289,10 +1379,6 @@ input#image_uploads.input-img {
   .text-brand {
     max-width: 739px;
   }
-}
-
-.car {
-  display: grid;
 }
 
 .wapper {
