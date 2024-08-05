@@ -160,9 +160,10 @@ body {
 
 .header {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
+  min-height: 93px;
   z-index: 2;
   padding-top: 10px;
   padding-bottom: 10px;
