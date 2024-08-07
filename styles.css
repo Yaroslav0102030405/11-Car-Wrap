@@ -1017,6 +1017,8 @@ span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
+  align-items: center;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1079,11 +1081,15 @@ span {
 .wapper-contact {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  /* text-align: center; */
   justify-content: flex-end;
   color: white;
   border-radius: 12px;
-  gap: 40px;
+  gap: 15px;
+}
+
+.bbb {
+  font-size: 20px;
 }
 
 .ccc {
