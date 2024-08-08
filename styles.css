@@ -372,7 +372,7 @@ body {
   gap: 0;
   justify-content: center;
   /* max-width: 370px; */
-  background-color: var(--brand-3);
+  background-color: black;
   width: 100%;
   left: 50%;
   transform: translate(-50%);
