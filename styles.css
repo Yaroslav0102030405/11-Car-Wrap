@@ -383,15 +383,15 @@ body {
   transition: color 250ms linear;
   color: black;
   border: 1px solid black;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
   padding-left: 5.5px;
   padding-right: 5.5px;
 }
 
 .menu-2 a:focus,
 .menu-2 a:hover {
-  background-color: var(--brand-2);
+  background-color: white;
 }
 
 /* @media screen and (max-width: 768px) {
