@@ -374,12 +374,12 @@ body {
   gap: 0;
   justify-content: center;
   /* max-width: 370px; */
-  /* background-color: var(--brand-3); */
+  background-color: var(--brand-3);
   width: 100%;
   left: 50%;
   transform: translate(-50%);
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
+  padding-top: 5px;
+  padding-bottom: 8px;
 }
 
 .menu-2 a {
