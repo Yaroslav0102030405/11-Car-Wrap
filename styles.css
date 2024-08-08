@@ -295,12 +295,6 @@ body {
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
-    /* position: fixed;
-    bottom: 10px;
-    text-align: center;
-    background-color: #ff01ff;
-    border-radius: 8px;
-    gap: 0; */
   }
 }
 
@@ -343,8 +337,8 @@ body {
 @media screen and (max-width: 768px) {
   .btn {
     margin-left: 0;
-    width: 152px;
-    font-size: 13px;
+    width: 170px;
+    /* font-size: 13px; */
   }
 }
 
