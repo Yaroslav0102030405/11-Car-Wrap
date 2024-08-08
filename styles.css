@@ -295,6 +295,12 @@ body {
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
+    /* position: fixed;
+    bottom: 10px;
+    text-align: center;
+    background-color: #ff01ff;
+    border-radius: 8px;
+    gap: 0; */
   }
 }
 
@@ -341,7 +347,6 @@ body {
 .btn:focus,
 .btn:hover {
   background-color: var(--brand-2);
-  /* color: black; */
 }
 
 .wapper {
@@ -361,6 +366,41 @@ body {
   transition: color 250ms linear;
   color: var(--brand-3);
 }
+
+.menu-2 {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  gap: 0;
+  justify-content: center;
+  /* max-width: 370px; */
+  background-color: var(--brand-3);
+}
+
+.menu-2 a {
+  font-size: 13.5px;
+  color: white;
+  transition: color 250ms linear;
+  color: black;
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5.5px;
+  padding-right: 5.5px;
+}
+
+.menu-2 a:focus,
+.menu-2 a:hover {
+  background-color: var(--brand-2);
+}
+
+/* @media screen and (max-width: 768px) {
+  .menu a {
+    font-size: 13.5px;
+    border: 1px solid white;
+    padding: 5px;
+  }
+} */
 
 .menu a:hover {
   color: var(--brand-2);
@@ -493,7 +533,7 @@ button:hover {
   background-color: var(--brand-2);
 }
 
-.active {
+/* .active {
   background-color: orangered;
   transform: scale(1.4);
 }
@@ -502,7 +542,7 @@ button:hover {
   .active {
     transform: scale(1);
   }
-}
+} */
 
 .div {
   display: flex;
@@ -615,21 +655,9 @@ button:hover {
   /* transform: translateX(100%); */
 }
 
-/* @media screen and (max-width: 768px) {
-  .car {
-    transform: scale(1.1);
-  }
-} */
-
 .car {
   display: grid;
 }
-/* 
-@media screen and (max-width: 768px) {
-  .car.active-car {
-    transform: scale(1.1);
-  }
-} */
 
 .service {
   padding-top: 50px;
@@ -681,13 +709,10 @@ button:hover {
 
 a {
   display: inline-block;
-  /* vertical-align: middle; */
   text-align: center;
 }
 
 .service-list {
-  /* display: flex;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(310px, auto));
   gap: 30px;
@@ -723,10 +748,6 @@ a {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  /* justify-self: end; */
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
   margin-top: auto;
 }
 
@@ -808,7 +829,6 @@ span {
 
 .item-title {
   margin-top: 10px;
-  /* color: black; */
   color: white;
 }
 
@@ -826,7 +846,6 @@ span {
 }
 
 .title {
-  /* color: var(--brand-3); */
   color: white;
 }
 
@@ -1282,7 +1301,6 @@ p {
   border: 1px solid white;
   margin-top: 7px;
   margin-bottom: 0;
-  /* margin-bottom: 50px; */
 }
 
 .line-2 {
@@ -1326,18 +1344,12 @@ p {
   margin-bottom: 5px;
 }
 
-/* .input-img {
-  opacity: 0;
-} */
-
 input#image_uploads.input-img {
-  /* position: relative; */
   padding: 10px;
   width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: #ff01ff; */
   color: white;
 }
 
@@ -1345,18 +1357,10 @@ input#image_uploads.input-img {
   color: white;
 }
 
-/* .f {
-  position: relative;
-} */
-
 .fff {
-  /* position: absolute; */
-  /* left: 0;
-  top: 39%; */
   color: white;
   background-color: var(--brand-2);
   padding: 10px;
-  /* pointer-events: none; */
 }
 
 .more {
@@ -1407,7 +1411,6 @@ input#image_uploads.input-img {
   max-width: 685px;
   font-size: 16px;
   color: white;
-  /* margin-bottom: 15px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -1441,7 +1444,6 @@ input#image_uploads.input-img {
   .logo-text {
     font-size: 34px;
     margin-bottom: 0;
-    /* font-weight: 700; */
   }
 }
 
@@ -1475,15 +1477,8 @@ input#image_uploads.input-img {
 
 .home {
   padding-top: 70px;
-  /* padding-bottom: 10px; */
   background-color: black;
 }
-
-/* @media screen and (max-width: 768px) {
-  .home {
-    display: none;
-  }
-} */
 
 @media screen and (max-width: 768px) {
   .home {
@@ -1498,14 +1493,9 @@ input#image_uploads.input-img {
 }
 
 .flex-home {
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   justify-content: space-between;
   gap: 40px;
-
-  /* align-items: center; */
 }
 
 @media screen and (max-width: 768px) {
