@@ -737,7 +737,7 @@ a {
 .service-list li {
   /* щоб вировняти нерівний контент по вертикалі */
   display: grid;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 8px;
   padding: 10px;
 
@@ -780,7 +780,7 @@ a {
 
 .price p {
   margin-bottom: 0;
-  color: white;
+  color: black;
   transition: color 250ms linear 350ms;
 }
 
@@ -791,7 +791,7 @@ span {
   margin-top: 10px;
   font-size: 20px;
   margin-top: 0;
-  color: white;
+  color: var(--brand-3);
   transition: color 250ms linear 350ms;
 }
 
@@ -862,7 +862,7 @@ span {
 
 .item-text {
   margin-bottom: 0;
-  color: white;
+  color: black;
 }
 
 /* --------------------------------------------------------------- */
