@@ -406,8 +406,8 @@ body {
 
 .menu-2 a:focus,
 .menu-2 a:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 @media screen and (min-width: 768px) {
