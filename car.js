@@ -73,7 +73,7 @@ refs.car7.addEventListener('click', onCar7);
 
 // refs.right.addEventListener('click', onActiveButton);
 
-refs.img.addEventListener('click', onClickZoom);
+// refs.img.addEventListener('click', onClickZoom);
 
 refs.load.addEventListener('click', onLoading);
 
