@@ -741,7 +741,13 @@ a {
   border-radius: 8px;
   padding: 10px;
 
-  background-color: transparent;
+  /* background-color: transparent; */
+  /* background: var(--brand-3), var(--brand-2); */
+  background: linear-gradient(
+    90deg,
+    rgba(31, 246, 236, 1) 0%,
+    rgba(252, 22, 208, 0.8520658263305322) 100%
+  );
   transition:
     border 250ms linear,
     background-color 250ms linear;
