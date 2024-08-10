@@ -402,6 +402,12 @@ body {
   color: white;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-2 {
+    display: none;
+  }
+}
+
 .menu a:hover {
   color: var(--brand-2);
   transform: scale(1.3);
@@ -1114,7 +1120,7 @@ span {
   max-width: 601px;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 25px;
+  font-size: 24px;
 }
 
 .ab {
@@ -1566,16 +1572,31 @@ input#image_uploads.input-img {
   /* padding: 10px; */
 }
 /* ------------------- */
-.hi {
-  margin-top: 10px;
-  color: white;
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 15px;
-  font-weight: 700;
+
+@media screen and (max-width: 1300px) {
+  .hi {
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .hi {
+    display: none;
+  }
 }
 
 .hi-text {
   color: white;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1300px) {
+  .hi-text {
+    display: none;
+  }
 }
