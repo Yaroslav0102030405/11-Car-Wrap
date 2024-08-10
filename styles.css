@@ -392,9 +392,9 @@ body {
   padding-right: 5px;
   padding-left: 5px;
 
-  background-color: black;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
   padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 6px;
@@ -406,8 +406,9 @@ body {
 
 .menu-2 a:focus,
 .menu-2 a:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
 }
 
 @media screen and (min-width: 768px) {
