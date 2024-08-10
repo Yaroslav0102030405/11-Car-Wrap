@@ -378,6 +378,7 @@ body {
   transform: translate(-50%);
   padding-top: 10px;
   padding-bottom: 15px;
+  border: 1px solid var(--brand-3);
 }
 
 .menu-2 a {
@@ -1568,7 +1569,7 @@ input#image_uploads.input-img {
 .hi {
   margin-top: 10px;
   color: white;
-  font-size: 52px;
+  font-size: 40px;
   text-align: center;
   margin-bottom: 15px;
   font-weight: 700;
