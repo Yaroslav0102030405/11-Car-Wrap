@@ -433,9 +433,9 @@ body {
   .right-text {
     margin-right: auto;
     margin-left: auto;
-    max-width: 290px;
+    max-width: 303px;
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -486,7 +486,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .q {
-    padding-top: 12px;
+    padding-top: 10px;
   }
 }
 
@@ -1439,15 +1439,17 @@ input#image_uploads.input-img {
 }
 
 .logo-text {
+  display: block;
   margin-top: 0;
   font-size: 39px;
   text-align: left;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-weight: 100;
 }
 
 @media screen and (max-width: 768px) {
   .logo-text {
+    /* display: block; */
     font-size: 34px;
     margin-bottom: 0;
   }
@@ -1564,15 +1566,15 @@ input#image_uploads.input-img {
 }
 /* ------------------- */
 .hi {
-  margin-top: 0;
+  margin-top: 10px;
   color: white;
-  font-size: 35px;
+  font-size: 52px;
   text-align: center;
-  /* margin-bottom: 10px; */
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
 .hi-text {
   color: white;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
