@@ -376,7 +376,7 @@ body {
   width: 100%;
   left: 50%;
   transform: translate(-50%);
-  padding-top: 5px;
+  padding-top: 13px;
   padding-bottom: 5px;
   /* border: 1px solid var(--brand-3); */
   background-color: white;
@@ -395,8 +395,9 @@ body {
   background-color: black;
   color: white;
   border: 1px solid white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 6px;
 
   transition:
     background-color 250ms linear,
