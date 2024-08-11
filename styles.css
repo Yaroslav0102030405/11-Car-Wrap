@@ -102,7 +102,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 20px;
+    font-size: 33px;
     margin-bottom: 10px;
   }
 }
@@ -1619,10 +1619,16 @@ input#image_uploads.input-img {
 
 @media screen and (max-width: 768px) {
   .blue-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blue-title {
     display: block;
     text-align: center;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 
