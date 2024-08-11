@@ -409,9 +409,15 @@ body {
 
 .menu-2 a:focus,
 .menu-2 a:hover {
-  background-color: white;
+  /* background-color: white; */
   color: black;
   border: 1px solid black;
+
+  background: linear-gradient(
+    90deg,
+    rgba(31, 246, 236, 1) 0%,
+    rgba(252, 22, 208, 0.8520658263305322) 100%
+  );
 }
 
 @media screen and (min-width: 768px) {
