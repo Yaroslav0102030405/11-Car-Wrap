@@ -135,7 +135,6 @@ h1 {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  /* background-color: var(--brand-2); */
   border: 1px solid #fff;
   background: linear-gradient(
     90deg,
@@ -342,7 +341,6 @@ body {
   .btn {
     margin-left: 0;
     width: 170px;
-    /* font-size: 13px; */
   }
 }
 
@@ -375,14 +373,11 @@ body {
   bottom: 0;
   gap: 0;
   justify-content: center;
-  /* max-width: 370px; */
-  /* background-color: black; */
   width: 100%;
   left: 50%;
   transform: translate(-50%);
   padding-top: 13px;
   padding-bottom: 5px;
-  /* border: 1px solid var(--brand-3); */
   background-color: white;
   border: 1px solid white;
 }
@@ -390,9 +385,6 @@ body {
 .menu-2 a {
   font-size: 12.5px;
   transition: color 250ms linear;
-  /* color: black; */
-  /* border: 1px solid black; */
-  /* background-color: var(--brand-3); */
   padding-right: 5px;
   padding-left: 5px;
 
@@ -528,7 +520,6 @@ button {
   width: 93.5px;
   border-radius: 8px;
   color: black;
-  /* background-color: white; */
   background-color: transparent;
   border: 1px solid white;
   color: white;
@@ -587,6 +578,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac1.active-car {
@@ -599,6 +591,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac2.active-car {
@@ -611,6 +604,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac3.active-car {
@@ -623,6 +617,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac4.active-car {
@@ -635,6 +630,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac5.active-car {
@@ -647,6 +643,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac6.active-car {
@@ -659,6 +656,7 @@ button:hover {
   left: 0;
   transform: translateX(100%);
   transition: transform 250ms linear;
+  padding: 10px;
 }
 
 .ac7.active-car {
@@ -671,7 +669,6 @@ button:hover {
   transition: transform 250ms linear;
   overflow: hidden;
   border-radius: 12px;
-  /* transform: translateX(100%); */
 }
 
 .car {
@@ -700,7 +697,6 @@ button:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
   .service-title {
-    /* margin-bottom: 45px; */
     font-size: 24px;
   }
 }
@@ -778,7 +774,6 @@ a {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  /* margin-top: 15px; */
 }
 
 @media screen and (max-width: 768px) {
@@ -1062,12 +1057,6 @@ span {
   }
 }
 
-/* @media screen and (min-width: 768px) {
-  .contact {
-    padding-bottom: 60px;
-  }
-} */
-
 .contact__container {
   display: flex;
   flex-wrap: wrap;
@@ -1136,7 +1125,6 @@ span {
 .wapper-contact {
   display: flex;
   flex-direction: column;
-  /* text-align: center; */
   justify-content: flex-end;
   color: white;
   border-radius: 12px;
@@ -1373,11 +1361,6 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  /* background: linear-gradient(
-    90deg,
-    rgba(31, 246, 236, 1) 0%,
-    rgba(252, 22, 208, 0.8520658263305322) 100%
-  ); */
   background-color: transparent;
 }
 
@@ -1486,13 +1469,11 @@ input#image_uploads.input-img {
   margin-top: 0;
   font-size: 39px;
   text-align: left;
-  /* margin-bottom: 30px; */
   font-weight: 100;
 }
 
 @media screen and (max-width: 768px) {
   .logo-text {
-    /* display: block; */
     font-size: 34px;
     margin-bottom: 0;
   }
@@ -1606,20 +1587,9 @@ input#image_uploads.input-img {
 .p {
   border-radius: 12px;
   border: 1px solid white;
-  /* padding: 10px; */
+  padding: 10px;
 }
 /* ------------------- */
-
-/* @media screen and (max-width: 1300px) {
-  .hi {
-    margin-top: 10px;
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 15px;
-    font-weight: 700;
-  }
-} */
 
 .hi {
   margin-top: 10px;
@@ -1630,23 +1600,17 @@ input#image_uploads.input-img {
   font-weight: 700;
 }
 
-/* @media screen and (min-width: 1300px) {
-  .hi {
-    display: none;
-  }
-} */
-
 .hi-text {
   text-align: center;
   color: white;
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 1300px) {
+/* @media screen and (min-width: 1300px) {
   .hi-text {
     display: none;
   }
-}
+} */
 
 .blue-title {
   font-size: 38px;
