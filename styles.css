@@ -757,15 +757,24 @@ a {
 .service-list li {
   /* щоб вировняти нерівний контент по вертикалі */
   display: grid;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 8px;
   padding: 10px;
+  border-inline: 5px solid;
+  border-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    Aqua,
+    Fuchsia,
+    rgba(0, 0, 0, 0)
+  );
+  border-image-slice: 1;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(31, 246, 236, 1) 0%,
     rgba(252, 22, 208, 0.8520658263305322) 100%
-  );
+  ); */
   transition:
     border 250ms linear,
     background-color 250ms linear;
@@ -797,7 +806,7 @@ a {
 
 .price p {
   margin-bottom: 0;
-  color: black;
+  color: white;
   transition: color 250ms linear 350ms;
 }
 
@@ -879,7 +888,7 @@ span {
 
 .item-text {
   margin-bottom: 0;
-  color: black;
+  color: white;
 }
 
 /* --------------------------------------------------------------- */
@@ -936,7 +945,7 @@ span {
 }
 
 .footer {
-  padding-top: 80px;
+  /* padding-top: 80px; */
   padding-bottom: 60px;
   color: white;
   background: var(--brand-color);
@@ -1049,11 +1058,11 @@ span {
   padding-top: 50px;
   padding-bottom: 60px;
   background: var(--brand-color);
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(31, 246, 236, 1) 0%,
     rgba(252, 22, 208, 0.8520658263305322) 100%
-  );
+  ); */
 }
 
 .contact__form {
@@ -1379,16 +1388,32 @@ p {
   }
 }
 
-/* .line {
-  border: 1px solid white;
-  margin-top: 7px;
-  margin-bottom: 0;
-} */
+.line {
+  border: 1px solid;
+  border-inline: 5px solid;
+  border-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    Aqua,
+    Fuchsia,
+    rgba(0, 0, 0, 0)
+  );
+  border-image-slice: 1;
+}
 
-/* .line-2 {
-  border: 1px solid white;
+.line-2 {
+  border: 1px solid;
+  border-inline: 5px solid;
+  border-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    Aqua,
+    Fuchsia,
+    rgba(0, 0, 0, 0)
+  );
+  border-image-slice: 1;
   margin-bottom: 50px;
-} */
+}
 
 .w15 {
   color: white;
