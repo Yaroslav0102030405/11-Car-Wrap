@@ -336,6 +336,7 @@ body {
   font-size: 15px;
 
   transition: background-color 250ms linear;
+  box-shadow: 10px 5px 5px var(--brand-2);
 }
 
 @media screen and (max-width: 768px) {
@@ -348,6 +349,7 @@ body {
 .btn:focus,
 .btn:hover {
   background-color: var(--brand-2);
+  box-shadow: none;
 }
 
 .wapper {
@@ -1711,4 +1713,14 @@ input#image_uploads.input-img {
   .blue-title {
     font-size: 24px;
   }
+}
+
+.order {
+  color: var(--brand-3);
+  cursor: url(/images/cursor/cursor-2.png), auto;
+}
+
+.order:focus,
+.order:hover {
+  color: var(--brand-2);
 }
