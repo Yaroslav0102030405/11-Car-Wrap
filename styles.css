@@ -102,7 +102,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 33px;
+    font-size: 26px;
     margin-bottom: 10px;
   }
 }
@@ -1716,8 +1716,16 @@ input#image_uploads.input-img {
 }
 
 .order {
+  display: inline-block;
   color: var(--brand-3);
   cursor: url(/images/cursor/cursor-2.png), auto;
+}
+
+@media screen and (max-width: 768px) {
+  .order {
+    margin-left: 5px;
+    font-size: 26px;
+  }
 }
 
 .order:focus,
