@@ -149,7 +149,8 @@ body {
 }
 
 .header {
-  position: fixed;
+  /* position: fixed; */
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -161,6 +162,13 @@ body {
   background: var(--brand-color);
 }
 
+.we {
+  position: absolute;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
