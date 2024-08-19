@@ -87,7 +87,7 @@ h1 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 15px;
-  font-size: 38px;
+  font-size: 47px;
   font-weight: 700;
   top: 0;
   left: 13%;
@@ -975,7 +975,7 @@ span {
 .wapper-address > h3 {
   font-size: 22px;
   display: inline-flex;
-  color: var(--brand-3);
+  color: white;
   margin-bottom: 17px;
 }
 
@@ -988,7 +988,7 @@ span {
 .wapper-works > h3 {
   font-size: 22px;
   display: inline-flex;
-  color: var(--brand-3);
+  color: white;
   margin-bottom: 17px;
 }
 
@@ -1002,51 +1002,8 @@ span {
 .wapper-social > h3 {
   font-size: 22px;
   display: inline-flex;
-  color: var(--brand-3);
+  color: white;
 }
-
-/* .wapper-garash {
-  display: block;
-}
-
-.one {
-  width: 1120px;
-  height: 30px;
-  border: 1px solid white;
-}
-
-.four {
-  position: relative;
-}
-
-.two {
-  position: absolute;
-  left: 0;
-  width: 25px;
-  height: 606px;
-  background-color: black;
-} */
-
-/* .free {
-  position: absolute;
-  right: 0;
-  width: 25px;
-  height: 606px;
-  background-color: black;
-} */
-
-/* .box {
-  background-color: black;
-  display: flex;
-  margin: 0 auto;
-  width: 1170px;
-  height: 20px;
-} */
-
-/* .text-address {
-  font-size: 15px;
-  margin-left: 30px;
-} */
 
 /* -------------------- */
 .contact {
@@ -1056,15 +1013,16 @@ span {
 }
 
 .contact__form {
-  border: 1px solid var(--brand-3);
+  border: 1px solid white;
   border-radius: 8px;
   padding: 20px 30px;
   text-align: center;
   width: 402px;
+  background-color: var(--brand-2);
 }
 
 .contact__title {
-  color: white;
+  /* color: black; */
   text-align: center;
 }
 
@@ -1100,7 +1058,7 @@ span {
   margin: 0 auto 16px;
   font-size: 32px;
   width: 265px;
-  color: var(--white-color);
+  color: black;
 }
 
 @media screen and (min-width: 768px) {
@@ -1217,7 +1175,7 @@ span {
   padding: 22px 24px;
   width: 100%;
   border-radius: 8px;
-  border: 1px solid var(--brand-3);
+  border: 1px solid white;
   background-color: transparent;
   font-size: 16px;
   line-height: 1.17;
@@ -1237,7 +1195,7 @@ span {
   padding: 20px;
   margin-bottom: 15px;
   margin-top: 15px;
-  background-color: var(--brand-3);
+  background-color: black;
 }
 
 .form__terms {
@@ -1366,7 +1324,7 @@ p {
 
 .wapper-contact img {
   border-radius: 12px;
-  border: 1px solid var(--brand-2);
+  border: 1px solid white;
   padding: 10px;
 }
 
@@ -1707,10 +1665,11 @@ input#image_uploads.input-img {
   /* display: inline-block; */
   color: black;
   cursor: url(/images/cursor/cursor-2.png), auto;
-  width: 300px;
+  width: 224px;
   background-color: var(--brand-3);
   border-radius: 6px;
   padding: 5px;
+  font-size: 28px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1758,3 +1717,50 @@ input#image_uploads.input-img {
     font-size: 24px;
   }
 }
+
+/* .h-wapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.h-w-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.h-p {
+  color: white;
+  margin-bottom: 30px;
+  width: 540px;
+}
+
+.h-p-2 {
+  color: white;
+}
+
+.h-p-3 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.h-p-4 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.h-b {
+  width: 84%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 10px;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+} */
