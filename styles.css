@@ -101,7 +101,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 26px;
+    font-size: 40px;
     margin-bottom: 10px;
   }
 }
@@ -700,7 +700,7 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   .service-title {
-    font-size: 33px;
+    font-size: 22px;
     margin-bottom: 25px;
   }
 }
@@ -884,6 +884,12 @@ span {
 .title {
   color: black;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    border: none;
+  }
 }
 
 .service-works {
@@ -1112,6 +1118,12 @@ span {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .ccc {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
@@ -1705,8 +1717,8 @@ input#image_uploads.input-img {
 }
 
 .аdvantages {
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding-top: 57px;
+  padding-bottom: 0;
   color: white;
   background-color: black;
 }
@@ -1729,12 +1741,11 @@ input#image_uploads.input-img {
   margin-top: 10px;
   font-size: 38px;
   margin-bottom: 50px;
-  /* color: var(--brand-3); */
 }
 
 @media screen and (max-width: 768px) {
   .h-h {
-    font-size: 33px;
+    font-size: 19px;
     margin-bottom: 30px;
   }
 }
@@ -1745,11 +1756,15 @@ input#image_uploads.input-img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .h-pp {
+    font-size: 14px;
+  }
+}
+
 .h-a {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: repeat(auto-fill, minmax(310px, auto));
-  /* gap: 30px; */
 }
 
 .h-a li {
@@ -1757,10 +1772,6 @@ input#image_uploads.input-img {
   grid-template-columns: auto 1fr;
   align-items: start;
   gap: 30px;
-  /* padding-top: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 10px; */
   padding: 10px 5px;
 }
 
@@ -1777,7 +1788,6 @@ p {
 .xx {
   display: flex;
   font-size: 12px;
-  /* margin-left: auto; */
   margin-right: auto;
   justify-content: right;
   color: black;
