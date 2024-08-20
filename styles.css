@@ -33,6 +33,9 @@ html {
   --brand-3: #02ffff;
 
   --gray-color: #899499;
+
+  --black-m: #0d0e0e;
+  --black-m1: #1c1f1f;
 }
 
 body {
@@ -158,7 +161,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background: var(--brand-color);
+  background: var(--black-m);
 }
 
 .h-link {
@@ -197,7 +200,7 @@ body {
 }
 
 .section {
-  background: var(--brand-color);
+  background: var(--black-m);
 }
 
 @media screen and (max-width: 768px) {
@@ -601,7 +604,7 @@ button:hover {
 .service {
   padding-top: 50px;
   padding-bottom: 30px;
-  background: var(--brand-color);
+  background: var(--black-m);
 }
 
 .service-title {
@@ -790,7 +793,7 @@ span {
 /* --------------------------------------------------------------- */
 
 .works {
-  color: black;
+  color: var(--black-m);
   padding-top: 30px;
   padding-bottom: 50px;
 }
@@ -845,7 +848,7 @@ span {
 .footer {
   padding-bottom: 60px;
   color: white;
-  background: var(--brand-color);
+  background: var(--black-m);
 }
 
 .wapper-0 {
@@ -910,7 +913,7 @@ span {
 .contact {
   padding-top: 50px;
   padding-bottom: 60px;
-  background-color: black;
+  background-color: var(--black-m);
 }
 
 .contact__form {
@@ -1444,7 +1447,7 @@ input#image_uploads.input-img {
 
 .home {
   padding-top: 70px;
-  background-color: black;
+  background-color: var(--black-m);
 }
 
 @media screen and (max-width: 768px) {
@@ -1574,7 +1577,6 @@ input#image_uploads.input-img {
 }
 
 .order {
-  /* display: inline-block; */
   color: black;
   cursor: url(/images/cursor/cursor-2.png), auto;
   width: 224px;
@@ -1589,7 +1591,6 @@ input#image_uploads.input-img {
     margin-left: 5px;
     font-size: 26px;
     margin-right: 5px;
-    /* width: 100%; */
     width: 215px;
     margin-left: auto;
     margin-right: auto;
@@ -1634,7 +1635,7 @@ input#image_uploads.input-img {
   padding-top: 57px;
   padding-bottom: 0;
   color: white;
-  background-color: black;
+  background-color: var(--black-m);
 }
 
 @media screen and (max-width: 768px) {
