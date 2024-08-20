@@ -312,24 +312,24 @@ body {
   width: 100%;
   left: 50%;
   transform: translate(-50%);
-  padding-top: 5px;
+  /* padding-top: 5px;
   padding-bottom: 5px;
-  border: 1px solid white;
+  border: 1px solid white; */
   background-color: black;
 }
 
 .menu-2 a {
   font-size: 12.5px;
   transition: color 250ms linear;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   background-color: black;
   color: white;
   border: 1px solid white;
   padding-top: 6px;
   padding-bottom: 6px;
-  border-radius: 6px;
+  /* border-radius: 6px; */
 
   transition:
     background-color 250ms linear,
