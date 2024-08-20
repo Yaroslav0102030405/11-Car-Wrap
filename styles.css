@@ -1708,19 +1708,22 @@ p {
   color: black;
 }
 
-.header {
+/* .header {
   position: relative;
-}
+} */
 
-.m-1 {
+/* .section {
+  position: relative;
+} */
+
+/* .m-1 {
   position: absolute;
   z-index: -1;
   top: 0;
   left: 0;
-  width: 100%;
-}
-/* 
-.www1 {
+} */
+
+/* .www1 {
   position: absolute;
   background-color: rgba(10, 10, 9, 0.169);
   z-index: 2;
@@ -1728,5 +1731,45 @@ p {
   height: 80px;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 } */
+
+.btn-2 {
+  padding: 10px;
+  width: 150px;
+  background-color: var(--brand-2);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  border: 1px solid black;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  color: black;
+}
+
+.btn-2:focus,
+.btn-2:hover {
+  background-color: var(--brand-3);
+}
+
+.btn-3 {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-3 {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: var(--brand-2);
+  }
+}
+
+.btn-3:focus,
+.btn-3:hover {
+  background-color: var(--brand-3);
+}
