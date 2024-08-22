@@ -319,14 +319,19 @@ body {
 }
 
 .menu-2 a {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  gap: 3px;
   font-size: 12.5px;
   transition: color 250ms linear;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 14px;
+  padding-left: 14px;
 
   background-color: black;
   color: white;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   padding-top: 6px;
   padding-bottom: 6px;
   /* border-radius: 6px; */
