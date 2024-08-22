@@ -7,13 +7,13 @@ const refs = {
 
   img: document.querySelector('.car'),
   right: document.querySelector('.right'),
-  car1: document.querySelector('.car-1'),
-  car2: document.querySelector('.car-2'),
-  car3: document.querySelector('.car-3'),
-  car4: document.querySelector('.car-4'),
-  car5: document.querySelector('.car-5'),
-  car6: document.querySelector('.car-6'),
-  car7: document.querySelector('.car-7'),
+  // car1: document.querySelector('.car-1'),
+  // car2: document.querySelector('.car-2'),
+  // car3: document.querySelector('.car-3'),
+  // car4: document.querySelector('.car-4'),
+  // car5: document.querySelector('.car-5'),
+  // car6: document.querySelector('.car-6'),
+  // car7: document.querySelector('.car-7'),
 
   bmv1: document.querySelector('.bmv-1'),
   bmv2: document.querySelector('.bmv-2'),
@@ -63,13 +63,13 @@ const refs = {
 // const onActiveBackgroundColor7 =
 //   'linear-gradient(90deg,rgba(150, 14, 212, 1) 0%,rgba(181, 245, 10, 1) 100%)';
 
-refs.car1.addEventListener('click', onCar);
-refs.car2.addEventListener('click', onCar2);
-refs.car3.addEventListener('click', onCar3);
-refs.car4.addEventListener('click', onCar4);
-refs.car5.addEventListener('click', onCar5);
-refs.car6.addEventListener('click', onCar6);
-refs.car7.addEventListener('click', onCar7);
+// refs.car1.addEventListener('click', onCar);
+// refs.car2.addEventListener('click', onCar2);
+// refs.car3.addEventListener('click', onCar3);
+// refs.car4.addEventListener('click', onCar4);
+// refs.car5.addEventListener('click', onCar5);
+// refs.car6.addEventListener('click', onCar6);
+// refs.car7.addEventListener('click', onCar7);
 
 // refs.right.addEventListener('click', onActiveButton);
 
@@ -98,67 +98,67 @@ function onLoading() {
 //   }
 // }
 
-function onCar() {
-  // refs.bmv1.src = 'images/violet1.png';
-  // refs.bmv2.src = 'images/violet-2.png';
-  refs.ac1.classList.add('active-car');
-  refs.ac2.classList.remove('active-car');
-  refs.ac3.classList.remove('active-car');
-  refs.ac4.classList.remove('active-car');
-  refs.ac5.classList.remove('active-car');
-  refs.ac6.classList.remove('active-car');
-  refs.ac7.classList.remove('active-car');
-}
+// function onCar() {
+// refs.bmv1.src = 'images/violet1.png';
+// refs.bmv2.src = 'images/violet-2.png';
+// refs.ac1.classList.add('active-car');
+// refs.ac2.classList.remove('active-car');
+// refs.ac3.classList.remove('active-car');
+// refs.ac4.classList.remove('active-car');
+// refs.ac5.classList.remove('active-car');
+// refs.ac6.classList.remove('active-car');
+// refs.ac7.classList.remove('active-car');
+// }
 
-function onCar2() {
-  // refs.bmv1.src = 'images/green-1.png';
-  // refs.bmv2.src = 'images/green-2.png';
-  refs.ac2.classList.add('active-car');
-  refs.ac3.classList.remove('active-car');
-  refs.ac4.classList.remove('active-car');
-  refs.ac5.classList.remove('active-car');
-  refs.ac6.classList.remove('active-car');
-  refs.ac7.classList.remove('active-car');
-}
-function onCar3() {
-  // refs.bmv1.src = 'images/yellow-1.png';
-  // refs.bmv2.src = 'images/yellow-2.png';
-  refs.ac3.classList.add('active-car');
-  refs.ac4.classList.remove('active-car');
-  refs.ac5.classList.remove('active-car');
-  refs.ac6.classList.remove('active-car');
-  refs.ac7.classList.remove('active-car');
-}
+// function onCar2() {
+// refs.bmv1.src = 'images/green-1.png';
+// refs.bmv2.src = 'images/green-2.png';
+// refs.ac2.classList.add('active-car');
+// refs.ac3.classList.remove('active-car');
+// refs.ac4.classList.remove('active-car');
+// refs.ac5.classList.remove('active-car');
+// refs.ac6.classList.remove('active-car');
+// refs.ac7.classList.remove('active-car');
+// }
+// function onCar3() {
+// refs.bmv1.src = 'images/yellow-1.png';
+// refs.bmv2.src = 'images/yellow-2.png';
+// refs.ac3.classList.add('active-car');
+// refs.ac4.classList.remove('active-car');
+// refs.ac5.classList.remove('active-car');
+// refs.ac6.classList.remove('active-car');
+// refs.ac7.classList.remove('active-car');
+// }
 
-function onCar4() {
-  // refs.bmv1.src = 'images/blue-1.png';
-  // refs.bmv2.src = 'images/blue-2.png';
-  refs.ac4.classList.add('active-car');
-  refs.ac5.classList.remove('active-car');
-  refs.ac6.classList.remove('active-car');
-  refs.ac7.classList.remove('active-car');
-}
+// function onCar4() {
+// refs.bmv1.src = 'images/blue-1.png';
+// refs.bmv2.src = 'images/blue-2.png';
+// refs.ac4.classList.add('active-car');
+// refs.ac5.classList.remove('active-car');
+// refs.ac6.classList.remove('active-car');
+// refs.ac7.classList.remove('active-car');
+// }
 
-function onCar5() {
-  // refs.bmv1.src = 'images/green-1.png';
-  // refs.bmv2.src = 'images/green-2.png';
-  refs.ac5.classList.add('active-car');
-  refs.ac6.classList.remove('active-car');
-  refs.ac7.classList.remove('active-car');
-}
+// function onCar5() {
+// refs.bmv1.src = 'images/green-1.png';
+// refs.bmv2.src = 'images/green-2.png';
+// refs.ac5.classList.add('active-car');
+// refs.ac6.classList.remove('active-car');
+// refs.ac7.classList.remove('active-car');
+// }
 
-function onCar6() {
-  // refs.bmv1.src = 'images/violet1.png';
-  // refs.bmv2.src = 'images/violet-2.png';
-  refs.ac6.classList.add('active-car');
-  refs.ac7.classList.remove('active-car');
-}
+// function onCar6() {
+// refs.bmv1.src = 'images/violet1.png';
+// refs.bmv2.src = 'images/violet-2.png';
+// refs.ac6.classList.add('active-car');
+// refs.ac7.classList.remove('active-car');
+// }
 
-function onCar7() {
-  // refs.bmv1.src = 'images/red-01.png';
-  // refs.bmv2.src = 'images/red-02.png';
-  refs.ac7.classList.add('active-car');
-}
+// function onCar7() {
+// refs.bmv1.src = 'images/red-01.png';
+// refs.bmv2.src = 'images/red-02.png';
+// refs.ac7.classList.add('active-car');
+// }
 
 function onBackroundColor(background) {
   refs.header.style.background = `${background}`;
