@@ -1516,7 +1516,7 @@ input#image_uploads.input-img {
 
 @media screen and (max-width: 768px) {
   .home {
-    padding-top: 145px;
+    padding-top: 260px;
   }
 }
 
@@ -1874,7 +1874,7 @@ p {
   .overlay {
     /* width: 350px; */
     background-position: center left;
-    height: 485px;
+    height: 610px;
   }
 }
 
