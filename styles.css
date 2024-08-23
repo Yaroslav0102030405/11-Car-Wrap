@@ -113,6 +113,12 @@ h1 {
 
 .h-flex {
   margin-bottom: 40px;
+  padding: 5px;
+  background: linear-gradient(
+    90deg,
+    rgb(37 197 204 / 37%) 0%,
+    rgb(237 81 245 / 32%) 100%
+  );
 }
 
 .h-flex li img {
@@ -123,7 +129,7 @@ h1 {
   position: relative;
   padding: 15px;
   width: 200px;
-  background-color: rgb(68 204 228);
+  background-color: var(--brand-2);
   border: 1px solid black;
   color: black;
 }
@@ -971,7 +977,8 @@ span {
   padding: 20px 30px;
   text-align: center;
   width: 402px;
-  background-color: white;
+  /* background-color: white; */
+  background: linear-gradient(90deg, rgb(37 197 204) 0%, rgb(237 81 245) 100%);
 }
 
 .contact__title {
