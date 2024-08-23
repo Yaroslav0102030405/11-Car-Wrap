@@ -42,6 +42,8 @@ body {
   margin: 0;
   background-color: white;
   cursor: url(/images/cursor/cursor-1.png), auto;
+  /* font-size: 15px;
+  line-height: 1.2; */
 }
 
 h3 {
@@ -194,6 +196,7 @@ h1 {
   }
 } */
 
+/* ----------------------------------------------------------- */
 .header {
   position: relative;
   width: 100%;
@@ -266,6 +269,7 @@ h1 {
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+  /* margin-bottom: 5px; */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
@@ -310,22 +314,23 @@ h1 {
   gap: 10px;
   align-items: center;
   padding: 7px;
-  margin-left: 20px;
-  width: 167px;
-  border: 1px solid white;
+  /* margin-left: 20px; */
+  /* width: 167px; */
+  /* border: 1px solid white; */
   border-radius: 8px;
   text-align: center;
-  color: white;
+  color: var(--brand-3);
   font-size: 15px;
   transition: background-color 250ms linear;
+  box-shadow: 0px 6px 10px var(--brand-2);
 }
-
+/* 
 @media screen and (max-width: 768px) {
   .btn {
     margin-left: 0;
     width: 170px;
   }
-}
+} */
 
 .btn:focus,
 .btn:hover {
@@ -676,7 +681,7 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   .service-title {
-    font-size: 34px;
+    font-size: 22px;
     margin-bottom: 25px;
   }
 }
@@ -756,11 +761,11 @@ a {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .price {
     margin-top: 15px;
   }
-}
+} */
 
 .price p {
   margin-bottom: 0;
@@ -936,11 +941,11 @@ span {
 }
 
 .wapper-address > h3 {
-  font-size: 22px;
+  font-size: 18px;
   display: inline-flex;
   color: white;
   margin-bottom: 17px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media screen and (max-width: 768px) {
@@ -950,11 +955,11 @@ span {
 }
 
 .wapper-works > h3 {
-  font-size: 22px;
+  font-size: 18px;
   display: inline-flex;
   color: white;
   margin-bottom: 17px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media screen and (max-width: 768px) {
@@ -965,10 +970,10 @@ span {
 }
 
 .wapper-social > h3 {
-  font-size: 22px;
+  font-size: 18px;
   display: inline-flex;
   color: white;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* -------------------- */
@@ -1362,6 +1367,9 @@ p {
   margin-right: auto;
   margin-top: 50px;
   background-color: black;
+  width: 150px;
+  box-shadow: none;
+  color: white;
 }
 
 .load:focus,
@@ -1516,7 +1524,7 @@ input#image_uploads.input-img {
 
 @media screen and (max-width: 768px) {
   .home {
-    padding-top: 260px;
+    padding-top: 280px;
   }
 }
 
@@ -1556,7 +1564,7 @@ input#image_uploads.input-img {
 
 @media screen and (max-width: 768px) {
   .home-title {
-    font-size: 33px;
+    font-size: 22px;
     margin-bottom: 25px;
   }
 }
@@ -1723,7 +1731,7 @@ input#image_uploads.input-img {
 
 @media screen and (max-width: 768px) {
   .h-h {
-    font-size: 19px;
+    font-size: 22px;
     margin-bottom: 30px;
   }
 }
