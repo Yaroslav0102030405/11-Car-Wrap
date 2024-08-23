@@ -102,14 +102,13 @@ h1 {
   font-optical-sizing: auto;
 }
 
-.smile {
+.flex p {
   font-size: 25px;
 }
 
-/* .h-text {
-  font-size: 15px;
-  margin-bottom: 10px;
-} */
+.smile {
+  font-size: 25px;
+}
 
 .h-flex {
   margin-bottom: 40px;
@@ -149,7 +148,7 @@ h1 {
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 40px;
-    margin-bottom: 220px;
+    margin-bottom: 86px;
   }
 }
 
@@ -185,7 +184,7 @@ h1 {
   background-color: black;
 }
 
-body {
+/* body {
   padding-top: 93px;
 }
 
@@ -193,19 +192,18 @@ body {
   body {
     padding-top: 80px;
   }
-}
+} */
 
 .header {
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
   min-height: 93px;
-  z-index: 2;
+  z-index: 1;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  background: var(--black-m);
 }
 
 .h-link {
@@ -249,7 +247,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .section {
-    padding-top: 30px;
+    padding-top: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .section {
+    padding-top: 10px;
   }
 }
 
@@ -340,8 +344,8 @@ body {
 }
 
 .menu a {
-  box-shadow: 0px 8px 10px var(--brand-2);
-  font-size: 20px;
+  box-shadow: 0px 6px 10px var(--brand-2);
+  font-size: 15px;
   color: white;
   transition: color 250ms linear;
   color: var(--brand-3);
@@ -936,6 +940,7 @@ span {
   display: inline-flex;
   color: white;
   margin-bottom: 17px;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 768px) {
@@ -949,6 +954,7 @@ span {
   display: inline-flex;
   color: white;
   margin-bottom: 17px;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 768px) {
@@ -962,6 +968,7 @@ span {
   font-size: 22px;
   display: inline-flex;
   color: white;
+  text-transform: uppercase;
 }
 
 /* -------------------- */
@@ -977,7 +984,6 @@ span {
   padding: 20px 30px;
   text-align: center;
   width: 402px;
-  /* background-color: white; */
   background: linear-gradient(90deg, rgb(37 197 204) 0%, rgb(237 81 245) 100%);
 }
 
@@ -1049,7 +1055,7 @@ span {
 @media screen and (min-width: 1300px) {
   .contact__map {
     width: 320px;
-    height: 100px;
+    height: 70px;
   }
 }
 
@@ -1408,17 +1414,17 @@ input#image_uploads.input-img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1300px) {
+/* @media screen and (min-width: 768px) and (max-width: 1300px) {
   .section {
     padding-top: 30px;
   }
-}
+} */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .section {
     padding-top: 20px;
   }
-}
+} */
 
 /* .flex {
   display: flex;
@@ -1504,13 +1510,13 @@ input#image_uploads.input-img {
 /* -------------------------------------------- */
 
 .home {
-  padding-top: 610px;
+  padding-top: 460px;
   background-color: var(--black-m);
 }
 
 @media screen and (max-width: 768px) {
   .home {
-    padding-top: 33px;
+    padding-top: 145px;
   }
 }
 
@@ -1568,10 +1574,9 @@ input#image_uploads.input-img {
 
 .home-img {
   border-radius: 10px;
-
-  border-radius: 12px;
-  border: 1px solid var(--brand-3);
-  padding: 10px;
+  border: 1px solid white;
+  padding: 5px;
+  background-color: white;
 }
 
 @media screen and (min-width: 768px) {
@@ -1824,14 +1829,52 @@ p {
   background-position: center top;
   background-size: cover;
   /* background-attachment: fixed; */
-  height: 950px;
+  /* height: 950px; */
+  height: 850px;
+  z-index: -1;
+}
+
+.h-t {
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 13, 19, 1) 0%,
+    rgba(12, 13, 19, 0) 100%
+  );
+  width: 100%;
+  height: 20vw;
+  top: 0;
+}
+
+.h-s {
+  background: rgba(12, 13, 19, 0.4);
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+}
+
+.section {
+  z-index: 1;
+  background-color: initial;
+}
+
+.h-b {
+  width: 100%;
+  height: 20vw;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 13, 19, 1) 0%,
+    rgba(12, 13, 19, 0) 100%
+  );
 }
 
 @media screen and (max-width: 768px) {
   .overlay {
     /* width: 350px; */
     background-position: center left;
-    height: 350px;
+    height: 485px;
   }
 }
 
