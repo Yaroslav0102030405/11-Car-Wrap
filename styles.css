@@ -22,7 +22,7 @@ html {
     rgba(29, 253, 153, 1) 100%
   );
 
-  --brand-color: linear-gradient(
+  --brand-color-3: linear-gradient(
     90deg,
     rgba(37, 197, 204, 1) 0%,
     rgba(237, 81, 245, 1) 100%
@@ -1211,17 +1211,19 @@ span {
   padding: 20px;
   /* margin-bottom: 15px; */
   margin-top: 15px;
-  background-color: var(--brand-3);
+  background: var(--brand-color-3);
   border: 1px solid black;
   color: #000;
   text-transform: uppercase;
   border-radius: 0;
+
+  transition: background 250ms linear;
 }
 
 .form__button:focus,
 .form__button:hover {
-  background-color: var(--brand-2);
-  color: white;
+  background: var(--brand-2);
+  /* color: white; */
 }
 
 @media screen and (max-width: 768px) {
@@ -1740,9 +1742,10 @@ input#image_uploads.input-img {
 
 .аdvantages {
   padding-top: 57px;
-  padding-bottom: 0;
+  padding-bottom: 100px;
   color: white;
-  background-color: var(--black-m);
+  /* background-color: var(--black-m); */
+  background: var(--brand-color-3);
 }
 
 @media screen and (max-width: 768px) {
@@ -1879,6 +1882,27 @@ p {
   height: 850px;
   z-index: -1;
 }
+
+/* .аdvantages {
+  position: relative;
+}
+
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url(/images/cont1.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 850px;
+  z-index: -1;
+} */
 
 .h-t {
   position: absolute;
