@@ -50,8 +50,6 @@ h3 {
 
 ul {
   display: flex;
-  /* flex-wrap: wrap;
-  justify-content: center; */
   gap: 18px;
 }
 
@@ -91,7 +89,7 @@ h1 {
   text-align: left;
   margin-top: 0;
   margin-bottom: 12px;
-  font-size: 46px;
+  font-size: 72px;
   font-weight: 700;
   top: 0;
   left: 13%;
@@ -101,8 +99,9 @@ h1 {
   font-optical-sizing: auto;
 }
 
-.flex p {
-  font-size: 12px;
+.h-text-1 {
+  font-size: 23px;
+  margin-bottom: 10px;
 }
 
 .smile {
@@ -111,12 +110,6 @@ h1 {
 
 .h-flex {
   margin-bottom: 10px;
-  /* padding: 5px; */
-  /* background: linear-gradient(
-    90deg,
-    rgb(37 197 204 / 37%) 0%,
-    rgb(237 81 245 / 32%) 100%
-  ); */
 }
 
 .h-flex li img {
@@ -131,8 +124,8 @@ h1 {
 
 .btn-0 {
   position: relative;
-  padding: 15px;
-  width: 329px;
+  padding: 13px;
+  width: 285px;
   background-color: var(--brand-3);
   border: 1px solid black;
   color: black;
@@ -141,7 +134,6 @@ h1 {
 @media screen and (max-width: 768px) {
   .btn-0 {
     display: block;
-    /* margin-left: auto; */
     margin-right: auto;
     width: 213px;
   }
@@ -195,16 +187,6 @@ h1 {
   background-color: var(--brand-3);
 }
 
-/* body {
-  padding-top: 93px;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    padding-top: 80px;
-  }
-} */
-
 /* ----------------------------------------------------------- */
 .header {
   position: relative;
@@ -249,8 +231,12 @@ h1 {
   }
 }
 
-.section {
-  padding-top: 20px;
+/* .section {
+  padding-top: 10px;
+} */
+
+.h-flex p {
+  font-size: 12px;
 }
 
 .section {
@@ -323,9 +309,6 @@ h1 {
   gap: 10px;
   align-items: center;
   padding: 7px;
-  /* margin-left: 20px; */
-  /* width: 167px; */
-  /* border: 1px solid white; */
   border-radius: 8px;
   text-align: center;
   color: var(--brand-3);
@@ -333,13 +316,6 @@ h1 {
   transition: background-color 250ms linear;
   box-shadow: 0px 6px 10px var(--brand-2);
 }
-/* 
-@media screen and (max-width: 768px) {
-  .btn {
-    margin-left: 0;
-    width: 170px;
-  }
-} */
 
 .btn:focus,
 .btn:hover {
@@ -374,9 +350,6 @@ h1 {
   width: 100%;
   left: 50%;
   transform: translate(-50%);
-  /* padding-top: 5px;
-  padding-bottom: 5px;
-  /* border: 1px solid white; */
   background-color: black;
   border: 1px solid white;
   border-top-left-radius: 15px;
@@ -386,7 +359,6 @@ h1 {
 .menu-2 a {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   gap: 3px;
   font-size: 11.5px;
@@ -398,7 +370,6 @@ h1 {
   color: white;
   padding-top: 6px;
   padding-bottom: 6px;
-  /* border-radius: 6px; */
 
   transition:
     background-color 250ms linear,
@@ -408,8 +379,6 @@ h1 {
 .sm:focus,
 .sm:hover {
   color: var(--brand-2);
-  /* border: 1px solid black; */
-  /* background-color: var(--brand-2); */
 }
 
 @media screen and (min-width: 768px) {
@@ -1374,10 +1343,6 @@ p {
   color: var(--brand-3);
 }
 
-/* .item-title {
-  color: var(--brand-2);
-} */
-
 .contact-disc {
   margin-top: 0;
   font-size: 45px;
@@ -1539,7 +1504,6 @@ input#image_uploads.input-img {
 
 @media screen and (min-width: 768px) {
   .text-brand {
-    /* text-transform: uppercase; */
     line-height: 1.4;
     font-size: 24px;
   }
@@ -1576,15 +1540,6 @@ input#image_uploads.input-img {
     font-size: 26px;
   }
 }
-
-/* .flex-t {
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  gap: 10px; 
-  margin-top: 50px;
-  margin-left: 50px;
-} */
 
 .te {
   margin-bottom: 10px;
@@ -1666,9 +1621,6 @@ input#image_uploads.input-img {
 
 .home-img {
   border-radius: 10px;
-  /* border: 1px solid white;
-  padding: 5px;
-  background-color: white; */
 }
 
 @media screen and (min-width: 768px) {
@@ -1876,9 +1828,7 @@ p {
   font-weight: 600;
   border-radius: 8px;
   color: white;
-  /* text-transform: uppercase; */
   transition: background 250ms linear;
-  /* box-shadow: 3px 2px 7px black; */
 }
 
 .btn-2:focus,
@@ -1968,7 +1918,6 @@ p {
 
 @media screen and (max-width: 768px) {
   .overlay {
-    /* width: 350px; */
     background-position: center left;
     height: 610px;
     background-attachment: fixed;
@@ -1977,7 +1926,6 @@ p {
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
   .overlay {
-    /* width: 768px; */
     height: 500px;
   }
 }
