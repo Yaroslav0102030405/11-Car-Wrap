@@ -89,7 +89,7 @@ h1 {
   text-transform: uppercase;
   text-align: left;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 45px;
   font-size: 76px;
   font-weight: 700;
   top: 0;
@@ -101,21 +101,21 @@ h1 {
 }
 
 .h-text-1 {
-  font-size: 23.5px;
+  font-size: 32.5px;
   margin-bottom: 17px;
 }
 
 @media screen and (max-width: 768px) {
   .h-text-1 {
-    font-size: 16.5px;
-    margin-bottom: 8px;
+    font-size: 22.5px;
+    margin-bottom: 16px;
     text-align: center;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
   .h-text-1 {
-    font-size: 14.5px;
+    font-size: 19px;
     margin-bottom: 10px;
   }
 }
@@ -195,7 +195,7 @@ h1 {
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
   h1 {
-    font-size: 24px;
+    font-size: 44px;
     margin-bottom: 20px;
   }
 }
@@ -855,6 +855,7 @@ span {
 
 .wapper-0 {
   display: grid;
+
   gap: 30px;
 }
 
@@ -866,9 +867,15 @@ span {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1300px) {
   .wapper-0 {
-    grid-template-columns: 6fr 2fr 2fr 1.3fr;
+    grid-template-columns: 6fr 2.7fr 3fr 1.5fr;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .wapper-0 {
+    grid-template-columns: 6fr 2.2fr 2.5fr 1.5fr;
   }
 }
 
