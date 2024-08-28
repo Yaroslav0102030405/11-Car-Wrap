@@ -665,17 +665,27 @@ a {
   display: grid;
   border-radius: 8px;
   padding: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   transition:
     border 250ms linear,
     background-color 250ms linear;
   background: rgba(40, 42, 50, 0.4);
 
-  transition: all 250ms linear;
-  box-shadow: 3px 2px 7px black;
+  /* transition: all 250ms linear; */
+  /* box-shadow: 3px 2px 7px black; */
+
+  border-inline: 2px solid;
+  border-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    Aqua,
+    Fuchsia,
+    rgba(0, 0, 0, 0)
+  );
+  border-image-slice: 1;
 }
 
-.service-list li:focus,
+/* .service-list li:focus,
 .service-list li:hover {
   border-inline: 1px solid;
   border-image: linear-gradient(
@@ -686,7 +696,7 @@ a {
     rgba(0, 0, 0, 0)
   );
   border-image-slice: 1;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .service-list li {
@@ -736,7 +746,7 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background: var(--brand-color-3);
   transform: translateY(-100%);
   transition: transform 250ms linear 200ms;
 }
@@ -827,9 +837,9 @@ span {
   transition: transform 250ms linear;
 }
 
-/* .service-works li:hover {
+.service-works li:hover {
   transform: scale(1.1);
-} */
+}
 
 @media screen and (max-width: 1300px) {
   .service-works li {
@@ -1083,7 +1093,7 @@ span {
   }
 }
 
-.po {
+/* .po {
   position: relative;
 }
 
@@ -1100,8 +1110,8 @@ span {
 
 .po3 {
   position: relative;
-}
-
+} */
+/* 
 .ab3 {
   position: absolute;
   top: 170px;
@@ -1111,7 +1121,7 @@ span {
 .ab3:focus,
 .ab3:hover {
   transform: scale(1.2);
-}
+} */
 
 .margin-0 {
   margin-bottom: 0;
@@ -1340,7 +1350,7 @@ p {
     rgba(0, 0, 0, 0)
   );
   border-image-slice: 1;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1966,4 +1976,32 @@ p {
   video {
     max-width: 360px;
   }
+}
+
+.h-ridht {
+  position: relative;
+}
+
+/* .o {
+  display: none;
+} */
+
+@media screen and (max-width: 1300px) {
+  .o {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .o {
+    position: absolute;
+    top: 75px;
+    left: 76px;
+    z-index: 1;
+  }
+}
+
+.o:focus,
+.o:hover {
+  transform: scale(1.3);
 }
