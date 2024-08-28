@@ -1998,6 +1998,10 @@ p {
     top: 75px;
     left: 76px;
     z-index: 1;
+
+    transform: scale(1);
+
+    transition: transform 150ms linear;
   }
 }
 
