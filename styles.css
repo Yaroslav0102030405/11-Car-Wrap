@@ -432,6 +432,11 @@ h1 {
   transition: all 250ms linear;
 }
 
+.menu-2 a:focus,
+.menu-2 a:hover {
+  background-color: var(--brand-2);
+}
+
 /* .sm:focus,
 .sm:hover {
   color: var(--brand-2);
