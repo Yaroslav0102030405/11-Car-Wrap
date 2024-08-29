@@ -696,6 +696,10 @@ a {
     rgba(0, 0, 0, 0)
   );
   border-image-slice: 1;
+
+  /* transform: perspective(400px) rotateX(0);
+
+  transition: transform 450ms linear; */
 }
 
 /* .service-list li:focus,
@@ -1852,12 +1856,15 @@ p {
   font-weight: 600;
   border-radius: 8px;
   color: white;
-  transition: background 250ms linear;
+  transition: background-color 250ms linear;
+  /* transform: perspective(400px) rotateX(0);
+  transition: transform 450ms linear; */
 }
 
 .btn-2:focus,
 .btn-2:hover {
   background-color: var(--brand-2);
+  /* transform: perspective(400px) rotateX(25deg); */
 }
 
 .btn-3 {
