@@ -427,7 +427,7 @@ h1 {
   flex-direction: column;
   gap: 3px;
   font-size: 11.5px;
-  transform: perspective(400px) rotateY(0);
+  transform: perspective(400px) rotateX(0);
   padding-right: 14px;
   padding-left: 14px;
 
@@ -442,7 +442,7 @@ h1 {
 .menu-2 a:focus,
 .menu-2 a:hover {
   background-color: var(--brand-2);
-  transform: perspective(400px) rotateY(45deg);
+  transform: perspective(400px) rotateX(45deg);
 }
 
 /* .sm:focus,
