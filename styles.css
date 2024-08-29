@@ -109,7 +109,6 @@ h1 {
   .h-text-1 {
     font-size: 26.5px;
     margin-bottom: 16px;
-    text-align: center;
   }
 }
 
@@ -130,7 +129,6 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .h-flex {
-    justify-content: center;
     margin-bottom: 20px;
   }
 }
@@ -154,9 +152,6 @@ h1 {
   background: var(--brand-color-3);
   border: 1px solid black;
   color: black;
-  /* transition: all 250ms linear; */
-
-  /* transition: all 250ms linear; */
 }
 
 .btn-0:focus,
@@ -166,10 +161,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .btn-0 {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 213px;
+    width: 313px;
     margin-bottom: 20px;
   }
 }
@@ -189,7 +181,6 @@ h1 {
   h1 {
     font-size: 53px;
     margin-bottom: 12px;
-    text-align: center;
   }
 }
 
@@ -225,9 +216,9 @@ h1 {
   background-color: black;
 }
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background-color: var(--brand-3);
-}
+} */
 
 /* ----------------------------------------------------------- */
 .header {
@@ -237,8 +228,8 @@ h1 {
   left: 0;
   min-height: 93px;
   z-index: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 25px;
   color: white;
   background-color: var(--black-m);
 }
@@ -292,7 +283,7 @@ h1 {
 
 .section {
   background: var(--black-m);
-  padding-top: 45px;
+  padding-top: 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -308,11 +299,18 @@ h1 {
 }
 
 .header-wapper {
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 41%;
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header-wapper {
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
@@ -778,6 +776,7 @@ span {
 }
 
 .product-thumb p {
+  font-size: 18px;
   margin-bottom: 0;
   text-align: center;
   color: white;
@@ -858,7 +857,7 @@ span {
 }
 
 .footer {
-  padding-bottom: 60px;
+  padding-bottom: 25px;
   color: white;
   background: var(--black-m);
 }
@@ -940,7 +939,7 @@ span {
 /* -------------------- */
 .contact {
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
   background-color: var(--black-m);
 }
 
@@ -1356,7 +1355,7 @@ p {
     rgba(0, 0, 0, 0)
   );
   border-image-slice: 1;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 768px) {
