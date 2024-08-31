@@ -28,6 +28,7 @@ html {
     rgba(237, 81, 245, 1) 100%
   );
 
+  --brand-color-32: #161616;
   --brand-color: black;
   --brand-2: #ff01ff;
   --brand-3: #39fcfc;
@@ -709,6 +710,10 @@ a {
 
   transition: transform 450ms linear; */
 }
+
+/* .service-list li:nth-child(1) {
+  background: var(--brand-color-3);
+} */
 
 .service-list li:nth-child(3) {
   background: var(--brand-color-3);
