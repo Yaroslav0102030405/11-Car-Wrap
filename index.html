@@ -17,6 +17,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./styles.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <header class="header" id="logo">
@@ -680,12 +682,23 @@
               unique design for you
             </h2> -->
             <!-- <p class="bbb">Before (no design)</p> -->
-            <img width="400" src="./images/pr.png" alt="cars" />
-            <!-- <p class="bbb">After (with design by Neion Nine Design)</p>
-            <img width="600" src="./images/contact-44.jpg" alt="cars" /> -->
-            <!-- <p class="bbb">
-              We will send you a photo with a new design of your car by email 📧
-            </p> -->
+            <!-- <img width="400" src="./images/pr.png" alt="cars" /> -->
+    
+
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img width="400" src="./images/c/pr1.jpg" alt=""></div>
+      <div class="swiper-slide"><img width="400" src="./images/c/pr2.jpg" alt=""></div>
+      <div class="swiper-slide"><img width="400" src="./images/c/pr3.jpg" alt=""></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
@@ -746,5 +759,21 @@
       </div>
     </footer>
     <script src="./car.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
   </body>
 </html>
