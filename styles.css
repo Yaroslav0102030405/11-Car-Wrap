@@ -45,6 +45,11 @@ body {
   cursor: url(/images/cursor/cursor-1.png), auto;
 }
 
+body {
+  position: relative;
+  height: 100%;
+}
+
 h3 {
   margin: 0;
 }
@@ -2047,8 +2052,15 @@ p {
   }
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   box-sizing: content-box;
+
+} */
+
+.mySwiper {
+  /* height: 20%; */
+  box-sizing: border-box;
+  padding: 10px 0;
 }
 
 .swiper-slide {
@@ -2126,6 +2138,12 @@ p {
 } */
 
 .w-pro {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 72px;
+}
+
+.w-pro-2 {
   display: grid;
   grid-template-columns: auto auto;
   gap: 72px;
