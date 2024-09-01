@@ -305,7 +305,7 @@ h1 {
     padding-top: 0;
     /* background: var(--brand-color-3); */
     padding-bottom: 30px;
-    background: white;
+    background-color: white;
   }
 }
 
@@ -1913,11 +1913,6 @@ p {
   }
 }
 
-/* .btn-3:focus,
-.btn-3:hover {
-  background-color: var(--brand-3);
-} */
-
 .section {
   position: relative;
   padding-top: 15px;
@@ -2000,36 +1995,6 @@ p {
   align-items: center;
 }
 
-/* .po {
-  position: relative;
-}
-
-.po3 {
-  position: relative;
-}
-
-.ab {
-  position: absolute;
-  top: 103px;
-  left: 28px;
-}
-
-.ab:focus,
-.ab:hover {
-  transform: scale(1.1);
-}
-
-.ab3 {
-  position: absolute;
-  top: 170px;
-  left: 48px;
-}
-
-.ab3:focus,
-.ab3:hover {
-  transform: scale(1.2);
-} */
-
 @media screen and (max-width: 768px) {
   video {
     max-width: 330px;
@@ -2058,9 +2023,7 @@ p {
     top: 75px;
     left: 76px;
     z-index: 1;
-
     transform: scale(1);
-
     transition: transform 150ms linear;
   }
 }
@@ -2123,8 +2086,10 @@ p {
   opacity: 1;
 }
 
-.car-0 {
+/* .car-0123 {
   position: absolute;
+  width: 100%;
+  width: 100%;
   top: 0;
   left: 0;
 
@@ -2132,6 +2097,6 @@ p {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  height: 480px;
-  z-index: 1;
-}
+  height: 524px;
+  z-index: 20;
+} */
