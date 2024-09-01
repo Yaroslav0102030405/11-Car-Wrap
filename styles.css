@@ -183,9 +183,9 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
-    padding-top: 30px;
+    /* margin-top: 22px; */
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-bottom: 0;
     color: black;
   }
@@ -1920,6 +1920,7 @@ p {
 
 .section {
   position: relative;
+  padding-top: 15px;
 }
 
 /* .аdvantages {
