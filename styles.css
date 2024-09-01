@@ -303,9 +303,9 @@ h1 {
 @media screen and (max-width: 768px) {
   .section {
     padding-top: 0;
-    /* background-color: #fea5dd; */
-    background: var(--brand-color-3);
+    /* background: var(--brand-color-3); */
     padding-bottom: 30px;
+    background: white;
   }
 }
 
@@ -2121,4 +2121,17 @@ p {
 
 .mySwiper .swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.car-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-image: url(/images/car-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 480px;
+  z-index: 1;
 }
