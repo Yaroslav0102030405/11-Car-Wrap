@@ -2100,3 +2100,44 @@ p {
   height: 524px;
   z-index: 20;
 } */
+
+/* ------------------------------- */
+
+.pro {
+  background-color: var(--black-m);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pro-title {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 38px;
+}
+
+.pro-text {
+  font-size: 24px;
+}
+
+/* .pro-w {
+  display: grid;
+} */
+
+.w-pro {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 72px;
+}
+
+/* .w-pro li {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 72px;
+} */
+
+/* .w-pro-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+} */
