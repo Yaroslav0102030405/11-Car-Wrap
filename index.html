@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
+    <!-- <div class="black-white"> -->
     <header class="header" id="logo">
     
       <div class="container">
@@ -65,6 +66,7 @@
         <div class="line"></div>
       </div>
     </header>
+  <!-- </div> -->
 
     <section id="car" class="section">
       <div class="container">
@@ -100,10 +102,42 @@
                 <!-- </div> -->
               <!-- </div> -->
               <div class="h-ridht">
-              <img class="auto" width="780" src="./images/bg-7.jpg" alt="">
+              <!-- <img class="auto" width="780" src="./images/bg-10.png" alt=""> -->
+
+               <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-9.png" alt=""></div>
+      <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-10.png" alt=""></div>
+      <!-- <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-12.png" alt=""></div> -->
+      <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-14.png" alt=""></div>
+      <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-16.png" alt=""></div>
+      <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-20.png" alt=""></div>
+      <!-- <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-15.png" alt=""></div> -->
+      <!-- <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-11.png" alt=""></div> -->
+      
+      <!-- <div class="swiper-slide"> <img class="auto" width="780" src="./images/bg-13.png" alt=""></div> -->
+      <!-- <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div> -->
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
               
               <!-- <div class="o"></div> -->
-              <img width="621" class="o" src="./images/bg-7-demo.png" alt="">
+              <!-- <img width="621" class="o" src="./images/bg-7-demo.png" alt=""> -->
               </div>
               
             </div>
@@ -408,6 +442,7 @@
         </h2>
         <ul class="service-works">
           <li>
+         
             <img src="./images/q/q1.jpg" alt="car 1" />
             <p style="color: black; margin-top: 20px;">Service #3 Ceramic coating</p>
             <div class="price">
@@ -415,11 +450,9 @@
               <span style="color: black;">3700.00$</span>
             </div>
             <p class="xx">Сompleted the work in 10 days</p>
+         
           </li>
           <li class="po">
-    
-
-
             <img src="./images/q/w7.jpg" alt="car 2" /> 
             <p style="color: black; margin-top: 20px;">Service #3 Ceramic coating</p>
             <div class="price">
@@ -664,7 +697,7 @@
 
     <section class="contact" id="contact">
       <div class="container">
-        <h2 class="service-title">Contacts Связаться с нами можно выбрать удобный способ</h2>
+        <h2 class="service-title">You can contact us in any convenient way</h2>
 
         <div class="line-2"></div>
         <div class="contact__container">
@@ -749,7 +782,7 @@
   </div>
 </div> -->
 <!-- <img width="430" src="./images/abc1.jpg" alt=""> -->
- <h3>Приехать к нам</h3>
+ <h3>Come to us</h3>
  <iframe
             class="contact__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.3860516878954!2d-79.44131012428736!3d43.88927053713124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2a42e53315b1%3A0x3781b6953bf79edf!2zMzgyIEVuZm9yZCBSZCwgUmljaG1vbmQgSGlsbCwgT04gTDRDIDNHMSwg0JrQsNC90LDQtNCw!5e0!3m2!1sru!2sua!4v1721503729722!5m2!1sru!2sua"
@@ -761,7 +794,7 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
 
-          <h4>Позвонить</h4>
+          <h4>Call</h4>
           <a href="">+1(416)836-7877</a>
 
 <!-- <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
@@ -878,7 +911,7 @@
 
   <!-- Initialize Swiper -->
 
-  <script>
+  <!-- <script>
     var swiper = new Swiper(".mySwiper", {
      
       spaceBetween: 10,
@@ -897,7 +930,34 @@
         swiper: swiper,
       },
     });
-  </script>
+  </script> -->
+
+<script>
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      }
+    }
+  });
+</script>
 
   </body>
 </html>
