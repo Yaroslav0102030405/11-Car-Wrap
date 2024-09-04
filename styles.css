@@ -115,7 +115,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .h-text-1 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 20px;
     color: black;
   }
@@ -191,8 +191,8 @@ h1 {
 @media screen and (max-width: 768px) {
   h1 {
     /* margin-top: 22px; */
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 29px;
+    margin-bottom: 35px;
     padding-bottom: 0;
     color: black;
   }
@@ -746,9 +746,14 @@ a {
 }
 
 .price p {
-  margin-bottom: 0;
+  /* display: inline-block; */
+  /* margin-bottom: 0; */
   color: rgba(255, 255, 255, 0.4);
   transition: color 250ms linear 350ms;
+  /* padding: 5px;
+  border: 1px solid black;
+  border-radius: 6px; */
+  /* margin-top: 10px; */
 }
 
 span {
@@ -1869,12 +1874,13 @@ p {
 }
 
 .btn-2 {
+  font-size: 14px;
   padding: 10px;
-  width: 160px;
+  width: 118px;
   background-color: var(--black-m);
-  margin-right: auto;
+  /* margin-right: auto; */
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   font-family: inherit;
   font-weight: 600;
@@ -2126,6 +2132,12 @@ body {
   /* width: 100%; */
   /* height: auto; */
   /* margin: 0 auto; */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .swiper {
+    max-width: 435px;
+  }
 }
 
 .swiper-slide {
