@@ -170,7 +170,7 @@ h1 {
 .btn-0 {
   position: relative;
   padding: 13px;
-  width: 295px;
+  width: 300px;
   background-color: black;
   /* border: 1px solid black; */
   color: white;
@@ -1542,6 +1542,8 @@ p {
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+
+  text-shadow: #ffffff 4px 3px 1px;
 }
 
 @media screen and (max-width: 768px) {
@@ -2247,7 +2249,28 @@ body {
   animation: 10s linear infinite colorChange;
   background-size: 500%;
   transition-behavior: allow-discrete;
+
+  /* text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  outline: none;
+  box-shadow:
+    #1a1919 4px 16px 1px,
+    inset 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 0 3px rgba(255, 255, 255, 0.5);
+  transition: 0.2s; */
 }
+
+/* .bет-0:hover {
+  background: rgb(167, 91, 41);
+} */
+/* .btn-0:active {
+  background: rgba(0, 155, 255, 1) 100%;
+  box-shadow: #ffffff 4px 3px 1px;
+
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+} */
 
 @keyframes colorChange {
   0% {
