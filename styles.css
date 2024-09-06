@@ -22,10 +22,16 @@ html {
     rgba(29, 253, 153, 1) 100%
   );
 
-  --brand-color-3: linear-gradient(
+  /* --brand-color-3: linear-gradient(
     90deg,
     rgba(37, 197, 204, 1) 0%,
     rgba(237, 81, 245, 1) 100%
+  ); */
+
+  --brand-color-3: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
   );
 
   --brand-color-32: #161616;
@@ -95,8 +101,8 @@ h1 {
   text-transform: uppercase;
   text-align: left;
   margin-top: 0;
-  margin-bottom: 60px;
-  font-size: 41px;
+  margin-bottom: 30px;
+  font-size: 78px;
   font-weight: 700;
   top: 0;
   left: 13%;
@@ -104,19 +110,32 @@ h1 {
   color: black;
   /* font-family: 'Dancing Script', cursive; */
   font-optical-sizing: auto;
+  /* color: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  ); */
+
+  background: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .h-text-1 {
   font-size: 36.5px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   color: black;
   font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
   .h-text-1 {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
     color: black;
   }
 }
@@ -171,7 +190,7 @@ h1 {
 @media screen and (max-width: 768px) {
   .btn-0 {
     width: 200px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     background: black;
     color: white;
   }
@@ -191,8 +210,8 @@ h1 {
 @media screen and (max-width: 768px) {
   h1 {
     /* margin-top: 22px; */
-    font-size: 29px;
-    margin-bottom: 35px;
+    font-size: 53px;
+    margin-bottom: 20px;
     padding-bottom: 0;
     color: black;
   }
@@ -200,7 +219,7 @@ h1 {
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
   h1 {
-    font-size: 15.5px;
+    font-size: 45px;
     margin-bottom: 20px;
   }
 }
@@ -293,7 +312,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .h-flex p {
-    font-size: 8.5px;
+    font-size: 8px;
     color: black;
   }
 }
@@ -683,7 +702,11 @@ button:hover {
 
 a {
   display: inline-block;
-  text-align: center;
+  /* text-align: center; */
+}
+
+h4 {
+  margin: 0;
 }
 
 .service-list {
@@ -724,7 +747,8 @@ a {
 }
 
 .service-list li:nth-child(3) {
-  background-color: white;
+  /* background-color: white; */
+  background: var(--brand-color-3);
 }
 
 @media screen and (min-width: 768px) {
@@ -746,14 +770,8 @@ a {
 }
 
 .price p {
-  /* display: inline-block; */
-  /* margin-bottom: 0; */
   color: rgba(255, 255, 255, 0.4);
   transition: color 250ms linear 350ms;
-  /* padding: 5px;
-  border: 1px solid black;
-  border-radius: 6px; */
-  /* margin-top: 10px; */
 }
 
 span {
@@ -765,6 +783,24 @@ span {
   margin-top: 0;
   color: white;
   transition: color 250ms linear 350ms;
+}
+
+.flex {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.f-text {
+  padding: 5px;
+  border: 1px solid #a79f9f;
+  color: #a79f9f;
+}
+
+.po-text {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .product {
@@ -992,6 +1028,10 @@ span {
   }
 }
 
+.c-title {
+  font-size: 30px;
+}
+
 .contact__form {
   text-align: center;
   width: 402px;
@@ -999,7 +1039,7 @@ span {
 
 .contact__title {
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media screen and (max-width: 768px) {
@@ -1068,11 +1108,11 @@ span {
   border-radius: 16px;
 }
 
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .contact__map {
     display: none;
   }
-}
+} */
 
 @media screen and (min-width: 1300px) {
   .contact__map {
@@ -1172,6 +1212,7 @@ span {
 
 .form {
   margin-top: 30px;
+  max-width: 402px;
 }
 
 .form__field {
@@ -1447,15 +1488,6 @@ p {
   color: black;
   margin-bottom: 5px;
 }
-
-/* input#image_uploads.input-img {
-  padding: 10px;
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
-} */
 
 .text-img {
   color: white;
@@ -1782,7 +1814,7 @@ p {
     left: 7px;
     width: 96%;
     top: 103px;
-    height: 267px;
+    height: 540px;
   }
 }
 
