@@ -108,13 +108,7 @@ h1 {
   left: 13%;
   z-index: 1;
   color: black;
-  /* font-family: 'Dancing Script', cursive; */
   font-optical-sizing: auto;
-  /* color: linear-gradient(
-    90deg,
-    rgba(51, 235, 216, 1) 35%,
-    rgba(0, 155, 255, 1) 100%
-  ); */
 
   background: linear-gradient(
     90deg,
@@ -178,13 +172,13 @@ h1 {
   padding: 13px;
   width: 295px;
   background-color: black;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   color: white;
 }
 
 .btn-0:focus,
 .btn-0:hover {
-  background: var(--brand-2);
+  background: rgba(51, 235, 216, 1);
 }
 
 @media screen and (max-width: 768px) {
@@ -663,12 +657,21 @@ button:hover {
   text-align: center;
   color: white;
   text-transform: uppercase;
+
+  font-optical-sizing: auto;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 @media screen and (max-width: 768px) {
   .service-title {
     /* padding-top: 20px; */
-    font-size: 19px;
+    font-size: 30px;
     margin-bottom: 25px;
   }
 }
@@ -1030,6 +1033,12 @@ span {
 
 .c-title {
   font-size: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+  .c-title {
+    font-size: 22px;
+  }
 }
 
 .contact__form {
@@ -1524,11 +1533,20 @@ p {
   margin-top: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
+
+  font-optical-sizing: auto;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 @media screen and (max-width: 768px) {
   .home-studio {
-    font-size: 18px;
+    font-size: 30px;
   }
 }
 
@@ -2216,4 +2234,42 @@ body {
 
 .mySwiper .swiper-slide {
   opacity: 1;
+}
+
+.btn-0 {
+  transition: 1s;
+  background-image: linear-gradient(
+    270deg,
+    #111 25%,
+    rgba(51, 235, 216, 1),
+    /* rgba(0, 155, 255, 1), */ #111 100%
+  );
+  animation: 10s linear infinite colorChange;
+  background-size: 500%;
+  transition-behavior: allow-discrete;
+}
+
+@keyframes colorChange {
+  0% {
+    background-position: 500% 0;
+  }
+
+  100% {
+    background-position: 0 500%;
+  }
+}
+
+.title-2 {
+  color: black;
+  margin-top: 0;
+  font-size: 38px;
+  margin-bottom: 39px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .title-2 {
+    font-size: 30px;
+  }
 }
