@@ -1666,7 +1666,7 @@ p {
 @media screen and (max-width: 768px) {
   .flex-home {
     grid-template-columns: auto, 1fr;
-    gap: 30px;
+    gap: 0;
   }
 }
 
