@@ -762,7 +762,7 @@ h4 {
   color: black;
 }
 
-.service-list li:nth-child(3) {
+.service-list li:nth-child(6) {
   /* background-color: white; */
   background: var(--brand-color-3);
 }
