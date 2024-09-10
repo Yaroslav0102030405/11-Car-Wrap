@@ -2058,6 +2058,7 @@ p {
 .h-flex li {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 @media screen and (max-width: 768px) {
