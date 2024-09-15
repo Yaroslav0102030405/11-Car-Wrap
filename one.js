@@ -84,3 +84,80 @@
 //   total += i;
 // }
 // console.log(total);
+
+// const friends = ['Mango', 'Anna', 'Wera'];
+// console.log(friend.length - 1);
+// console.log(friend[0]);
+// console.log((friend[1] = 'ttt'));
+// console.log(friend);
+
+// for (const friend of friends) {
+//   console.log(friend);
+// }
+
+// const cart = [1, 2, 3, 4, 5];
+// let total = 0;
+
+// for (const car of cart) {
+
+//   if (car % 2 !== 0) {
+//     console.log(car);
+//     continue;
+//   }
+//   total += car;
+// }
+// console.log(total);
+
+// const logins = ['One', 'Two', 'Free'];
+// const loginToFind = 'Two';
+// let message = '';
+
+// for (const login of logins) {
+//   console.log(login);
+
+//   if (login === loginToFind) {
+//     message = `Пользователь ${loginToFind} найден`;
+//     break;
+//   } else {
+//     message = `Пользователь ${loginToFind} не найден`;
+//   }
+// }
+
+// const message = logins.includes(loginToFind)
+//   ? `Пользователь ${loginToFind} найден`
+//   : `Пользователь не найден`;
+
+// console.log(message);
+
+// const numbers = [7, 3, 4, 5, 6, 2, 1];
+// let smallestNumber = numbers[0];
+
+// for (const number of numbers) {
+//   console.log(number);
+
+//   if (number < smallestNumber) {
+//     smallestNumber = number;
+//   }
+// }
+
+// console.log(smallestNumber);
+
+// const friends2 = ['Abc', 'Sce', 'Bcd'];
+// const string = friends2.join(',');
+
+// console.log(string);
+
+// const title = 'Top 10 benefits of React framework';
+
+// const slug = title.toLowerCase().split(' ').join('-');
+// console.log(slug);
+
+// const ar1 = [5, 10, 15];
+// const ar2 = [20, 25, 30];
+// const finishArs = ar1.concat(ar2);
+// let total = 0;
+
+// for (const finishAr of finishArs) {
+//   total += finishAr;
+// }
+// console.log(total);
