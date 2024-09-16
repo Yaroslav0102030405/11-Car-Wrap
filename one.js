@@ -161,3 +161,34 @@
 //   total += finishAr;
 // }
 // console.log(total);
+
+// const add = function (x, y) {
+//   return x + y;
+// };
+
+// console.log(add(5, 5));
+
+// const price = [1, 2, 3];
+
+// const calculateTotalPrice = function (items) {
+//   let total = 0;
+
+//   for (const item of items) {
+//     total += item;
+//   }
+
+//   return total;
+// };
+
+// console.log(calculateTotalPrice(price));
+// console.log(calculateTotalPrice([10, 20, 30]));
+
+// const logins = ['Alena', 'Bana', 'Trane'];
+
+// const findLogin = function (allLogins, loginToFind) {
+//   return allLogins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} найден`
+//     : `Пользователь ${loginToFind} не найден`;
+// };
+
+// console.log(findLogin(logins, 'Trane'));
