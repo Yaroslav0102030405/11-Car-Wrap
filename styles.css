@@ -63,6 +63,9 @@ h3 {
 ul {
   display: flex;
   gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,12 +91,6 @@ a {
 
 button {
   cursor: url(/images/cursor/cursor-2.png), auto;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 h1 {
