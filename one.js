@@ -192,3 +192,51 @@
 // };
 
 // console.log(findLogin(logins, 'Trane'));
+
+// const playlist = {
+//   name: 'Мой супер плейлист',
+//   rating: 5,
+//   tracks: ['трек-1', 'трек-2', 'трек-3'],
+//   trackCount: 3,
+// };
+
+// console.log(playlist);
+// console.log(playlist.name);
+
+// const inputName = 'color';
+// const inputValue = 'tomato';
+
+// const colorPickerData = {
+//   [inputName]: inputValue,
+// };
+
+// console.log(colorPickerData);
+
+// const a = [1, 2, 3];
+
+// a.push(4);
+// console.log(a);
+
+const playlist = {
+  name: 'Мой супер плейлист',
+  rating: 5,
+  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  trackCount: 3,
+  changeName(newName) {
+    console.log((this.name = newName));
+  },
+
+  addTrack(track) {
+    this.tracks.push(track);
+    this.trackCount = this.tracks.length;
+  },
+
+  //   getTrackCount() {
+  //     return this.tracks.length;
+  //   },
+};
+
+playlist.changeName('Новое имя');
+playlist.addTrack('трек-4');
+
+console.log(playlist);
