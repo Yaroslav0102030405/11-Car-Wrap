@@ -217,26 +217,111 @@
 // a.push(4);
 // console.log(a);
 
-const playlist = {
-  name: 'Мой супер плейлист',
-  rating: 5,
-  tracks: ['трек-1', 'трек-2', 'трек-3'],
-  trackCount: 3,
-  changeName(newName) {
-    console.log((this.name = newName));
+// const playlist = {
+//   name: 'Мой супер плейлист',
+//   rating: 5,
+//   tracks: ['трек-1', 'трек-2', 'трек-3'],
+//   trackCount: 3,
+//   changeName(newName) {
+//     console.log((this.name = newName));
+//   },
+
+//   addTrack(track) {
+//     this.tracks.push(track);
+//     this.trackCount = this.tracks.length;
+//   },
+// };
+
+// playlist.changeName('Новое имя');
+// playlist.addTrack('трек-4');
+
+// console.log(playlist);
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 7,
+// };
+
+// let totalFeedback = 0;
+
+// const keys = Object.keys(feedback);
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(key);
+//   console.log(feedback[key]);
+
+//   totalFeedback += feedback[key];
+// }
+// console.log(totalFeedback);
+
+const friends = [
+  {
+    name: 'Mango',
+    online: false,
   },
-
-  addTrack(track) {
-    this.tracks.push(track);
-    this.trackCount = this.tracks.length;
+  {
+    name: 'Ajax',
+    online: true,
   },
+  {
+    name: 'Poly',
+    online: true,
+  },
+  {
+    name: 'Kiwi',
+    online: false,
+  },
+];
 
-  //   getTrackCount() {
-  //     return this.tracks.length;
-  //   },
-};
+// friends[0].title = 555;
 
-playlist.changeName('Новое имя');
-playlist.addTrack('трек-4');
+// console.table(friends);
 
-console.log(playlist);
+// const findFriendByName = (allFriends, friendName) => {
+//   for (const friend of allFriends) {
+//     console.log(friend.name);
+
+//     if (friend.name === friendName) {
+//       return 'Нашли';
+//     }
+//   }
+
+//   return 'Не нашли';
+// };
+
+// console.log(findFriendByName(friends, 'Poly'));
+
+// const getAllNames = function (allFriends) {
+//   const names = [];
+
+//   for (const friend of allFriends) {
+//     console.log(friend.name);
+
+//     names.push(friend.name);
+//   }
+
+//   return names;
+// };
+
+// console.log(getAllNames(friends));
+
+// const getAllNames = function (allFriends) {
+//   const friendsbyStatus = {
+//     online: [],
+//     offline: [],
+//   };
+
+//   for (const friend of allFriends) {
+//     if (friend.online) {
+//       friendsbyStatus.online.push(friend);
+//     } else {
+//       friendsbyStatus.offline.push(friend);
+//     }
+//   }
+
+//   return friendsbyStatus;
+// };
+
+// console.log(getAllNames(friends));
