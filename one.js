@@ -326,13 +326,13 @@ const friends = [
 
 // console.log(getAllNames(friends));
 
-const numbers = [...[1, 2, 3], ...[4, 5, 6], ...[7, 8, 9]];
-console.log(numbers);
+// const numbers = [...[1, 2, 3], ...[4, 5, 6], ...[7, 8, 9]];
+// console.log(numbers);
 
-const lastWeekTemps = [1, 2, 3];
-const currentWeekTemps = [4, 5, 6];
-const nextWeekTemps = [7, 8, 9];
+// const lastWeekTemps = [1, 2, 3];
+// const currentWeekTemps = [4, 5, 6];
+// const nextWeekTemps = [7, 8, 9];
 
-const allTemps = [...lastWeekTemps, ...currentWeekTemps, ...nextWeekTemps];
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps, ...nextWeekTemps];
 
-console.log(allTemps);
+// console.log(allTemps);
