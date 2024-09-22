@@ -337,19 +337,22 @@ const friends = [
 
 // console.log(allTemps);
 
-const makeSheff = function (name) {
-  const makeDish = function (dish) {
-    console.log(`${name} готовит ${dish}`);
-  };
+// const makeSheff = function (name) {
+//   const makeDish = function (dish) {
+//     console.log(`${name} готовит ${dish}`);
+//   };
 
-  return makeDish;
-};
+//   return makeDish;
+// };
 
-const mango = makeSheff('Mango');
-mango('котлеты');
-mango('сырники');
+// const mango = makeSheff('Mango');
+// mango('котлеты');
+// mango('сырники');
 
-const poly = makeSheff('Ajax');
-poly('помидоры');
+// const poly = makeSheff('Ajax');
+// poly('помидоры');
 
-console.dir(poly);
+// console.dir(poly);
+
+const add = (...rest) => rest;
+console.log(add(1, 1));
