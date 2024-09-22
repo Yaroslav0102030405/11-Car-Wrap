@@ -336,3 +336,20 @@ const friends = [
 // const allTemps = [...lastWeekTemps, ...currentWeekTemps, ...nextWeekTemps];
 
 // console.log(allTemps);
+
+const makeSheff = function (name) {
+  const makeDish = function (dish) {
+    console.log(`${name} готовит ${dish}`);
+  };
+
+  return makeDish;
+};
+
+const mango = makeSheff('Mango');
+mango('котлеты');
+mango('сырники');
+
+const poly = makeSheff('Ajax');
+poly('помидоры');
+
+console.dir(poly);
