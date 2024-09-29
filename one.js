@@ -354,5 +354,10 @@ const friends = [
 
 // console.dir(poly);
 
-const add = (...rest) => rest;
-console.log(add(1, 1));
+// const add = (...rest) => rest;
+// console.log(add(1, 1));
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+// const filteredNumbers = numbers.filter(number => number > 5);
+// console.log(filteredNumbers);
