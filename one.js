@@ -361,3 +361,12 @@ const friends = [
 
 // const filteredNumbers = numbers.filter(number => number > 5);
 // console.log(filteredNumbers);
+
+// const user = {
+//   name: 'Mango',
+//   showTag() {
+//     console.log(this);
+//   },
+// };
+
+// user.showTag();
