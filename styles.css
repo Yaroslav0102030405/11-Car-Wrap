@@ -99,7 +99,7 @@ h1 {
   text-align: left;
   margin-top: 0;
   margin-bottom: 30px;
-  font-size: 78px;
+  font-size: 93px;
   font-weight: 700;
   top: 0;
   left: 13%;
@@ -411,7 +411,7 @@ h1 {
 
 .www {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   gap: 20px;
   align-items: center;
@@ -2003,7 +2003,7 @@ p {
 
 .section {
   position: relative;
-  padding-top: 15px;
+  padding-top: 55px;
 }
 
 /* .аdvantages {
@@ -2217,7 +2217,7 @@ body {
 
 .swiper {
   display: flex;
-  max-width: 760px;
+  max-width: 660px;
   /* width: 100%; */
   /* height: auto; */
   /* margin: 0 auto; */
