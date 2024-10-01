@@ -370,3 +370,10 @@ const friends = [
 // };
 
 // user.showTag();
+
+let a = 10;
+function sum() {
+  console.log(5);
+  console.log(a + 5);
+}
+sum();
