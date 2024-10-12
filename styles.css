@@ -2006,6 +2006,12 @@ p {
   padding-top: 55px;
 }
 
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 15px;
+  }
+}
+
 /* .аdvantages {
   position: relative;
 }
