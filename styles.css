@@ -43,6 +43,8 @@ html {
   --black-m: #0d0e0e;
   --black-m1: #1c1f1f;
   /* --black-m: #1c2023; */
+
+  scroll-behavior: smooth;
 }
 
 body {
