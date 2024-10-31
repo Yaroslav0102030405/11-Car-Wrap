@@ -169,7 +169,7 @@ h1 {
 .btn-0 {
   position: relative;
   padding: 13px;
-  width: 300px;
+  width: 358px;
   background-color: black;
   /* border: 1px solid black; */
   color: white;
@@ -298,7 +298,7 @@ h1 {
 }
 
 .h-flex p {
-  font-size: 12px;
+  font-size: 14.4px;
   color: white;
   font-weight: 700;
 }
@@ -436,6 +436,13 @@ h1 {
   transition: color 250ms linear;
   /* color: var(--brand-3); */
   /* color: #adf2ea; */
+  /* background: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
 }
 
 .menu a::before {
@@ -740,7 +747,7 @@ h4 {
     border 250ms linear,
     background-color 250ms linear;
   background: rgba(40, 42, 50, 0.4);
-  border: 1px solid white;
+  border: 1px solid transparent;
 
   /* border-inline: 1px solid; */
   /* border-image: linear-gradient(
@@ -779,7 +786,8 @@ h4 {
 
 .service-list li:focus,
 .service-list li:hover {
-  background: var(--brand-color-3);
+  /* background: var(--brand-color-3); */
+  border: 1px solid white;
 }
 
 .price {
@@ -798,7 +806,7 @@ span {
   text-align: right;
   font-weight: 700;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 0;
   color: white;
   transition: color 250ms linear 350ms;
@@ -924,6 +932,7 @@ span {
 /* --------------------------------------------------------------- */
 
 .works {
+  background: var(--black-m);
   color: var(--black-m);
   padding-top: 30px;
   padding-bottom: 50px;
@@ -1579,6 +1588,15 @@ p {
   text-transform: uppercase;
 
   font-optical-sizing: auto;
+  /* background: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+
+  /* text-shadow: #ffffff 4px 3px 1px; */
   background: linear-gradient(
     90deg,
     rgba(51, 235, 216, 1) 35%,
@@ -1586,8 +1604,6 @@ p {
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-
-  text-shadow: #ffffff 4px 3px 1px;
 }
 
 @media screen and (max-width: 768px) {
@@ -2317,6 +2333,13 @@ body {
   margin-bottom: 39px;
   text-align: center;
   text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 235, 216, 1) 35%,
+    rgba(0, 155, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 @media screen and (max-width: 768px) {
@@ -2333,4 +2356,16 @@ body {
   .top {
     display: none;
   }
+} */
+
+@media screen and (min-width: 768px) {
+  .mb-100 {
+    margin-bottom: 100px;
+  }
+}
+
+/* .top-title {
+  margin-top: 0;
+  font-size: 35px;
+  color: white;
 } */
