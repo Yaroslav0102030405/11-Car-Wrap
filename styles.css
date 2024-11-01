@@ -40,7 +40,7 @@ html {
   --brand-3: #39fcfc;
 
   --gray-color: #899499;
-  --black-m: #40403d;
+  --black-m: #606060;
   --black-m1: #1c1f1f;
   /* --black-m: #1c2023; */
 
@@ -951,9 +951,15 @@ span {
   color: black;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 768px) {
   .service-works {
     grid-template-columns: repeat(auto-fill, minmax(157px, auto));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-works {
+    grid-template-columns: repeat(auto-fill, minmax(164px, auto));
   }
 }
 
@@ -1944,6 +1950,14 @@ p {
   .h-h {
     font-size: 22px;
     margin-bottom: 30px;
+    color: white;
+    background: linear-gradient(
+      90deg,
+      rgba(51, 235, 216, 1) 35%,
+      rgba(0, 155, 255, 1) 100%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
 }
 
@@ -2360,11 +2374,11 @@ body {
   background-color: var(--black-m);
 }
 
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .top {
     display: none;
   }
-} */
+}
 
 @media screen and (min-width: 768px) {
   .mb-100 {
