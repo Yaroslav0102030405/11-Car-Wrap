@@ -40,7 +40,7 @@ html {
   --brand-3: #39fcfc;
 
   --gray-color: #899499;
-  --black-m: #0d0e0e;
+  --black-m: #40403d;
   --black-m1: #1c1f1f;
   /* --black-m: #1c2023; */
 
@@ -56,6 +56,7 @@ body {
 body {
   position: relative;
   height: 100%;
+  padding-top: 93px;
 }
 
 h3 {
@@ -248,7 +249,7 @@ h1 {
 
 /* ----------------------------------------------------------- */
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -258,6 +259,7 @@ h1 {
   /* padding-bottom: 25px; */
   color: white;
   background-color: var(--black-m);
+  z-index: 999;
 }
 
 @media screen and (max-width: 768px) {
@@ -957,7 +959,7 @@ span {
 
 .service-works li {
   max-width: 402px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 8px;
   padding: 6px;
   transform: scale(1);
@@ -1925,12 +1927,17 @@ p {
 }
 
 .h-h {
+  color: var(--black-m);
   position: relative;
   margin-top: 10px;
   font-size: 38px;
   margin-bottom: 50px;
   text-transform: uppercase;
   /* z-index: 3; */
+}
+
+.h-pp {
+  color: var(--black-m);
 }
 
 @media screen and (max-width: 768px) {
@@ -2189,6 +2196,7 @@ p {
 .reason {
   font-size: 38px;
   font-weight: 700;
+  color: var(--black-m);
 }
 
 @media screen and (max-width: 1300px) {
