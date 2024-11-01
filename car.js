@@ -1,36 +1,36 @@
-const refs = {
-  header: document.querySelector('.header'),
-  section: document.querySelector('.section'),
-  service: document.querySelector('.service'),
-  works: document.querySelector('.works'),
-  contact: document.querySelector('.contact'),
+// const refs = {
+//   header: document.querySelector('.header'),
+//   section: document.querySelector('.section'),
+//   service: document.querySelector('.service'),
+//   works: document.querySelector('.works'),
+//   contact: document.querySelector('.contact'),
 
-  img: document.querySelector('.car'),
-  right: document.querySelector('.right'),
-  // car1: document.querySelector('.car-1'),
-  // car2: document.querySelector('.car-2'),
-  // car3: document.querySelector('.car-3'),
-  // car4: document.querySelector('.car-4'),
-  // car5: document.querySelector('.car-5'),
-  // car6: document.querySelector('.car-6'),
-  // car7: document.querySelector('.car-7'),
+//   img: document.querySelector('.car'),
+//   right: document.querySelector('.right'),
+// car1: document.querySelector('.car-1'),
+// car2: document.querySelector('.car-2'),
+// car3: document.querySelector('.car-3'),
+// car4: document.querySelector('.car-4'),
+// car5: document.querySelector('.car-5'),
+// car6: document.querySelector('.car-6'),
+// car7: document.querySelector('.car-7'),
 
-  bmv1: document.querySelector('.bmv-1'),
-  bmv2: document.querySelector('.bmv-2'),
+// bmv1: document.querySelector('.bmv-1'),
+// bmv2: document.querySelector('.bmv-2'),
 
-  div: document.querySelector('.div'),
+// div: document.querySelector('.div'),
 
-  load: document.querySelector('.load'),
-  loading: document.querySelectorAll('.loading'),
+// load: document.querySelector('.load'),
+// loading: document.querySelectorAll('.loading'),
 
-  ac1: document.querySelector('.ac1'),
-  ac2: document.querySelector('.ac2'),
-  ac3: document.querySelector('.ac3'),
-  ac4: document.querySelector('.ac4'),
-  ac5: document.querySelector('.ac5'),
-  ac6: document.querySelector('.ac6'),
-  ac7: document.querySelector('.ac7'),
-};
+// ac1: document.querySelector('.ac1'),
+// ac2: document.querySelector('.ac2'),
+// ac3: document.querySelector('.ac3'),
+// ac4: document.querySelector('.ac4'),
+// ac5: document.querySelector('.ac5'),
+// ac6: document.querySelector('.ac6'),
+// ac7: document.querySelector('.ac7'),
+// };
 
 // //Получаем точку
 // var point = document.getElementById("pointId");
@@ -75,16 +75,16 @@ const refs = {
 
 // refs.img.addEventListener('click', onClickZoom);
 
-refs.load.addEventListener('click', onLoading);
+// refs.load.addEventListener('click', onLoading);
 
-function onLoading() {
-  refs.loading.forEach(loadin => loadin.classList.add('act'));
-  // console.log(refs.loading.length - 1);
+// function onLoading() {
+//   refs.loading.forEach(loadin => loadin.classList.add('act'));
+//   // console.log(refs.loading.length - 1);
 
-  if (refs.loading.length) {
-    refs.load.style.display = 'none';
-  }
-}
+//   if (refs.loading.length) {
+//     refs.load.style.display = 'none';
+//   }
+// }
 
 // function onClickZoom() {
 //   if (!refs.img.classList.contains('active-car')) {
@@ -160,29 +160,34 @@ function onLoading() {
 // refs.ac7.classList.add('active-car');
 // }
 
-function onBackroundColor(background) {
-  refs.header.style.background = `${background}`;
-  refs.section.style.background = `${background}`;
-  refs.service.style.background = `${background}`;
-  refs.contact.style.background = `${background}`;
-  refs.works.style.background = `${background}`;
-}
+// function onBackroundColor(background) {
+//   refs.header.style.background = `${background}`;
+//   refs.section.style.background = `${background}`;
+//   refs.service.style.background = `${background}`;
+//   refs.contact.style.background = `${background}`;
+//   refs.works.style.background = `${background}`;
+// }
 
-// додавання класу при скролі
-function onEntry(entry) {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('accent');
+// скрол
+window.addEventListener('scroll', () => {
+  let scrollDistance = window.scrollY;
+
+  // console.log(scrollDistance);
+
+  document.querySelectorAll('.scroll').forEach((el, i) => {
+    if (
+      el.offsetTop - document.querySelector('.nav').clientHeight <=
+      scrollDistance
+    ) {
+      document.querySelectorAll('.nav a').forEach(el => {
+        if (el.classList.contains('active')) {
+          el.classList.remove('active');
+        }
+      });
+      document
+        .querySelectorAll('.nav li')
+        [i].querySelector('a')
+        .classList.add('active');
     }
   });
-}
-
-let options = {
-  threshold: [0.5],
-};
-let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation');
-
-for (let elm of elements) {
-  observer.observe(elm);
-}
+});
