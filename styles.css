@@ -38,7 +38,7 @@ html {
   --brand-color: black;
   --brand-2: #ff01ff;
   --brand-3: #39fcfc;
-
+  --yellow-brand: #ffea00;
   --gray-color: #899499;
   --black-m: #606060;
   --black-m1: #1c1f1f;
@@ -107,16 +107,16 @@ h1 {
   top: 0;
   left: 13%;
   z-index: 1;
-  color: black;
+  color: var(--yellow-brand);
   font-optical-sizing: auto;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(51, 235, 216, 1) 35%,
     rgba(0, 155, 255, 1) 100%
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 .h-text-1 {
@@ -207,7 +207,7 @@ h1 {
     font-size: 53px;
     margin-bottom: 20px;
     padding-bottom: 0;
-    color: black;
+    color: var(--yellow-brand);
   }
 }
 
@@ -468,7 +468,7 @@ h1 {
   width: 100%;
   left: 50%;
   transform: translate(-50%);
-  background-color: black;
+  background-color: var(--black-m);
   border: 1px solid white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -485,7 +485,7 @@ h1 {
   padding-right: 14px;
   padding-left: 14px;
 
-  background-color: black;
+  background-color: var(--black-m);
   /* border: 1px solid white; */
   color: white;
   padding-top: 6px;
@@ -511,8 +511,9 @@ h1 {
   }
 }
 
-.menu a:hover {
-  color: var(--brand-2);
+.menu a:hover,
+.menu a:focus {
+  color: var(--yellow-brand);
   transform: scale(1.2);
 }
 
@@ -676,17 +677,17 @@ button:hover {
   font-size: 38px;
   margin-bottom: 39px;
   text-align: center;
-  color: white;
+  color: var(--yellow-brand);
   text-transform: uppercase;
 
   font-optical-sizing: auto;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(51, 235, 216, 1) 35%,
     rgba(0, 155, 255, 1) 100%
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 @media screen and (max-width: 768px) {
@@ -1045,7 +1046,7 @@ span {
 .wapper-address > h3 {
   font-size: 18px;
   display: inline-flex;
-  color: white;
+  color: var(--yellow-brand);
   margin-bottom: 17px;
   text-transform: uppercase;
 }
@@ -1059,7 +1060,7 @@ span {
 .wapper-works > h3 {
   font-size: 18px;
   display: inline-flex;
-  color: white;
+  color: var(--yellow-brand);
   margin-bottom: 17px;
   text-transform: uppercase;
 }
@@ -1074,7 +1075,7 @@ span {
 .wapper-social > h3 {
   font-size: 18px;
   display: inline-flex;
-  color: white;
+  color: var(--yellow-brand);
   text-transform: uppercase;
 }
 
@@ -1538,7 +1539,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  background-color: black;
+  background-color: var(--black-m);
   width: 170px;
   box-shadow: none;
   color: white;
@@ -1589,7 +1590,7 @@ p {
 }
 
 .home-studio {
-  color: white;
+  color: var(--yellow-brand);
   font-size: 38px;
   margin-top: 0;
   margin-bottom: 30px;
@@ -1605,13 +1606,13 @@ p {
   -webkit-background-clip: text; */
 
   /* text-shadow: #ffffff 4px 3px 1px; */
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(51, 235, 216, 1) 35%,
     rgba(0, 155, 255, 1) 100%
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 @media screen and (max-width: 768px) {
@@ -1901,7 +1902,7 @@ p {
   .nnn {
     left: 7px;
     width: 96%;
-    top: 103px;
+    top: 80px;
     height: 540px;
   }
 }
@@ -1933,7 +1934,7 @@ p {
 }
 
 .h-h {
-  color: var(--black-m);
+  color: var(--yellow-brand);
   position: relative;
   margin-top: 10px;
   font-size: 38px;
@@ -1948,16 +1949,16 @@ p {
 
 @media screen and (max-width: 768px) {
   .h-h {
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 30px;
-    color: white;
-    background: linear-gradient(
+    color: var(--yellow-brand);
+    /* background: linear-gradient(
       90deg,
       rgba(51, 235, 216, 1) 35%,
       rgba(0, 155, 255, 1) 100%
     );
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
   }
 }
 
@@ -2327,11 +2328,16 @@ body {
 
 .btn-0 {
   transition: 1s;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     270deg,
     #111 25%,
-    rgba(51, 235, 216, 1),
-    /* rgba(0, 155, 255, 1), */ #111 100%
+    rgba(51, 235, 216, 1), #111 100%
+  ); */
+  background-image: linear-gradient(
+    270deg,
+    gray 25%,
+    rgb(255, 234, 0),
+    gray 100%
   );
   animation: 10s linear infinite colorChange;
   background-size: 500%;
@@ -2349,19 +2355,19 @@ body {
 }
 
 .title-2 {
-  color: black;
+  color: var(--yellow-brand);
   margin-top: 0;
   font-size: 38px;
   margin-bottom: 39px;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     rgba(51, 235, 216, 1) 35%,
     rgba(0, 155, 255, 1) 100%
   );
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
 }
 
 @media screen and (max-width: 768px) {
@@ -2390,4 +2396,9 @@ body {
   margin-top: 0;
   font-size: 35px;
   color: white;
+} */
+
+/* .accent {
+  color: var(--yellow-brand);
+  background-color: #39fcfc;
 } */

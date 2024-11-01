@@ -167,3 +167,22 @@ function onBackroundColor(background) {
   refs.contact.style.background = `${background}`;
   refs.works.style.background = `${background}`;
 }
+
+// додавання класу при скролі
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('accent');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5],
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
