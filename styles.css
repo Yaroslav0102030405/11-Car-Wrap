@@ -128,9 +128,12 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .h-text-1 {
-    font-size: 15px;
+    text-transform: uppercase;
+    font-size: 39px;
     margin-bottom: 10px;
+    text-align: center;
     /* color: black; */
+    color: var(--yellow-brand);
   }
 }
 
@@ -203,11 +206,12 @@ h1 {
 
 @media screen and (max-width: 768px) {
   h1 {
+    text-align: end;
     /* margin-top: 22px; */
-    font-size: 53px;
+    font-size: 13.5px;
     margin-bottom: 5px;
     padding-bottom: 0;
-    color: var(--yellow-brand);
+    color: white;
   }
 }
 
@@ -347,11 +351,11 @@ h1 {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .header-wapper {
     justify-content: center;
   }
-}
+} */
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
   .header-wapper {
@@ -433,7 +437,7 @@ h1 {
 
 .link {
   /* box-shadow: 0px 6px 10px var(--brand-2); */
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 600;
   color: white;
   transition: color 250ms linear;
@@ -656,7 +660,7 @@ button:hover {
 
 .service {
   padding-top: 50px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   background: var(--black-m);
 }
 
@@ -688,7 +692,7 @@ button:hover {
   .service-title {
     /* padding-top: 20px; */
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1010,7 +1014,7 @@ span {
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding-bottom: 74px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1042,7 +1046,8 @@ span {
 
 @media screen and (max-width: 768px) {
   .wapper-logo {
-    margin-bottom: 20px;
+    display: none;
+    /* margin-bottom: 20px; */
   }
 }
 
@@ -1098,7 +1103,7 @@ span {
 @media screen and (max-width: 768px) {
   .contact {
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1124,7 +1129,7 @@ span {
 
 @media screen and (max-width: 768px) {
   .contact__form {
-    max-width: 330px;
+    max-width: 290px;
   }
 }
 
@@ -1150,7 +1155,7 @@ span {
 
 @media screen and (max-width: 1300px) {
   .contact__container {
-    gap: 32px;
+    /* gap: 32px; */
     justify-content: center;
   }
 }
@@ -1336,8 +1341,8 @@ span {
   padding: 20px;
   margin-top: 15px;
   background: var(--brand-color-3);
-  border: 1px solid black;
-  color: #000;
+  /* border: 1px solid black; */
+  color: white;
   text-transform: uppercase;
   border-radius: 0;
 
@@ -1525,6 +1530,7 @@ p {
 
 @media screen and (max-width: 768px) {
   .line-2 {
+    display: none;
     margin-bottom: 50px;
   }
 }
@@ -1629,6 +1635,7 @@ p {
 @media screen and (max-width: 768px) {
   .home-studio {
     font-size: 30px;
+    text-align: center;
   }
 }
 
@@ -2400,5 +2407,12 @@ body {
 @media screen and (min-width: 768px) {
   .mb-100 {
     margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .h-link-btn {
+    display: flex;
+    justify-content: center;
   }
 }
