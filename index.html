@@ -91,7 +91,7 @@
       <div class="container">
         <div class="www">
           <div class="flex-t">
-            <h1>Car wrap in Toronto</h1>
+            <!-- <h1>Car wrap in Toronto</h1> -->
             <p class="h-text-1">
               <!-- We will create an individual style for your car -->
               We will come to you and do it on the spot!
@@ -1147,13 +1147,14 @@
 
     <section class="contact scroll" id="contact">
       <div class="container">
-        <h2 style="margin-bottom: 15px" class="service-title">Contacts</h2>
+        <h2 class="service-title">Contacts</h2>
 
         <!-- <div class="line-2"></div> -->
         <div class="contact__container">
           <div data-aos="zoom-in" class="contact__form">
             <h3 class="contact__title">Get a free consultation</h3>
-            <form method="POST" id="form" class="form" name="form">
+
+            <form class="form" name="form">
               <input
                 type="hidden"
                 name="access_key"
@@ -1325,5 +1326,38 @@
         touchpadSupport: true,
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <!-- <script>
+      const TOKEN = '6470796582:AAEzk1WSMbpsvtk_zU8M9E4AEclnoD5ovB8';
+      const CHAT_ID = '-1002084469289';
+      const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+      const success = document.getElementById('success');
+
+      document.getElementById('tg').addEventListener('submit', function (e) {
+        e.preventDefault();
+      });
+
+      let message = `<b>Заявка с сайта на курс ФРОНТЕНД</b>\n`;
+      message += `<b>Відправник: </b> ${this.name.value}\n`;
+      message += `<b>Телефон: </b> ${this.tel.value}\n`;
+
+      axios
+        .post(URI_API, {
+          chat_id: CHAT_ID,
+          parse_mode: 'html',
+          text: message,
+        })
+        .then(res => {
+          form.reset();
+          success.innerHTML = 'Message sent';
+        })
+        .catch(error => {
+          console.log(error);
+        })
+        .finally(() => {
+          console.log('Конец');
+        });
+    </script> -->
   </body>
 </html>

@@ -126,6 +126,13 @@ h1 {
   font-weight: 700;
 }
 
+@media screen and (min-width: 1300px) {
+  .h-text-1 {
+    font-size: 75.5px;
+    color: var(--yellow-brand);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .h-text-1 {
     text-transform: uppercase;
@@ -174,22 +181,33 @@ h1 {
   position: relative;
   padding: 13px;
   width: 358px;
-  background-color: black;
+  background: var(--yellow-brand);
   /* border: 1px solid black; */
   color: white;
 }
 
+@media screen and (min-width: 1300px) {
+  .btn-0 {
+    font-size: 24px;
+    /* color: var(--black-m); */
+    color: #36454f;
+  }
+}
+
 .btn-0:focus,
 .btn-0:hover {
-  background: rgba(51, 235, 216, 1);
+  background: var(--black-m);
+  color: var(--yellow-brand);
+  border: 1px solid var(--yellow-brand);
 }
 
 @media screen and (max-width: 768px) {
   .btn-0 {
+    font-size: 25px;
     width: 200px;
     margin-bottom: 10px;
-    background: black;
-    color: white;
+    background: var(--yellow-brand);
+    color: #36454f;
   }
 }
 
@@ -1340,7 +1358,7 @@ span {
   width: 100%;
   padding: 20px;
   margin-top: 15px;
-  background: var(--brand-color-3);
+  /* background: var(--brand-color-3); */
   /* border: 1px solid black; */
   color: white;
   text-transform: uppercase;
@@ -1351,7 +1369,9 @@ span {
 
 .form__button:focus,
 .form__button:hover {
-  background: var(--brand-2);
+  background: var(--black-m);
+  color: var(--yellow-brand);
+  border: 1px solid var(--yellow-brand);
 }
 
 @media screen and (max-width: 768px) {
@@ -2070,11 +2090,11 @@ p {
   /* padding-top: 55px; */
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (min-width: 1300px) {
   .section {
-    padding-top: 15px;
+    padding-top: 55px;
   }
-} */
+}
 
 /* .аdvantages {
   position: relative;
@@ -2344,13 +2364,8 @@ body {
   opacity: 1;
 }
 
-.btn-0 {
+/* .btn-0 {
   transition: 1s;
-  /* background-image: linear-gradient(
-    270deg,
-    #111 25%,
-    rgba(51, 235, 216, 1), #111 100%
-  ); */
   background-image: linear-gradient(
     270deg,
     gray 25%,
@@ -2370,7 +2385,7 @@ body {
   100% {
     background-position: 0 500%;
   }
-}
+} */
 
 .title-2 {
   color: var(--yellow-brand);
@@ -2414,5 +2429,11 @@ body {
   .h-link-btn {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-title {
+    margin-bottom: 15px;
   }
 }
