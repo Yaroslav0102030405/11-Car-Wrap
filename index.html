@@ -36,7 +36,13 @@
         <div class="header-wapper">
           <a class="logo" aria-label="logo" href="./index.html">
             <!-- <img width="150" height="56" src="./images/logo.png" alt="logo" />     -->
-            <img width="80" height="56" src="./images/roma.png" alt="logo" />
+            <img
+              class="logo-header"
+              width="80"
+              height="56"
+              src="./images/logo.png"
+              alt="logo"
+            />
           </a>
           <nav class="nav">
             <ul class="menu">
@@ -126,7 +132,7 @@
                     /> -->
                     <img
                       loading="lazy"
-                      width="455"
+                      width="300"
                       height="507"
                       src="./images/services/1service.jpg"
                       alt="car-1"
@@ -154,7 +160,7 @@
                       loading="lazy"
                       width="455"
                       height="507"
-                      src="./images/services/3service.jpg"
+                      src="./images/hero/4.jpg"
                       alt="car-1"
                     />
                   </picture>
@@ -1216,15 +1222,16 @@
         <div class="wapper-0">
           <div class="wapper-logo">
             <a href="#logo">
-              <img width="150" height="56" src="./images/roma.png" alt="logo" />
+              <img width="150" height="56" src="./images/logo.png" alt="logo" />
             </a>
           </div>
           <div class="wapper-address">
-            <h3>Come over</h3>
+            <h3>We are from</h3>
             <address>
               <p>
-                382 Enford Rd, Richmond Hill, <br />
-                ON L4C 3G1
+                <!-- 382 Enford Rd, Richmond Hill, <br />
+                ON L4C 3G1 -->
+                Canada, Totonto
               </p>
               <a class="contact-phone" href="#">+1(416)836-7877</a>
             </address>
@@ -1259,6 +1266,33 @@
                   <use href="./images/sprite-icons.svg#icon-facebook-1"></use>
                 </svg>
               </li>
+              <li>
+                <!-- <svg
+                  aria-label="link tik-tok"
+                  class="icon"
+                  width="30"
+                  height="30"
+                >
+                  <use
+                    href="./images/sprite-icons.svg#icon-icons8-tiktok"
+                  ></use>
+                </svg> -->
+                <!-- <img src="./images/icons8-tiktok-50.png" alt="" /> -->
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg
+                  class="icon"
+                  fill="#000000"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"
+                  />
+                </svg>
+              </li>
             </ul>
           </div>
         </div>
@@ -1266,8 +1300,28 @@
     </footer>
 
     <script src="./car.js" type="module"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
+      var swiper = new Swiper('.mySwiper', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <!-- <script>
       const progressCircle = document.querySelector('.autoplay-progress svg');
       const progressContent = document.querySelector('.autoplay-progress span');
       var swiper = new Swiper('.mySwiper', {
@@ -1292,7 +1346,7 @@
           },
         },
       });
-    </script>
+    </script> -->
 
     <script src="./one.js" type="module"></script>
     <script
