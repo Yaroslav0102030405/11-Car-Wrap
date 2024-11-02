@@ -1154,7 +1154,7 @@
           <div data-aos="zoom-in" class="contact__form">
             <h3 class="contact__title">Get a free consultation</h3>
 
-            <form class="form" name="form">
+            <form class="form" id="form" name="form">
               <input
                 type="hidden"
                 name="access_key"
@@ -1165,7 +1165,7 @@
                   class="form__input"
                   type="text"
                   id="user-text"
-                  name="user-name"
+                  name="name"
                   placeholder="Name"
                   required
                   autocomplete="off"
@@ -1177,13 +1177,16 @@
                   class="form__input"
                   type="tel"
                   id="user-tel"
-                  name="user-tel"
+                  name="tel"
                   placeholder="Phone Number"
                   required
                   autocomplete="off"
                 />
               </div>
-              <button class="form__button btn-0" type="submit">Send</button>
+              <button class="form__button btn-0" id="success" type="submit">
+                Send
+              </button>
+              <p class="success2" style="display: none"></p>
             </form>
           </div>
           <div class="wapper-contact">
@@ -1328,36 +1331,41 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
-    <!-- <script>
+    <script>
       const TOKEN = '6470796582:AAEzk1WSMbpsvtk_zU8M9E4AEclnoD5ovB8';
       const CHAT_ID = '-1002084469289';
       const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
       const success = document.getElementById('success');
+      const success2 = document.querySelector('.success2');
 
-      document.getElementById('tg').addEventListener('submit', function (e) {
+      document.getElementById('form').addEventListener('submit', function (e) {
         e.preventDefault();
+
+        let message = `<b>Сообщения с сайта Mobile Detailing</b>\n`;
+        message += `<b>Відправник: </b> ${this.name.value}\n`;
+        message += `<b>Телефон: </b> ${this.tel.value}\n`;
+
+        axios
+          .post(URI_API, {
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: message,
+          })
+          .then(res => {
+            form.reset();
+            success.innerHTML = 'Message sent';
+            success.style.backgroundColor = 'green';
+            success2.style.display = 'block';
+            success2.innerHTML = 'The manager will call back within 15 minutes';
+            success2.style.paddingTop = '10px';
+          })
+          .catch(error => {
+            console.log(error);
+          })
+          .finally(() => {
+            console.log('Конец');
+          });
       });
-
-      let message = `<b>Заявка с сайта на курс ФРОНТЕНД</b>\n`;
-      message += `<b>Відправник: </b> ${this.name.value}\n`;
-      message += `<b>Телефон: </b> ${this.tel.value}\n`;
-
-      axios
-        .post(URI_API, {
-          chat_id: CHAT_ID,
-          parse_mode: 'html',
-          text: message,
-        })
-        .then(res => {
-          form.reset();
-          success.innerHTML = 'Message sent';
-        })
-        .catch(error => {
-          console.log(error);
-        })
-        .finally(() => {
-          console.log('Конец');
-        });
-    </script> -->
+    </script>
   </body>
 </html>
