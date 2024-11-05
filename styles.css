@@ -43,7 +43,7 @@ html {
 body {
   margin: 0;
   background-color: white;
-  cursor: url(/images/cursor/cursor-1.png), auto;
+  cursor: url(/images/cursor/cursor11.png), auto;
 }
 
 body {
@@ -82,11 +82,11 @@ a {
 }
 
 a {
-  cursor: url(/images/cursor/cursor-2.png), auto;
+  cursor: url(/images/cursor/cursor12.png), auto;
 }
 
 button {
-  cursor: url(/images/cursor/cursor-2.png), auto;
+  cursor: url(/images/cursor/cursor12.png), auto;
 }
 
 h1 {
@@ -1617,4 +1617,8 @@ body {
 .color-gray {
   /* background: var(--yellow-brand); */
   color: var(--black-m);
+}
+
+.icon {
+  cursor: url(/images/cursor/cursor12.png), auto;
 }
