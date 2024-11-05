@@ -26,5 +26,6 @@
 - HTML
 - CSS
 - JS
+- gptchat
 
 Pet-project: landing page.
