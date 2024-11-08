@@ -72,8 +72,24 @@ window.addEventListener('scroll', () => {
 
 // console.log(promise);
 
-fetch('https://pokeapi.co/api/v2/pokemon/1')
-  .then(r => r.json())
-  .then(pokemon => {
-    console.log(pokemon);
-  });
+// fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+//     .then(r => r.json())
+//     .then(pokemon => {
+//       console.log(pokemon);
+//     });
+// };
+
+const fetchPokemonById = id => {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
+};
+
+fetchPokemonById(1).then(onFetchError).catch(onFetchError);
+fetchPokemonById(2).then(onFetchError).catch(onFetchError);
+
+function onFetchSuccess(pokemon) {
+  console.log(pokemon);
+}
+
+function onFetchError(error) {
+  console.log(error);
+}
