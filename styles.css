@@ -162,11 +162,13 @@ h1 {
 }
 
 .btn-0 {
+  text-align: center;
   position: relative;
   padding: 13px;
   width: 358px;
   background: var(--yellow-brand);
   color: white;
+  border: 1px solid transparent;
 }
 
 @media screen and (min-width: 1300px) {
@@ -379,7 +381,7 @@ h1 {
 .h-tel {
   font-weight: 600;
   font-size: 17px;
-  color: var(--yellow-brand);
+  /* color: var(--yellow-brand); */
 }
 
 .img-video {
@@ -1621,4 +1623,10 @@ body {
 
 .icon {
   cursor: url(/images/cursor/cursor12.png), auto;
+}
+
+.icon1 {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
 }
