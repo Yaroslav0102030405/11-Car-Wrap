@@ -292,7 +292,7 @@ h1 {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 370px) {
+/* @media screen and (min-width: 370px) {
   .container {
     width: 370px;
   }
@@ -302,7 +302,7 @@ h1 {
   .container {
     width: 768px;
   }
-}
+} */
 
 @media screen and (min-width: 1300px) {
   .container {
@@ -695,9 +695,27 @@ h4 {
 
 .service-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, auto));
+  grid-template-columns: repeat(3, 1fr);
+  /* width: 100%;
+  height: 100%; */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, auto)); */
   gap: 30px;
   color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .service-list {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
 }
 
 .service-list li {
@@ -713,13 +731,13 @@ h4 {
   border: 1px solid transparent;
 }
 
-@media screen and (min-width: 1300px) {
+/* @media screen and (min-width: 1300px) {
   .service-list li {
     grid-template-rows: 422px 214px auto;
   }
-}
+} */
 
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .service-list li {
     grid-template-rows: 358px auto auto;
     gap: 0;
@@ -730,7 +748,7 @@ h4 {
   .service-list li {
     max-width: 354px;
   }
-}
+} */
 
 .service-list li:focus,
 .service-list li:hover {
@@ -1539,8 +1557,12 @@ body {
 }
 
 .www {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: auto; */
   justify-content: center;
   align-items: center;
   gap: 20px;
