@@ -501,6 +501,28 @@
         </div>
       </div>
     </footer>
+    <script>
+      const colors = [
+        '#d02626',
+        '#606060',
+        '#58d026',
+        '#7743aa',
+        '#e765c7',
+        '#6883d7',
+        'black',
+      ];
+
+      const lastColor = colors.length - 1;
+      const firstColor = 0;
+
+      const index = Math.round(
+        Math.random() * (lastColor - firstColor) + firstColor,
+      );
+
+      const color = colors[index];
+
+      document.body.style.backgroundColor = color;
+    </script>
 
     <script src="./car.js" type="module"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
