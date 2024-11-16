@@ -352,17 +352,17 @@ h1 {
 .header-wapper {
   margin-bottom: 20px;
   display: grid;
-  grid-template-columns: 41%;
+  grid-template-columns: 36%;
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1300px) {
+/* @media screen and (min-width: 768px) and (max-width: 1300px) {
   .header-wapper {
     grid-template-columns: 22%;
   }
-}
+} */
 
 .menu {
   display: flex;
