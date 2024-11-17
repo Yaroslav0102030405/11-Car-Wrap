@@ -1619,8 +1619,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .h-link-btn {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
