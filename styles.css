@@ -115,7 +115,7 @@ h1 {
 
 @media screen and (min-width: 1300px) {
   .h-text-1 {
-    font-size: 75.5px;
+    font-size: 98px;
     color: var(--yellow-brand);
   }
 }
@@ -765,7 +765,7 @@ h4 {
 
 .price {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   align-items: end;
   /* align-content: space-between; */
 }
