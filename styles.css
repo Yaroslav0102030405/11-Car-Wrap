@@ -35,8 +35,10 @@ html {
   --yellow-brand: #ffea00;
   --gray-color: #899499;
   /* --black-m: #606060; */
-  --black-m: black;
+  --black-m: #000000;
   --black-m1: #1c1f1f;
+
+  --text-color: rgba(255, 255, 255, 0.8);
 
   scroll-behavior: smooth;
 }
@@ -79,7 +81,7 @@ img {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 
 a {
@@ -179,7 +181,7 @@ h1 {
 @media screen and (min-width: 1300px) {
   .btn-0 {
     font-size: 24px;
-    color: #36454f;
+    color: black;
   }
 }
 
@@ -385,7 +387,7 @@ h1 {
 
 .h-tel {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   /* color: var(--yellow-brand); */
 }
 
@@ -422,7 +424,7 @@ h1 {
 .link {
   font-size: 8px;
   font-weight: 600;
-  color: white;
+  color: var(--text-color);
   transition: color 250ms linear;
 }
 
@@ -1078,7 +1080,7 @@ span {
   margin: 0 auto 16px;
   font-size: 30px;
   width: 265px;
-  color: white;
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -1173,7 +1175,7 @@ span {
   width: 100%;
   padding: 20px;
   margin-top: 15px;
-  color: white;
+  /* color: white; */
   text-transform: uppercase;
   border-radius: 0;
 }
@@ -1506,7 +1508,7 @@ p {
 }
 
 p {
-  color: white;
+  color: var(--text-color);
 }
 
 .section {
