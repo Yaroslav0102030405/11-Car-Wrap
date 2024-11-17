@@ -35,6 +35,7 @@ html {
   --yellow-brand: #ffea00;
   --gray-color: #899499;
   /* --black-m: #606060; */
+  --black-m: black;
   --black-m1: #1c1f1f;
 
   scroll-behavior: smooth;
@@ -852,7 +853,7 @@ span {
 
 .item-title {
   margin-top: 10px;
-  color: white;
+  color: var(--yellow-brand);
   margin-bottom: 10px;
 }
 
@@ -1679,4 +1680,14 @@ body {
   100% {
     top: 0;
   }
+}
+
+h4 {
+  color: var(--yellow-brand);
+}
+
+.sh {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--yellow-brand);
 }
