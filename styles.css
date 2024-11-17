@@ -1696,3 +1696,7 @@ h4 {
   font-weight: 700;
   color: var(--yellow-brand);
 }
+
+.swiper-pagination-bullet {
+  background: #ffea00;
+}
