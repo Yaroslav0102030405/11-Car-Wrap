@@ -168,7 +168,7 @@ h1 {
   text-align: center;
   position: relative;
   padding: 13px;
-  width: 358px;
+  min-width: 358px;
   background: var(--yellow-brand);
   color: white;
   border: 1px solid transparent;
@@ -195,7 +195,7 @@ h1 {
 @media screen and (max-width: 768px) {
   .btn-0 {
     font-size: 25px;
-    width: 228px;
+    min-width: 228px;
     margin-bottom: 10px;
     background: var(--yellow-brand);
     color: #36454f;
