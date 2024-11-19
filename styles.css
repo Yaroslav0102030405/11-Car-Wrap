@@ -1736,7 +1736,7 @@ h4 {
 }
 
 .colors li:nth-child(3) {
-  background-color: var(--yellow-brand);
+  background-color: #a67c00;
 }
 
 .colors li:nth-child(4) {
