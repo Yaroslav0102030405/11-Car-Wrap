@@ -706,6 +706,7 @@ h4 {
   grid-template-columns: repeat(auto-fill, minmax(310px, auto)); */
   gap: 30px;
   color: black;
+  min-height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -724,6 +725,7 @@ h4 {
 
 .service-list li {
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   border-radius: 8px;
   padding: 20px;
   gap: 10px;
@@ -1700,4 +1702,51 @@ h4 {
 
 .swiper-pagination-bullet {
   background: #ffea00;
+}
+
+.colors {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.colors li {
+  padding: 10px;
+  /* transform: scale(1); */
+  width: 22px;
+  height: 22px;
+  /* border: 3px solid black; */
+  /* box-shadow: #1c1f1f; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.colors li:hover,
+.color li:focus {
+  transform: scale(1.2);
+  border: none;
+}
+
+/* .colors li:nth-child(1) {
+  background-color: white;
+} */
+
+.colors li:nth-child(2) {
+  background-color: white;
+}
+
+.colors li:nth-child(3) {
+  background-color: var(--yellow-brand);
+}
+
+.colors li:nth-child(4) {
+  background-color: #ff0000;
+}
+
+.colors li:nth-child(5) {
+  background-color: #00ff00;
+}
+
+.s-price {
+  margin-top: auto;
 }
