@@ -111,6 +111,15 @@ h1 {
   margin-bottom: 49px;
   color: white;
   font-weight: 700;
+  /* background: linear-gradient(
+    90deg,
+    rgba(1, 10, 22, 0.9473039215686274) 41%,
+    rgba(225, 233, 21, 1) 100%
+  ); */
+  /* background: linear-gradient(90deg, #00ffff, #ff00c3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 @media screen and (min-width: 1300px) {
@@ -371,6 +380,14 @@ h1 {
 .menu {
   display: flex;
   gap: 32px;
+  background: rgba(40, 42, 50, 0.4);
+  /* background: #2ec194; */
+  border-radius: 15px;
+  box-shadow:
+    -4px -3px 6px rgba(245, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+    inset 4px -3px 0px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 1300px) {
@@ -427,6 +444,7 @@ h1 {
   font-weight: 600;
   color: var(--text-color);
   transition: color 250ms linear;
+  padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -488,8 +506,13 @@ h1 {
 }
 
 a.active {
-  color: var(--yellow-brand);
+  /* color: var(--yellow-brand); */
   /* background-color: #ffea00; */
+  border-radius: 12px;
+  padding: 10px;
+  color: black;
+  background-color: #ffea00;
+  transform: background-color;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1300px) {
