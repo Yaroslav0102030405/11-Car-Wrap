@@ -182,3 +182,214 @@ const fn = function (...args) {
 
 console.log(fn(1, 2, 3));
 console.log(fn(4, 5));
+
+// Мі используем обьект чтобы групировать характеристики одной сущности
+const playlist = {
+  name: 'Мой плейлист',
+  rating: 5,
+  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  trackCount: 3,
+};
+
+// доступ до свойства
+console.log(playlist.name);
+console.log(playlist.rating);
+console.log(playlist.tracks);
+console.log(playlist.trackCount);
+
+// Добавить свойство или перезаписать
+// якщо є таке свойство то перезапиешться значення
+// якщо не має такого свойства то створиться нове
+console.log((playlist.add = 10));
+
+const propertyName = 'tracks';
+console.log(playlist[propertyName]);
+console.log(playlist);
+
+// коротка запись свойств
+const userName = 'Mango';
+const email = 'mango@gmail.com';
+
+const signupData = {
+  userName,
+  email,
+};
+
+console.log(signupData);
+
+// вычесляэмые свойства
+const inputName = 'color';
+const inputValue = 'tomato';
+
+const colorPickerData = {
+  [inputName]: inputValue,
+};
+console.log(colorPickerData);
+
+// Методи об'єкту та this при обращение до свойства в методах
+const playlist2 = {
+  name: 'Мой плейлист',
+  rating: 5,
+  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  trackCount: 3,
+  changeName(newName) {
+    this.name = newName;
+  },
+  addTrack(newTrack) {
+    this.tracks.push(newTrack);
+  },
+  updateRating(newRating) {
+    this.rating = newRating;
+  },
+  getTrackCount() {
+    return this.tracks.length;
+  },
+};
+
+playlist2.changeName('Новое имя');
+playlist2.addTrack('трек-4');
+playlist2.updateRating(4);
+
+console.log(playlist2);
+
+// перебор обьектов через Object.keys/values.intries
+const feedback = {
+  good: 5,
+  neutral: 7,
+  bad: 3,
+};
+
+const keys = Object.keys(feedback);
+
+for (const key of keys) {
+  console.log(key);
+  console.log(feedback[key]);
+}
+
+const values = Object.values(feedback);
+let total2 = 0;
+
+for (const value of values) {
+  console.log(value);
+  total += value;
+}
+
+console.log(total2);
+
+// Массив обьектов
+const friends2 = [
+  { name: 'Mango', online: true },
+  { name: 'Kiwi', online: false },
+  { name: 'Poly', online: false },
+  { name: 'Ajax', online: true },
+];
+
+console.log(friends2);
+
+const findFriendByName = function (allFriends, name) {
+  for (const allFriend of allFriends) {
+    if (allFriend.name === name) {
+      return 'Нашли';
+    }
+  }
+  return 'Не нашли';
+};
+
+console.log(findFriendByName(friends2, 'Poly'));
+
+const getAllNames = function (allFriends) {
+  const names = [];
+  for (const allFriend of allFriends) {
+    names.push(allFriend.name);
+  }
+  return names;
+};
+
+console.log(getAllNames(friends2));
+
+const getOnlineFriends = function (allFriends) {
+  const onlineFriends = [];
+
+  for (const friend of allFriends) {
+    if (friend.online) onlineFriends.push(friend);
+  }
+
+  return onlineFriends;
+};
+
+console.log(getOnlineFriends(friends2));
+
+const getFriendsByOnlineStatus = function (allFriends) {
+  const friendsbyStatus = {
+    online: [],
+    offline: [],
+  };
+
+  for (const friend of allFriends) {
+    if (friend.online) {
+      friendsbyStatus.online.push(friend);
+    } else {
+      friendsbyStatus.offline.push(friend);
+    }
+  }
+
+  return friendsbyStatus;
+};
+
+console.log(getFriendsByOnlineStatus(friends2));
+
+const a = {
+  b: 1,
+  с: 2,
+  g: 3,
+};
+
+console.log(Object.keys(a).length);
+
+// оператор rest
+const lastWeekTemps = [1, 2, 3];
+const currentTemps = [4, 5, 6];
+const nextWeektemps = [7, 8, 9];
+
+const allTemps = [...lastWeekTemps, ...currentTemps, ...nextWeektemps];
+console.log(allTemps);
+
+// распыление обьектов
+const a1 = { x: 1, y: 2 };
+const b = { x: 0, z: 3 };
+const c = {
+  name: 'Mango',
+  ...a1,
+  ...b,
+};
+
+console.log(c);
+
+const defaultSettings = {
+  theme: 'light',
+  showNotifications: true,
+  heideSidebar: false,
+};
+
+const usertSettings = {
+  showNotifications: false,
+  heideSidebar: true,
+};
+
+const finalSettings = {
+  ...defaultSettings,
+  ...usertSettings,
+};
+
+console.log(finalSettings);
+
+// операция деструктуризация обьекта
+// создает лоальные переменные
+const playlist3 = {
+  name: 'Мой плейлист',
+  rating: 5,
+  tracks: ['трек-1', 'трек-2', 'трек-3'],
+  trackCount: 3,
+};
+
+const { name, rating, tracks, trackCount } = playlist3;
