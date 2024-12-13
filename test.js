@@ -393,3 +393,124 @@ const playlist3 = {
 };
 
 const { name, rating, tracks, trackCount } = playlist3;
+
+// колбек функція - функція зворотного виклику використовується коли функцію треба викликати по вимогі або по якійсь події
+// колбек функція - це функція яка передаються іншій функції як аргумент
+// функція яка приймає іншу функція як параметр називається функція вишого порядку
+
+// приклда функції вишого порядку
+const fnA = function (message, callback) {
+  console.log(message);
+  callback(100);
+};
+
+// приклад колбек функції
+const fnB = function (number) {
+  console.log(number);
+};
+
+// визов функції
+fnA('Привіт', fnB);
+
+// функція імшего порядка
+const doMath = function (a, b, callback) {
+  const result = callback(a, b);
+  console.log(result);
+};
+
+// колбек функція яка додає
+const add1 = function (x, y) {
+  return x + y;
+};
+
+// колбек функція яка віднімає
+const sub = function (x, y) {
+  return x - y;
+};
+
+// виклик функції
+doMath(2, 3, add1);
+doMath(10, 8, sub);
+
+// Задача 3
+// фуекція вишого порядку
+const filtet = function (array, test) {
+  // створили новий пустий масив
+  const filteredArray = [];
+
+  // перебираємо массив
+  for (const el of array) {
+    // в функцію 1 і 2 додаємо для перевірки кожен елемент масиву
+    const passed = test(el);
+
+    // перевіряємо і по вимогі додаємо його в новий масив
+    if (passed) {
+      filteredArray.push(el);
+    }
+  }
+
+  return filteredArray;
+};
+
+// колбек функція 1
+const callback1 = function (value) {
+  return value >= 3;
+};
+
+// колбек функція 2
+const callback2 = function (value) {
+  return value <= 4;
+};
+
+console.log(filtet([1, 2, 3, 4, 5], callback1));
+console.log(filtet([1, 2, 3, 4, 5, , 6, 7, 8], callback2));
+
+// задача 4 масив обьектів
+const fruits = [
+  { name: 'apples', quantity: 200, isFresh: true },
+  { name: 'grapes', quantity: 150, isFresh: false },
+  { name: 'bananas', quantity: 100, isFresh: true },
+];
+
+const getFruitsWithQuantity = function (fruit) {
+  return fruit.quantity >= 120;
+};
+
+console.log(filtet(fruits, getFruitsWithQuantity));
+
+//  замиканіе - функція повертає з себе іншу внутрішню функцію і у внутрішньої функції буде доступ до всіх параметрів та змін батківської функції
+// почитати що таке лексичне оркуженіе
+const makeSheff = function (name) {
+  const makeDish = function (dish) {
+    console.log(`${name} готує ${dish}`);
+  };
+  return makeDish;
+};
+
+// викликаємо функцію makeSheff і вона з себе повертає функцію makeDish
+// ім'я зберігається в замиканії
+const mango = makeSheff('Mango');
+//  вже тут в mango у нас функція makeDish
+mango('котлети');
+mango('пирожки');
+
+const poly = makeSheff('Poly');
+poly('чай');
+poly('кофе');
+
+// подивитися в консолі на замиканіе
+console.dir(mango);
+// знайти свойство Scopes - Closure (замиканіє)
+
+// задача
+const rounder = function (places) {
+  return function (number) {
+    return Number(number.toFixed(places));
+  };
+};
+
+const rounder2 = rounder(2);
+const rounder3 = rounder(3);
+
+console.log(rounder2(2.33333));
+console.log(rounder3(3.455667));
