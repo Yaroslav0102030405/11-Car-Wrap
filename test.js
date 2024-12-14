@@ -393,3 +393,127 @@ const playlist3 = {
 };
 
 const { name, rating, tracks, trackCount } = playlist3;
+
+// this - знаходиться внутрі функції
+// де  і як була обьявлена функція не важливо
+// контекст определяеться в момент визова функції
+// значення в this записується під час виклику функції
+
+// функція як метод об'екту
+const user1 = {
+  tag: 'Mango',
+  showTag() {
+    // значення цього this ніхто не знає...
+    console.log(this);
+  },
+};
+
+// значення писваюється при виклику
+// виклик в контексте об'єкту
+// якщо з ліва від функції аббо методи стоїть об'єкт який її викликає то this будет силка на йей об'єкт
+// якщо об'ект викликає функцію то силка на юзера записується в this
+// this силається на об'ект який викликає цю функцію
+user1.showTag();
+
+// виклик ункції без об'єкта
+//  - в строгому режимі = undefined
+// - не встрогому режимі = window
+const foo = function () {
+  console.log(this);
+};
+
+foo();
+
+// приклда 2
+// об'явили функцію
+const showTag = function () {
+  console.log(this);
+  console.log(this.tag);
+};
+
+// об'явили об'ект
+const user = {
+  tag: 'Mango',
+};
+
+// записали в об'ект функцію
+user.showUserTag = showTag;
+
+// записали занчення в this
+user.showUserTag();
+
+// call and apply
+// метод call визиває функцію принудітельно в контектсе якогось об'єкту
+const showThis = function (...args) {
+  console.log(this);
+};
+
+const objA = {
+  a: 5,
+  b: 7,
+};
+
+// вкликає функцію що this силался на об'єкт objA і це тільки на один визов (не прив'язка контексту)
+// передаєте аргументи як незалежний набір
+showThis.call(objA, 1, 2, 3);
+// передаєте як масив
+showThis.apply(objA, [1, 2, 3]);
+
+// приклад
+const changeColor = function (color) {
+  console.log(this);
+  this.color = color;
+};
+
+const hat = {
+  color: 'black',
+};
+
+changeColor.call(hat, 'orange');
+console.log(hat);
+
+// приклад
+const sweater = {
+  color: 'green',
+};
+
+changeColor.call(sweater, 'blue');
+console.log(sweater);
+
+// метод bind створює копію функції назавжди з прив'язаним контекстом
+// bind не викликає цю функцію зараз як це робить call apply яку можна викликати потім
+const changeHatColor = changeColor.bind(hat);
+changeHatColor('red');
+console.log(hat);
+
+const changeSweaterColor = changeColor.bind(sweater);
+changeSweaterColor('yellow');
+console.log(sweater);
+
+// стрілочні функції
+// зручно використовувати як колек функції
+// ✔️ стрілочна функція це завжди функціональний вираз
+// ✔️ у стрілки не має свого this і не має arguments
+const add2 = (a, b) => {
+  return a + b;
+};
+
+console.log(add2(5, 5));
+
+// неявний возврат
+const add3 = (a, b) => a - b;
+console.log(add3(10, 4));
+
+//  this определяється в момент об'явленія там де об'явив такій контекст вона запомніла на завжди
+const showThis2 = () => {
+  console.log(this);
+};
+
+showThis2(); // window
+
+const user2 = { name: 'Mango' };
+user2.showContext = showThis2;
+
+user2.showContext(); // window
+
+// ⚠️ стрілки не можуть бути методами об'екту
