@@ -441,3 +441,51 @@ user.showUserTag = showTag;
 
 // записали занчення в this
 user.showUserTag();
+
+// call and apply
+// метод call визиває функцію принудітельно в контектсе якогось об'єкту
+const showThis = function (...args) {
+  console.log(this);
+};
+
+const objA = {
+  a: 5,
+  b: 7,
+};
+
+// вкликає функцію що this силался на об'єкт objA і це тільки на один визов (не прив'язка контексту)
+// передаєте аргументи як незалежний набір
+showThis.call(objA, 1, 2, 3);
+// передаєте як масив
+showThis.apply(objA, [1, 2, 3]);
+
+// приклад
+const changeColor = function (color) {
+  console.log(this);
+  this.color = color;
+};
+
+const hat = {
+  color: 'black',
+};
+
+changeColor.call(hat, 'orange');
+console.log(hat);
+
+// приклад
+const sweater = {
+  color: 'green',
+};
+
+changeColor.call(sweater, 'blue');
+console.log(sweater);
+
+// метод bind створює копію функції назавжди з прив'язаним контекстом
+// bind не викликає цю функцію зараз як це робить call apply яку можна викликати потім
+const changeHatColor = changeColor.bind(hat);
+changeHatColor('red');
+console.log(hat);
+
+const changeSweaterColor = changeColor.bind(sweater);
+changeSweaterColor('yellow');
+console.log(sweater);
