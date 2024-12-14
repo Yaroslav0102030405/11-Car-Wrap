@@ -489,3 +489,30 @@ console.log(hat);
 const changeSweaterColor = changeColor.bind(sweater);
 changeSweaterColor('yellow');
 console.log(sweater);
+
+// стрілочні функції
+// ✔️ стрілочна функція це завжди функціональний вираз
+// ✔️ у стрілки не має свого this і не має arguments
+const add2 = (a, b) => {
+  return a + b;
+};
+
+console.log(add2(5, 5));
+
+// неявний возврат
+const add3 = (a, b) => a - b;
+console.log(add3(10, 4));
+
+//  this определяється в момент об'явленія там де об'явив такій контекст вона запомніла на завжди
+const showThis2 = () => {
+  console.log(this);
+};
+
+showThis2(); // window
+
+const user2 = { name: 'Mango' };
+user2.showContext = showThis2;
+
+user2.showContext(); // window
+
+// ⚠️ стрілки не можуть бути методами об'екту
