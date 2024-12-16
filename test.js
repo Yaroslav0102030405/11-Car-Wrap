@@ -582,3 +582,204 @@ const firstStudent = new Student('Вася', 18);
 const secondStudent = new Student('Петя', 20);
 console.log(firstStudent);
 console.log(secondStudent);
+
+// Методи масиву
+const numbers1 = [1, 2, 3, 4, 5];
+
+// forEach = по елементно перебирає масив нічого не повертає і заміняє класичний for
+numbers1.forEach(function (element) {
+  return element;
+});
+
+console.log(numbers1);
+
+// map - перебирає массив повертає новий масив такій же довжини
+// використовується для оновлення масив де будє новій масив з оновленими даними або одним оноволеним даним
+// повернути новий масив з одним пользователем оновленим
+// витігнути із колекції в масив однакові значення наприклад всіх імен картинок хобі
+// як працює фільтр потрібно указати по якому условію потрібно фільтровати цей масив
+// якщо нічого не підійшло по условію то фільтр поверне пустий масив
+const doubleNumbers = numbers1.map(number => {
+  return number * 2;
+});
+console.log(doubleNumbers);
+
+const playerIdToUpdate = 3;
+
+const players = [
+  { id: 1, name: 'Mango', timePlayed: 100, online: true },
+  { id: 2, name: 'Poly', timePlayed: 350, online: false },
+  { id: 3, name: 'Ajax', timePlayed: 200, online: true },
+  { id: 4, name: 'Kiwiw', timePlayed: 400, online: false },
+];
+
+const playerNames = players.map(player => {
+  return player.name;
+});
+console.log(playerNames);
+
+const playerId = players.map(player => player.id);
+console.log(playerId);
+
+const playerTimePlayed = players.map(player => player.timePlayed);
+console.log(playerTimePlayed);
+
+const updatePlayers = players.map(player => {
+  return { ...player, timePlayed: player.timePlayed * 2 };
+});
+console.log(updatePlayers);
+
+const updatePlayersId = players.map(player => {
+  if (playerIdToUpdate === player.id) {
+    return { ...player, timePlayed: player.timePlayed + 100 };
+  }
+  return player;
+});
+console.log(updatePlayersId);
+
+// filter - перебирає масив повертає новий масив
+// доавляє в повертайщий масив елементи які відповідають вимозі колбек функції
+// використовується для пошуку під коллекції в колекції
+const filteredNumbers = numbers.filter(number => {
+  return number > 5;
+});
+console.log(filteredNumbers);
+
+const filteredPlayers = players.filter(player => player.name === 'Mango');
+console.log(filteredPlayers);
+
+const filteredOffline = players.filter(player => !player.online);
+console.log(filteredOffline);
+
+const timePlayedFiltered = players.filter(player => player.timePlayed > 200);
+console.log(timePlayedFiltered);
+
+// метод find - по єлементно перебирає масив і повертає первий найдений елемент який задовольніє условію или андефайн
+// шукає унікальний елемент
+const findNumbers = numbers.find(number => number > 5);
+console.log(findNumbers);
+
+const player3 = 3;
+
+const playerIdToFind = players.find(player => player.id === player3);
+console.log(playerIdToFind);
+
+const findPlayerById = (allPlayer, playerId) => {
+  return allPlayer.find(player => player.id === playerId);
+};
+
+console.log(findPlayerById(players, 4));
+
+// метод every - по елементно перебирають масив повертає true якщо всі елементи задовольняють условію
+const isAllOnline = players.every(player => player.online);
+console.log(isAllOnline);
+
+// метод some - по елементно перебирає масив та повертає true коли хоча би один елемент задоволняє условію
+const isAnyOnline = players.some(player => player.online);
+console.log('isAnyOnline', isAnyOnline);
+
+// метод reduce - по елементно перебирає масив повертає все що завгодно
+// це шверцарский нож для роботи з колекією
+
+// задача підрахувати загальну суму всіх чисел
+const num = [10, 20, 30, 40, 50];
+
+const totals = num.reduce((acc, number) => {
+  return acc + number;
+}, 0);
+console.log(totals);
+
+// задача
+const salary2 = {
+  mango: 2,
+  poly: 3,
+  ajax: 4,
+};
+
+const totalSalary = Object.values(salary2).reduce((total, value) => {
+  return total + value;
+}, 0);
+console.log(totalSalary);
+
+// робота с масивом
+const totalTimePlayers = players.reduce((total, player) => {
+  return total + player.timePlayed;
+}, 0);
+console.log(totalTimePlayers);
+
+// рахуємо загальну суму товарів в корзині
+const cart = [
+  { label: 'Apples', price: 100, quantity: 2 },
+  { label: 'Bananas', price: 120, quantity: 3 },
+  { label: 'Lemons', price: 70, quantity: 4 },
+];
+
+const totalAmout = cart.reduce((total, item) => {
+  return total + item.price * item.quantity;
+}, 0);
+console.log(totalAmout);
+
+// Збираємо всі теги
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 5, tags: ['html', 'js'] },
+  { id: '002', likes: 5, tags: ['js', 'css'] },
+  { id: '003', likes: 5, tags: ['css', 'nodejs'] },
+];
+
+const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+console.log(allTags);
+
+// Статистика тегів
+const tagsStatus = allTags.reduce((acc, tag) => {
+  return { ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 };
+}, {});
+console.log(tagsStatus);
+
+// метод sort - сортирує та змінює оригінальний масив
+// по умолчанию сортирує по возрастанію
+// приводить елементи к строке
+const numbers3 = [11, 12, 13, 14, 15];
+const descSortedNumbers3 = [...numbers3].sort((a, b) => b - a);
+console.log(descSortedNumbers3);
+const ascSortedNumbers3 = [...numbers3].sort((a, b) => a - b);
+console.log(ascSortedNumbers3);
+
+// Кастомна сортировка сложних типів
+const sortedByBestPlayers = [...players].sort(
+  (a, b) => b.timePlayed - a.timePlayed,
+);
+console.log(sortedByBestPlayers);
+
+// сортирувати по першій букві
+const byName = [...players].sort((a, b) => {
+  const result = a.name[0] > b.name[0];
+
+  if (result) {
+    return 1;
+  }
+  return -1;
+});
+console.log(byName);
+
+// цупочка викликів
+const numbers4 = [1, 2, 3, 4, 5];
+
+const sorted = numbers4
+  .filter(number => number > 2)
+  .map(number => number * 3)
+  .sort((a, b) => a - b);
+console.log(sorted);
+
+// максимум буде 2-3 методи в ципочці
+const players2 = [
+  { id: '1', tag: 'Mango', isOnline: true, rank: 800 },
+  { id: '1', tag: 'Poly', isOnline: true, rank: 200 },
+  { id: '1', tag: 'Kiwi', isOnline: true, rank: 400 },
+  { id: '1', tag: 'Ajax', isOnline: true, rank: 600 },
+];
+
+const onlineAndSorted = players2
+  .filter(player => player.isOnline)
+  .sort((a, b) => a.rank - b.rank);
+console.log(onlineAndSorted);
