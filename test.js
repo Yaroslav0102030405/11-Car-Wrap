@@ -517,3 +517,150 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// DOM (Documant Object Model) - об'єктна модель документа.
+// - це інтерфейс якій є тільки в браузері для работи з HTML-документом.
+// якій містить набір властивостей і методів що дозволяють шукати створювати і удаляти елементи
+// та реагувати на реакцію користувача
+
+// інструмент для роботи з брайзером
+// це означає, що все в браузері представлено об'єктом
+
+// мова JS не вміє працювати з розміткою та стилями он взагалі про них нічого не знає
+// браузер нам предоставляє айпіай ДОМ для роботи з розміткою та стилями
+// кожен тег в html представлений в браузері як джаваскрпит обьект
+// ДОМ є тільки в браузері інтерфейс для работи з стилями та розміткою
+// кожен тег за допомогою html парсела переводиться в html елементи в браузері
+// і потім завдяки дом айпіаю предоставлен нам як джаваскипт обьект з методами та властивостями
+// кожен тег це силка на обьект і на протоипі будуть ледати собственни властивості і методи
+
+// пошук елементів
+// document.querySelector() - використовується для пошуку одного унікального елемента
+// document.querySelectorAll() - знайти всі елементи (якусь колекцію) які підходять під селектор переданий в дужках
+
+// подивитися на дом ми можемо написати таку команду в коді console.log(document); і ми побачимо дом або дом дерево
+// якщо набрати в коді команду console.dir(document); ми побачимо методи та властивості з є доступні
+
+// властивості елемента (змінити)
+const buttonEl = document.querySelector('.colors li');
+
+buttonEl.addEventListener('click', () => {
+  const imageEl = document.querySelector('.service-img');
+  const titleEl = document.querySelector('.item-title');
+
+  imageEl.src =
+    'https://images.prom.ua/1065621053_vafelna-kartinka-kohannya.jpg';
+  imageEl.alt = 'Обвертка жевачки love is';
+
+  titleEl.textContent = 'Новий заголовок';
+});
+
+// css класи для оформлення а js класи для роботи за домогою з цим елементом
+
+// як працювати з класами елементів ?
+// classlist
+// - add (добавити клас)
+// - remove (удалити)
+// - toggle (переключити клас)
+// replace (старый клас змінити на новий клас)
+// - contains (перевіряє чи є такий клас)
+// приклад
+const titleHeroEl = document.querySelector('.h-text-1');
+titleHeroEl.classList.add('cool');
+titleHeroEl.classList.remove('cool');
+titleHeroEl.classList.toggle('cool');
+titleHeroEl.classList.replace('cool', 'good');
+
+if (titleHeroEl.classList.contains('good')) {
+  titleHeroEl.classList.add('good-2');
+}
+
+// Навігація по DOM
+const menuEl = document.querySelector('.menu');
+console.log(menuEl.firstElementChild);
+console.log(menuEl.children);
+console.log(menuEl.children[1]);
+console.log(menuEl.lastElementChild);
+
+// створення тегів
+// створення елементу в пам'яті
+const titleHeroRef = document.createElement('h6');
+titleHeroRef.classList.add('hero-title');
+titleHeroRef.textContent = 'Це новий заголовок в секции херо';
+titleHeroRef.style.fontSize = '20px';
+titleHeroRef.style.color = 'red';
+
+const imageRef = document.createElement('img');
+imageRef.src =
+  'https://images.prom.ua/1065621053_vafelna-kartinka-kohannya.jpg';
+imageRef.width = 300;
+imageRef.alt = 'Новий';
+
+// добавляти елемент в html документ
+// const carEl = document.querySelector('.car');
+
+document.body.appendChild(titleHeroRef); // додає елемент в кінець
+document.body.append(imageRef, titleHeroRef); // для вставки більше одного елемента
+
+// очистити контент тегу innerHTML = ""
+
+// добавити сусідний html
+// insertAdjacentHTML();
+// beforebegin - добавити перед елементом
+// afterend - після елементу
+// afterbegin - додає першим елементом
+// beforeend - добавляє елемент в кінець
+
+import products from './products.js';
+
+// const makeProductCard = ({ name, description, price }) => {
+//   const productEl = document.createElement('article');
+//   productEl.classList.add('product');
+
+//   const nameEl = document.createElement('h2');
+//   nameEl.textContent = name;
+//   nameEl.classList.add('product-name');
+
+//   const desctEl = document.createElement('p');
+//   desctEl.textContent = description;
+//   desctEl.classList.add('product-desct');
+
+//   const priceEl = document.createElement('p');
+//   priceEl.textContent = `Ціна ${price} кредитів`;
+//   priceEl.classList.add('product-price');
+
+//   productEl.append(nameEl, desctEl, priceEl);
+
+//   return productEl;
+// };
+
+// console.log(makeProductCard(products[1]));
+// const elements = products.map(makeProductCard);
+
+const productsContainerEl = document.querySelector('.js-products');
+
+const elements = products.map(({ name, description, price }) => {
+  const productEl = document.createElement('article');
+  productEl.classList.add('product');
+
+  const nameEl = document.createElement('h2');
+  nameEl.textContent = name;
+  nameEl.classList.add('product-name');
+
+  const desctEl = document.createElement('p');
+  desctEl.textContent = description;
+  desctEl.classList.add('product-desct');
+  desctEl.style.color = 'red';
+
+  const priceEl = document.createElement('p');
+  priceEl.textContent = `Ціна ${price} кредитів`;
+  priceEl.classList.add('product-price');
+  priceEl.style.color = 'red';
+
+  productEl.append(nameEl, desctEl, priceEl);
+
+  return productEl;
+});
+
+// console.log(elements);
+productsContainerEl.append(...elements);
