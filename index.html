@@ -734,7 +734,7 @@
               />
               <div class="form__field">
                 <input
-                  class="form__input"
+                  class="form__input js-input-name"
                   type="text"
                   id="user-text"
                   name="name"
@@ -746,7 +746,7 @@
 
               <div class="form__field">
                 <input
-                  class="form__input"
+                  class="form__input js-input-tel"
                   type="tel"
                   id="user-tel"
                   name="tel"
@@ -910,10 +910,17 @@
       const success = document.getElementById('success');
       const success2 = document.querySelector('.success2');
 
-      document.getElementById('form').addEventListener('submit', function (e) {
+      const formEl = document.querySelector('.form');
+      formEl.addEventListener('submit', function (event) {
         e.preventDefault();
 
-        let message = `<b>Сообщения с сайта Mobile Detailing</b>\n`;
+        const formData = new FormData(event.currentTarget);
+         formData.forEach((value, name) => {
+          console.log(`${name}:${value}`);
+
+        });
+
+        let message = `<b>Повідомлення з сайта Mobile Detailing</b>\n`;
         message += `<b>Відправник: </b> ${this.name.value}\n`;
         message += `<b>Телефон: </b> ${this.tel.value}\n`;
 

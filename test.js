@@ -517,3 +517,73 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// подія це реакція браузера на яку-то дію користувача
+// Подію генерує (створює) брайзер а ми тільки можемо його піймати
+
+// повісити слушателя події
+// метод addEventListener() він є у кожного html елементі
+// першим аргументом ми передаємо тип події а кторим колбек функція яка буде визвана при цій події
+
+// іменувати колбек функцію onSubjectEvent // onTargetButtonClick
+// подія приходить в колбек функцію
+const tatgetTitleEl = document.querySelector('.btn-0');
+
+tatgetTitleEl.addEventListener('click', onTargetTitleClick);
+
+function onTargetTitleClick(event) {
+  console.log(event.target);
+  console.log('клик на кнопку');
+}
+
+// типи подій
+// click, submit, scroll, input - для текствоих полей, checkbox - для чекбоксов і радіобатонов
+// event.preventDefault() при отрпавкі форми запретити перезагрузку сторінки
+// силка на елемент якій прослуховується установлен addEventListener
+
+// formData - збирає всі значення полей які  в формі
+// використовується щоб зібрати всі дані з великої форми
+// const formData = new FormData(event.currentTarget);
+// formData.forEach((value, name) => {
+//   console.log(name);
+//   console.log(value);
+// });
+// на сервер потрібно відправляти і ім'я і значення поля щоб сервер зна що куди записувати в базу даних
+// тому name обов'язкові
+
+// Паттерн "Об'ект силок"
+const refs = {
+  inputNameEl: document.querySelector('.js-input-name'),
+  inputTelEl: document.querySelector('.js-input-tel'),
+};
+
+refs.inputNameEl.addEventListener('input', onInputName);
+
+function onInputName(event) {
+  console.log(event.currentTarget.value);
+}
+
+// refs.inputNameEl.addEventListener('focus', onInputNameFocus);
+// refs.inputNameEl.addEventListener('blur', onInputNameBlur);
+// refs.inputTelEl.addEventListener('focus', onInputTelFocus);
+// refs.inputTelEl.addEventListener('blur', onInputTelBlur);
+
+// function onInputNameFocus() {
+//   console.log('фокус');
+//   refs.inputNameEl.style.border = '1px solid #ffea00';
+// }
+
+// function onInputNameBlur() {
+//   console.log('потеря фокуса');
+//   refs.inputNameEl.style.border = '1px solid gray';
+// }
+
+// function onInputTelFocus() {
+//   console.log('фокус');
+//   refs.inputTelEl.style.border = '1px solid #ffea00';
+// }
+
+// function onInputTelBlur() {
+//   console.log('потеря фокуса');
+//   refs.inputTelEl.style.border = '1px solid gray';
+// }
