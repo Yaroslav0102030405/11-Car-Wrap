@@ -517,3 +517,45 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// Як працюють події
+// У подї є 3 фази
+// подія народжується на window і потім тоне вниз по дереву елемента
+// 1 фаза занурення події називається Capture Phase (коли подія тоне від window до елемента)
+// 2 фаза Target Phase (коли подія дійшла до елементу на який ви клікнули)
+// 3 фаза Bubbing Phase всплитіє (коли подія від цільового елементу починає по дереву вспливати обратно до window)
+// і під час вспитія ми можемо відловити подію і обработати
+
+// Делегування події (коли ви на загального батька вешаєте )
+// використовується коли на однотипну колекцію вешаєте на общего родителя один слушатель події
+// це робиться коли є якась колекція і коли є однотипна подія (клик на кнопку)
+// і при кліке на кожну кнопку відбувається одна і теж дія тільки з різними даними
+const containerEl = document.querySelector('.js-container');
+let selectedTag = null;
+
+containerEl.addEventListener('click', onClickButton);
+
+function onClickButton(evt) {
+  // console.log(evt.target);
+  // показує на яку кнопку написнули
+  if (!evt.target.classList.contains('btn')) {
+    return;
+  }
+  // console.log(evt.target.nodeName);
+  // шукаємо активний клас
+  const currentActiveButton = document.querySelector('.btn-active');
+  // console.log(currentActiveButton);
+  // якщо є вже активна кнопка
+  // if (currentActiveButton) {
+  //   currentActiveButton.classList.remove('btn-active');
+  // }
+
+  currentActiveButton?.classList.remove('btn-active');
+  // якщо не має тоді добавити клас
+  const nextActiveButton = evt.target;
+  nextActiveButton.classList.add('btn-active');
+  selectedTag = nextActiveButton.dataset.value;
+  console.log(selectedTag);
+}
+
+// new Set() - набор унікальних елементів

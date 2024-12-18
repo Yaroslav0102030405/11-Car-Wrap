@@ -182,9 +182,7 @@ h1 {
   color: white;
   border: 1px solid transparent;
 
-  transition:
-    background-color 250ms linear,
-    color 250ms linear 250ms;
+  transition: background-color 250ms linear, color 250ms linear 250ms;
 }
 
 @media screen and (min-width: 1300px) {
@@ -751,9 +749,7 @@ h4 {
   padding: 20px;
   gap: 10px;
   /* border: 1px solid black; */
-  transition:
-    border 250ms linear,
-    background-color 250ms linear;
+  transition: border 250ms linear, background-color 250ms linear;
   background: rgba(40, 42, 50, 0.4);
   border: 1px solid transparent;
 }
@@ -1784,4 +1780,8 @@ h4 {
 
 .over:hover img {
   scale: 120%;
+}
+
+.btn-active {
+  background-color: #ff0000;
 }
