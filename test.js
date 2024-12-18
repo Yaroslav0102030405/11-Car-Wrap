@@ -538,6 +538,8 @@ function onTargetTitleClick(event) {
 
 // типи подій
 // click, submit, scroll, input - для текствоих полей, checkbox - для чекбоксов і радіобатонов
+// keydown - будь яке натиснення клавиш включаєчі служебні клавіши
+// keypress - не враховую служебні клавіши
 // event.preventDefault() при отрпавкі форми запретити перезагрузку сторінки
 // силка на елемент якій прослуховується установлен addEventListener
 
@@ -587,3 +589,44 @@ function onInputName(event) {
 //   console.log('потеря фокуса');
 //   refs.inputTelEl.style.border = '1px solid gray';
 // }
+
+// currentTarget - де вісіт слушатель події
+// current.target - на що ми натиснули в інтерфейсі
+
+const refs2 = {
+  openModalBtn: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+  backdrop: document.querySelector('.js-backdrop'),
+};
+
+refs2.openModalBtn.addEventListener('click', onOpenModal);
+refs2.closeModalBtn.addEventListener('click', onCloseModal);
+refs2.backdrop.addEventListener('click', onBackdropModal);
+
+function onOpenModal() {
+  window.addEventListener('keydown', onEscKeyPress);
+  document.body.classList.add('show-modal');
+}
+
+function onCloseModal() {
+  window.removeEventListener('keydown', onEscKeyPress);
+  document.body.classList.remove('show-modal');
+}
+
+function onBackdropModal(event) {
+  // console.log(event.currentTarget);
+  // console.log(event.target);
+
+  if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
+}
+
+function onEscKeyPress(event) {
+  // console.log(event);
+  // console.log(event.code);
+
+  if (event.code === 'Escape') {
+    onCloseModal();
+  }
+}
