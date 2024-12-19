@@ -517,3 +517,59 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// Болтливі події
+// дебайнс - поки є котік подій функція не викликається
+// но як тільки є проміжуток який ми указали в секундах то одразу фуункція викликається
+// використовується про події input щоб коли користувач вводить в пошук якісь данні
+// то щоб на кожну букву не відправлявся запрос на бекенд за  даними та не забивався стейк
+// const inputEl = document.querySelector('.input-text');
+// const titleEl = document.querySelector('.js-title');
+// let counter = 0;
+
+// inputEl.addEventListener('input', _.debounce(onInputChange, 300));
+
+// function onInputChange(e) {
+//   counter += 1;
+
+//   titleEl.textContent = `Кількість викликов: ${counter}, значення: ${e.target.value}`;
+// }
+
+const tech = [
+  { label: 'HTML' },
+  { label: 'JS' },
+  { label: 'React' },
+  { label: 'CSS' },
+];
+
+const refs = {
+  list: document.querySelector('.js-list'),
+  input: document.querySelector('#filter'),
+};
+
+refs.input.addEventListener('input', _.debounce(onFilterChange, 300));
+
+const listItemsMarkup = createListItemsMarkup(tech);
+refs.list.innerHTML = listItemsMarkup;
+
+function createListItemsMarkup(items) {
+  return items.map(item => `<li>${item.label}</li>`).join('');
+}
+console.log(listItemsMarkup);
+
+function onFilterChange(e) {
+  // з інтерфейсу поличили фільтр
+  const filter = e.target.value.toLowerCase();
+
+  // створили новий отфльтрований масив елементів які ввів юзер к інрут
+  const filteredItems = tech.filter(t =>
+    t.label.toLowerCase().includes(filter),
+  );
+  console.log(filteredItems);
+
+  // створили розмітку вже под отфільтрований масив
+  const listItemsMarkup = createListItemsMarkup(filteredItems);
+  console.log(listItemsMarkup);
+  // заменили розмітку юл на нову вже отфільтровану
+  refs.list.innerHTML = listItemsMarkup;
+}

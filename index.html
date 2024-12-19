@@ -53,7 +53,7 @@
         <div class="header-wapper">
           <a class="logo" aria-label="logo" href="./index.html">
             <!-- <img width="150" height="56" src="./images/logo.png" alt="logo" />     -->
-            <img
+            <img loading="lazy"
               class="logo-header"
               width="100"
               height="56"
@@ -414,7 +414,7 @@
             <div class="s-image">
               <div class="product">
                 <div class="product-thumb">
-                  <img width="120" src="./images/logo.png" alt="logo" />
+                  <img loading="lazy" width="120" src="./images/logo.png" alt="logo" />
                 </div>
                 <!-- <picture> -->
                   <div class="over">
@@ -459,7 +459,7 @@
             <div class="s-image">
               <div class="product">
                 <div class="product-thumb">
-                  <img width="120" src="./images/logo.png" alt="logo" />
+                  <img loading="lazy" width="120" src="./images/logo.png" alt="logo" />
                 </div>
                 <!-- <picture> -->
                   <div class="over">
@@ -552,7 +552,7 @@
             <div class="s-image">
               <div class="product">
                 <div class="product-thumb">
-                  <img width="120" src="./images/logo.png" alt="logo" />
+                  <img loading="lazy" width="120" src="./images/logo.png" alt="logo" />
                 </div>
                 <!-- <picture> -->
                   <div class="over">
@@ -597,7 +597,7 @@
             <div class="s-image">
               <div class="product">
                 <div class="product-thumb">
-                  <img width="120" src="./images/logo.png" alt="logo" />
+                  <img loading="lazy" width="120" src="./images/logo.png" alt="logo" />
                 </div>
                 <!-- <picture> -->
                   <div class="over">
@@ -642,7 +642,7 @@
             <div class="s-image">
               <div class="product">
                 <div class="product-thumb">
-                  <img width="120" src="./images/logo.png" alt="logo" />
+                  <img loading="lazy" width="120" src="./images/logo.png" alt="logo" />
                 </div>
                 <!-- <picture> -->
                   <div class="over">
@@ -689,7 +689,7 @@
       <div class="container">
         <div class="flex-home">
           <div class="home-left">
-            <img width="767" src="./images/about/about.jpg" alt="about us" />
+            <img loading="lazy" width="767" src="./images/about/about.jpg" alt="about us" />
           </div>
 
           <div class="home-right">
@@ -762,7 +762,7 @@
             </form>
           </div>
           <div class="wapper-contact">
-            <img width="400" src="./images/autotuning/30.webp" alt="contact" />
+            <img loading="lazy" width="400" src="./images/autotuning/30.webp" alt="contact" />
           </div>
         </div>
       </div>
@@ -843,6 +843,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- <h2 class="js-title"></h2>
+    <input type="text" class="input-text"> -->
+
+    <label>Що шукаєте?
+      <input type="text" id="filter">
+    </label>
+
+    <ul class="js-list" style="display: block;"></ul>
+   
 
 
     <script src="./car.js" type="module"></script>
@@ -939,6 +949,8 @@
           });
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="./test.js" type="module"></script>
+
   </body>
 </html>
