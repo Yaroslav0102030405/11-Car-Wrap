@@ -845,14 +845,24 @@
     </footer>
 
   <ul style="display: flex; flex-wrap: wrap;" class="js-container">
-    <li><button class="btn" type="button" data-value="html">#html</button></li>
-    <li><button class="btn" type="button" data-value="css">#css</button></li>
+    <li><button class="btn" type="button" data-value="html" data-action="open-modal">#html</button></li>
+    <li><button class="btn" type="button" data-value="css" data-action="open-modal">#css</button></li>
     <li><button class="btn" type="button" data-value="js">#js</button></li>
     <li><button class="btn" type="button" data-value="react">$react</button></li>
     <li><button class="btn" type="button" data-value="sass">#sass</button></li>
     <li><button class="btn" type="button" data-value="redux">#redux</button></li>
     <li><button class="btn" type="button" data-value="node">#node</button></li>
   </ul>
+
+  <ul class="js-palette"></ul>
+
+  <div class="backdrop js-backdrop">
+    <div class="modal">
+      <h2 class="js-modal-title">Modal window</h2>
+      <!-- <p>sdsdsdsdsdsdsdsds</p> -->
+      <button type="button" data-action="close-modal">Закрыть модалку</button>
+    </div>
+  </div>
 
 
     <script src="./car.js" type="module"></script>

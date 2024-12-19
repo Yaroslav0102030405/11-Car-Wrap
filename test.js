@@ -530,32 +530,169 @@ user2.showContext(); // window
 // використовується коли на однотипну колекцію вешаєте на общего родителя один слушатель події
 // це робиться коли є якась колекція і коли є однотипна подія (клик на кнопку)
 // і при кліке на кожну кнопку відбувається одна і теж дія тільки з різними даними
-const containerEl = document.querySelector('.js-container');
-let selectedTag = null;
+// задача активна кнопка
+// const containerEl = document.querySelector('.js-container');
+// let selectedTag = null;
 
-containerEl.addEventListener('click', onClickButton);
+// containerEl.addEventListener('click', onClickButton);
 
-function onClickButton(evt) {
-  // console.log(evt.target);
-  // показує на яку кнопку написнули
-  if (!evt.target.classList.contains('btn')) {
+// function onClickButton(evt) {
+//   // console.log(evt.target);
+//   // показує на яку кнопку написнули
+//   if (!evt.target.classList.contains('btn')) {
+//     return;
+//   }
+//   // console.log(evt.target.nodeName);
+//   // шукаємо активний клас
+//   const currentActiveButton = document.querySelector('.btn-active');
+//   // console.log(currentActiveButton);
+//   // якщо є вже активна кнопка
+//   // if (currentActiveButton) {
+//   //   currentActiveButton.classList.remove('btn-active');
+//   // }
+
+//   currentActiveButton?.classList.remove('btn-active');
+//   // якщо не має тоді добавити клас
+//   const nextActiveButton = evt.target;
+//   nextActiveButton.classList.add('btn-active');
+//   selectedTag = nextActiveButton.dataset.value;
+//   console.log(selectedTag);
+// }
+
+// задача додавання унікальних елементів (лайков)
+// new Set() - набор унікальних елементів
+// const containerEl = document.querySelector('.js-container');
+// let selectedTag = new Set();
+
+// containerEl.addEventListener('click', onClickButton);
+
+// function onClickButton(e) {
+//   // показує на яку кнопку написнули
+//   if (!e.target.classList.contains('btn')) {
+//     return;
+//   }
+//   // console.log(evt.target.nodeName);
+//   // шукаємо активний клас
+//   const btn = e.target;
+//   const tag = btn.dataset.value;
+//   const isActive = btn.classList.contains('btn-active');
+//   // console.log(currentActiveButton);
+//   // якщо є вже активна кнопка
+//   if (isActive) {
+//     selectedTag.delete(tag);
+//   } else {
+//     selectedTag.add(tag);
+//   }
+
+//   btn.classList.toggle('btn-active');
+//   console.log(selectedTag);
+// }
+
+// const colors = [
+//   { hex: '#C0C0C0', rba: '192, 192, 192' },
+//   { hex: '#FF0000', rba: '255, 0, 0' },
+//   { hex: '#FFFF00', rba: '255, 255, 0' },
+// ];
+
+// // получили доступ до тегу контейнер
+// const paletteContainer = document.querySelector('.js-palette');
+
+// function createColorCardMarkup(colors) {
+//   return colors
+//     .map(({ hex, rgb }) => {
+//       return `<li
+//       data-hex="${hex}"
+//       data-rgb="${rgb}"
+//       style="background-color: ${hex}; width: 60px; height: 60px">
+//       </li>`;
+//     })
+//     .join('');
+// }
+
+// // записали виклик функції в іншу зміну
+// const cardsMarkup = createColorCardMarkup(colors);
+// // добавили масив в розмітку
+// paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+// console.log(createColorCardMarkup(colors));
+
+// у нас є appendChild - це коли ми робимо через createElement створюємо теги
+// а якщо ми створили одну велику строку і щоб брайзер сам її распирсив в теги
+// то тоді використовуємо insertAdjacentHTML
+
+// // Паттерн "Об'ект силок"
+// const refs = {
+//   inputNameEl: document.querySelector('.js-input-name'),
+//   inputTelEl: document.querySelector('.js-input-tel'),
+// };
+
+// refs.inputNameEl.addEventListener('input', onInputName);
+
+// function onInputName(event) {
+//   console.log(event.currentTarget.value);
+// }
+
+// refs.inputNameEl.addEventListener('focus', onInputNameFocus);
+// refs.inputNameEl.addEventListener('blur', onInputNameBlur);
+// refs.inputTelEl.addEventListener('focus', onInputTelFocus);
+// refs.inputTelEl.addEventListener('blur', onInputTelBlur);
+
+// function onInputNameFocus() {
+//   console.log('фокус');
+//   refs.inputNameEl.style.border = '1px solid #ffea00';
+// }
+
+// function onInputNameBlur() {
+//   console.log('потеря фокуса');
+//   refs.inputNameEl.style.border = '1px solid gray';
+// }
+
+// function onInputTelFocus() {
+//   console.log('фокус');
+//   refs.inputTelEl.style.border = '1px solid #ffea00';
+// }
+
+// function onInputTelBlur() {
+//   console.log('потеря фокуса');
+//   refs.inputTelEl.style.border = '1px solid gray';
+// }
+
+// currentTarget - де вісіт слушатель події
+// current.target - на що ми натиснули в інтерфейсі
+
+// скрипт делегування щоб в контенере при натискі на будь яку кнопку відкривилося модалька
+const refsContainerButton = {
+  containerEl: document.querySelector('.js-container'),
+  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+  backdrop: document.querySelector('.js-backdrop'),
+  modalTitle: document.querySelector('.js-modal-title'),
+};
+
+refsContainerButton.containerEl.addEventListener('click', onClickButton);
+refsContainerButton.closeModalBtn.addEventListener('click', onCloseModal);
+refsContainerButton.backdrop.addEventListener('click', onBackdropModal);
+
+function onClickButton(e) {
+  if (!e.target.classList.contains('btn')) {
     return;
   }
-  // console.log(evt.target.nodeName);
-  // шукаємо активний клас
-  const currentActiveButton = document.querySelector('.btn-active');
-  // console.log(currentActiveButton);
-  // якщо є вже активна кнопка
-  // if (currentActiveButton) {
-  //   currentActiveButton.classList.remove('btn-active');
-  // }
-
-  currentActiveButton?.classList.remove('btn-active');
-  // якщо не має тоді добавити клас
-  const nextActiveButton = evt.target;
-  nextActiveButton.classList.add('btn-active');
-  selectedTag = nextActiveButton.dataset.value;
-  console.log(selectedTag);
+  window.addEventListener('keydown', onEscKeyPress);
+  document.body.classList.add('show-modal');
+  refsContainerButton.modalTitle.textContent = e.target.textContent;
 }
 
-// new Set() - набор унікальних елементів
+function onCloseModal() {
+  window.removeEventListener('keydown', onEscKeyPress);
+  document.body.classList.remove('show-modal');
+}
+
+function onBackdropModal(event) {
+  if (event.currentTarget === event.target) {
+    onCloseModal();
+  }
+}
+
+function onEscKeyPress(event) {
+  if (event.code === 'Escape') {
+    onCloseModal();
+  }
+}
