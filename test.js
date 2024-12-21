@@ -517,3 +517,118 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// Формат JSON - похож на js об'ект - це формат для збереження даних
+// його використовують між пересилкою даних між клієнтом і сервером
+// JSON.stringify() - масив об'ектів або об'ект і приводить к рядку
+// Приклад
+const user5 = {
+  name: 'Mango',
+  age: 10,
+};
+
+console.log(JSON.stringify(user5));
+
+// Приклад 2 навпаки коли треба привести строку до JS об'екту
+const saveUserData = '{"name":"Mango","age":10}';
+
+console.log(JSON.parse(saveUserData));
+
+// Webstorige - локальне храніліще
+// це коли ви в браузере можете зберегти якусь інформацію про стан сайту
+// локалсторідж - це маленька база даних в якої ви можеет зберігати корзину товарі
+// у локалсторіджа є 4 методи
+// localStorage.setItem() - приймає ключ для зберігання свойство а вторим значенням ви передаєте строку яку бажаєте зберегти
+localStorage.setItem('data', 'sddsdsdsd');
+console.log(localStorage);
+
+// якщо потрібно записати в локалсторідж записати масив або об'ект то ми це робимо через JSON.stringify()
+localStorage.setItem('my-data', JSON.stringify({ name: 'Mango', age: 5 }));
+console.log(localStorage);
+// не можуть під одним ключмо зберігатися різні дани
+// під одним ключмо можуть бути налаштування користувача
+// під другим ключом темна або світла тема
+// під третім ключем остання посещена сторінка
+
+// localstorige.getItem() - прочитати з локалсторіджа що в ньому збережено
+// передаємо тільки ключ
+console.log(localStorage.getItem('my-data'));
+// теперь цю строку треба разпарсити привести її до об'екту
+const savedData = localStorage.getItem('my-data');
+const parseData = JSON.parse(savedData);
+console.log(parseData); // ми получили об'ект
+
+// сешинсторідж - це храніліще сеції поки відкрита вкладка браузера коли вкладку закрив то всі дані удалилися
+// локалсторідж для одного сайта буде однаковий а сешинсторідж буде різний на різних вкладках
+// localstogige.remoteItem()
+// localstorige.clear()
+const STORAGE_KEY = 'feedback-msg';
+
+const refs = {
+  formEl: document.querySelector('.form2'),
+  textAryaEl: document.querySelector('.textarya'),
+};
+
+refs.formEl.addEventListener('submit', onFormSubmit);
+// refs.textAryaEl.addEventListener('input', _.throttle(onTextAryaInput, 1000));
+
+// localstorigeMessageTextArya();
+
+function onFormSubmit(e) {
+  // Запретити перезагрузку сторінки
+  e.preventDefault();
+  // всі поля форми очистити
+  e.currentTarget.reset();
+  // якщо юзер відправив форму тоді ми удаляємо повідомлення чке він писав з локалсторідж
+  localStorage.removeItem(STORAGE_KEY);
+}
+
+// function onTextAryaInput(e) {
+//   // получаємо значення інпута
+//   const message = e.target.value;
+//   // const message = formData;
+//   console.log(message);
+//   // записуємо значення інпута в локалсторідж код ключом і так як це строка то не потрібно її приводити до строки
+//   localStorage.setItem(STORAGE_KEY, message);
+// }
+
+// // функція яка перевіряє чи є в локалсторідж якісь дані та якщо є повертає ії в тег тексарія
+// function localstorigeMessageTextArya() {
+//   const savedMessage = localStorage.getItem(STORAGE_KEY);
+
+//   // якщо будуть дані в локалсторід то вони запишуться в тег якщо ні то нічого не буде
+//   if (savedMessage) {
+//     // оновлили ДОМ
+//     refs.textAryaEl.value = savedMessage;
+//   }
+// }
+
+let formData = {};
+
+refs.formEl.addEventListener('input', function (e) {
+  // в об'ект ми записуємо значення кожного поля
+  // якщо такого ключа в об'екті не буде то він запишеться
+  formData[e.target.name] = e.target.value;
+  console.log(formData);
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+});
+
+function onlocalstorageMessage() {
+  if (localStorage.getItem(STORAGE_KEY)) {
+    // formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    console.log(formData);
+    // refs.formEl.elements[name];
+    for (let key in formData) {
+      // получаєсо доступ до всіх елементів
+      refs.formEl.elements[key].value = formData[key];
+      // refs.formEl.elements[key];
+    }
+  }
+}
+// }
+
+onlocalstorageMessage();
+
+// console.log(refs.formEl.elements);
