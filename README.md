@@ -1,4 +1,5 @@
 # Mobile detailing
+
 ## Контент для сайту створений за допомогою gptchat
 
 це сайт який надає послугу з проведення спеціальної зовнішньої та внутрішньої
@@ -29,3 +30,5 @@
 - gptchat
 
 Pet-project: landing page.
+
+<!-- https://waelyasmina.medium.com/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65 -->

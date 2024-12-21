@@ -1,0 +1,19 @@
+{
+  "name": "11-car-wrap",
+  "version": "1.0.0",
+  "description": "це сайт який надає послугу з проведення спеціальної зовнішньої та внутрішньої\r обробки автомобіля безпосередньо біля клієнта, тобто на місці його перебування,\r незалежно від місцеперебування ( doma, офісу або іншого місця).",
+  "main": "car.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

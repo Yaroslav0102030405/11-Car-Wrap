@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0",
+    "image": "https://cdn.pixabay.com/photo/2024/06/12/15/39/car-8825800_960_720.jpg",
+    "name": "Авто-1",
+    "price": 500
+  },
+  {
+    "id": "1",
+    "image": "https://cdn.pixabay.com/photo/2023/06/03/18/12/benz-8038240_640.jpg",
+    "name": "Авто-2",
+    "price": 700
+  },
+  {
+    "id": "2",
+    "image": "https://cdn.pixabay.com/photo/2021/07/11/10/39/fantasy-6403406_1280.jpg",
+    "name": "Авто-3",
+    "price": 900
+  },
+  {
+    "id": "3",
+    "image": "https://cdn.pixabay.com/photo/2024/06/12/15/39/car-8825800_960_720.jpg",
+    "name": "Авто-1",
+    "price": 500
+  },
+  {
+    "id": "4",
+    "image": "https://cdn.pixabay.com/photo/2023/06/03/18/12/benz-8038240_640.jpg",
+    "name": "Авто-2",
+    "price": 700
+  },
+  {
+    "id": "5",
+    "image": "https://cdn.pixabay.com/photo/2021/07/11/10/39/fantasy-6403406_1280.jpg",
+    "name": "Авто-3",
+    "price": 900
+  },
+  {
+    "id": "6",
+    "image": "https://cdn.pixabay.com/photo/2023/06/03/18/12/benz-8038240_640.jpg",
+    "name": "Авто-2",
+    "price": 700
+  },
+  {
+    "id": "7",
+    "image": "https://cdn.pixabay.com/photo/2021/07/11/10/39/fantasy-6403406_1280.jpg",
+    "name": "Авто-3",
+    "price": 900
+  }
+]

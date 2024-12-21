@@ -1,0 +1,16 @@
+<h1>Популярні товари</h1>
+
+<ul>
+  {{#each products}}
+    <li>
+      <a href='/product/{{id}}'>
+        {{! <article> }}
+        <img width='300' height='170' src='{{image}}' alt='{{name}}' />
+        <h2>{{name}}</h2>
+        <p>Ціна: {{price}} кредитів</p>
+        <button>Замовити</button>
+        {{! </article> }}
+      </a>
+    </li>
+  {{/each}}
+</ul>
