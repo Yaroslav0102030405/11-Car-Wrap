@@ -7,6 +7,8 @@ const products = require('./products.json');
 const express = require('express');
 
 const exphbs = require('express-handlebars');
+
+const PORT = process.env.PORT || 4444;
 // шаг 2
 const app = express();
 
@@ -51,8 +53,8 @@ app.get('/product/:productId', (req, res) => {
 });
 
 //  шаг 3
-app.listen(4444, () => {
-  console.log(`Aplication server ${4444}`);
+app.listen(PORT, () => {
+  console.log(`Aplication server ${PORT}`);
 });
 
 // в терміналі заускаємо сервер командою node app.js
