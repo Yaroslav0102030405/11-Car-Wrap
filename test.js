@@ -517,3 +517,123 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// JS - однопоточна синхрона мова програмування інструкція виконується послідовно строчка за строчкою зверху до низу
+// поки не виконається рядок коду зверху нижний рядок коду не почне виконуватися
+// спочатку виконується весь сінхроний код
+// Асінхроність в JS - це відклажені викликі
+// Web workers - для многопоточності (сусідній поток)
+
+// проміси придумали щоб позбавитися вічних колбек функцій
+// Promise - обійянка - це об'єкт у якого є 3 стани
+// це об'ект який зберігає стан асинхроной операції
+// pending, fulfilled, rejected
+// проміс може ожидатися
+// проміс може виконанно з якимось результатом
+// або проміс відклонен з помилкою
+
+// створення промісу
+// конструктор проміс створює новий проміс
+// в конструктор ми передаємо функцію обратного виклику і 2 параметра
+const promise = new Promise((resolve, reject) => {});
+// then - обробляємо тільки успішне виконання промісу fulfilled
+// а catch - ми обробляємо неуспішне виконання промісу rejected
+// finaly - виконається в будь якому випадку
+
+// then і catch - потрбіні щоб отримати результат промісу
+// в сінхроному коді получити результат промісу не возможно
+// тому що синхроний код виконується одразу
+// а проміс виконується асинхронно через деякий час
+// саме тому ми регістрируємо в зен і кетч колбекі
+// щоб потім коли прийде проміс колбек функція виконалась
+
+// приклда промісу з затримкою
+const makeOrder = dish => {
+  const DELAY = 1000;
+
+  return new Promise((resolve, reject) => {
+    const passed = Math.random() > 0.5;
+
+    setTimeout(() => {
+      if (passed) {
+        resolve(`✔️ Вот ваше замовлення ${dish}`);
+      }
+      reject(`❌ Але вибачте, у нас закінчились продукти`);
+    });
+  });
+};
+
+makeOrder('Пирог')
+  .then(onMakeOrderSuccess)
+  .catch(onMakeOrderError)
+  .finally(console.log('Дякуємо за замовлення'));
+
+function onMakeOrderSuccess(resolt) {
+  console.log(resolt);
+}
+
+function onMakeOrderError(error) {
+  console.log(error);
+}
+
+// приклад коли проміс виконуєтьс мгновенно одразу
+// промісифікація синхроних функцій
+// promise.resolt() - примусовий резолт
+// promise.reject() - примусовий реджект
+const makeOrder2 = dish => {
+  return Promise.resolve(`✔️ Вот ваше замовлення ${dish}`);
+};
+
+makeOrder2('Шашлик').then(onMakeOrderSuccess2);
+// .catch(onMakeOrderError2)
+// .finally(console.log('Дякуємо за замовлення'));
+
+function onMakeOrderSuccess2(resolt) {
+  console.log(resolt);
+}
+
+// function onMakeOrderError2(error) {
+//   console.log(error);
+// }
+
+// реальний приклад
+// функція яка йде на сервер і тягне данні
+const fetchPokemonById = id => {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(resolve =>
+    resolve.json(),
+  );
+};
+
+fetchPokemonById(1).then(onFetchSuccess).catch(onFetchError);
+fetchPokemonById(2).then(onFetchSuccess).catch(onFetchError);
+
+// функція яка консоліт покемона
+function onFetchSuccess(pokemon) {
+  console.log(pokemon);
+}
+
+// функція яка консоліт помилку
+function onFetchError(error) {
+  console.log(error);
+}
+
+// правило у функції повина бути одна відповідальність
+// бо інакше буде важко читат та підтримувати такій код
+const makePromise = () => {
+  return new Promise((resolve, reject) => {
+    const passed = Math.random() > 0.3;
+
+    setTimeout(() => {
+      if (passed) {
+        resolve('✔️  Все хорошо');
+      }
+      reject('❌ Все пропало');
+    }, 2000);
+  });
+};
+
+makePromise()
+  .then(resolve => console.log(resolve))
+  .catch(error => console.log(error));
+
+// проміс потрібен щоб обрабити результат асинхроної операції
