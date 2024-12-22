@@ -516,4 +516,64 @@ user2.showContext = showThis2;
 
 user2.showContext(); // window
 
+// import Handlebars from '/handlebars';
+// const template = Handlebars.compile('Name: {{name}}');
+// console.log(template({ name: 'Nils' }));
+
 // ⚠️ стрілки не можуть бути методами об'екту
+
+import API from './api.js';
+import getRefs from './get-refs.js';
+
+const refs = getRefs();
+// const refs = {
+//   pokemonCardEl: document.querySelector('.js-container-pokemon'),
+//   searchFormEl: document.querySelector('.js-search-form'),
+// };
+
+refs.searchFormEl.addEventListener('submit', onSearch);
+
+function onSearch(e) {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  console.log(form.elements);
+  const searchQuery = form.elements.query.value;
+
+  API.fetchPokemon(searchQuery)
+    .then(pokemon => {
+      console.log(pokemon);
+      const markup = onPokemonMarkup(pokemon);
+      refs.pokemonCardEl.innerHTML = markup;
+    })
+    .catch(onPokemonError)
+    .finally(() => form.reset());
+}
+
+// const BASE_URL = 'https://pokeapi.co/api/v2';
+
+// function fetchPokemon(pokemonId) {
+//   return fetch(`${BASE_URL}/pokemon/${pokemonId}`).then(response =>
+//     response.json(),
+//   );
+// }
+
+function onPokemonMarkup({ sprites, name, weight, height }) {
+  return `<li>
+      <img src="${sprites.front_default}" alt="${name}" />
+      <h2>имя: ${name}</h2>
+      <p>вес: ${weight}</p>
+      <p>рост: ${height}</p>
+    </li>`;
+}
+
+function onPokemonError(error) {
+  // alert('Вибачте, такого пакемона не знайшли');
+
+  const markup = `<h2>'Вибачте, такого пакемона не знайшли</h2>`;
+  refs.pokemonCardEl.innerHTML = markup;
+}
+
+// fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
+//   .then(response => response.json())
+//   .then(console.log);
