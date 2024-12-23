@@ -517,3 +517,92 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// const APIkey = '2b084a585a6744c9a99186e76694f8db';
+
+// ваш код буде модульний і находитися в різних файликах
+// import onSearch from './on-search';
+// import Handlebars from 'handlebars';
+
+import NewsApiService from './news-service.js';
+
+const refs = {
+  searchQuery: document.querySelector('.js-form'),
+  containerEl: document.querySelector('.js-container-t'),
+  loadMoreBtn: document.querySelector('.js-load-btn'),
+};
+
+const newsApiService = new NewsApiService();
+
+refs.searchQuery.addEventListener('submit', onSearch);
+refs.loadMoreBtn.addEventListener('click', onLoadMore);
+
+// let searchQueryInput = '';
+
+function onSearch(e) {
+  e.preventDefault();
+
+  newsApiService.query = e.currentTarget.elements.query.value;
+
+  if (newsApiService.query === '') {
+    return alert('Введите щось нормальне');
+  }
+
+  newsApiService.resetPage();
+  newsApiService.fetchArticles().then(articles => {
+    clearContainer();
+    onMarkup(articles);
+  });
+}
+
+function onLoadMore() {
+  newsApiService.fetchArticles().then(onMarkup);
+}
+
+// function appendArticlesMarkup(articles) {
+//   refs.containerEl.insertAdjacentHTML('beforeend', onMarkup(articles));
+// }
+
+function onMarkup(articles) {
+  return articles.map(({ url, urlToImage, title, author, description }) => {
+    const li = `<li class="li">
+   <a href="${url}" target="_blank" rel="noopener noreferrer">
+   <article>
+   <img class="img" src="${urlToImage}" alt="" width="250" height="250">
+   <h2 style="color: black">${title}</h2>
+   <p style="color: black">${author}</p>
+   <p style="color: black">${description}</p>
+   </article>
+   </li>`;
+    console.log(articles);
+    console.log(li);
+    refs.containerEl.insertAdjacentHTML('beforeend', li);
+
+    // const li = document.createElement('li');
+
+    // const a4 = document.createElement('a');
+    // a4.href = url;
+    // a4.target = '_blank';
+    // a4.rel = 'noopener noreferrer';
+
+    // // const article = document.createElement('article');
+
+    // const img3 = document.createElement('img');
+    // img3.src = urlToImage;
+
+    // const h2 = document.createElement('h2');
+    // h2.textContent = title;
+
+    // const p = document.createElement('p');
+    // p.textContent = author;
+
+    // const p2 = document.createElement('p');
+    // p2.textContent = description;
+
+    // li.append(a4, img3, h2, p, p2);
+  });
+}
+
+function clearContainer() {
+  refs.containerEl.innerHTML = '';
+}

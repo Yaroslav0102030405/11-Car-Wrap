@@ -79,17 +79,17 @@ window.addEventListener('scroll', () => {
 //     });
 // };
 
-const fetchPokemonById = id => {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
-};
+// const fetchPokemonById = id => {
+//   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
+// };
 
-fetchPokemonById(1).then(onFetchError).catch(onFetchError);
-fetchPokemonById(2).then(onFetchError).catch(onFetchError);
+// fetchPokemonById(1).then(onFetchError).catch(onFetchError);
+// fetchPokemonById(2).then(onFetchError).catch(onFetchError);
 
-function onFetchSuccess(pokemon) {
-  console.log(pokemon);
-}
+// function onFetchSuccess(pokemon) {
+//   console.log(pokemon);
+// }
 
-function onFetchError(error) {
-  console.log(error);
-}
+// function onFetchError(error) {
+//   console.log(error);
+// }

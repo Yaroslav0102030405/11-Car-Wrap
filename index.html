@@ -844,6 +844,33 @@
       </div>
     </footer>
 
+    <form class="js-form">
+      <!-- <label for="searchQuery">Що шукаємо?</label> -->
+      <!-- <br> -->
+      <input type="text" 
+      name="query" 
+      id="searchQuery" 
+      placeholder="Введіть ім'я котика" 
+      autocomplete="off">
+
+      <button style="background-color: #ffea00;" type="submit">Шукати</button>
+    </form>
+
+    <button style="background-color: aqua;">Загрузка...</button>
+
+    <button class="js-load-btn" style="background-color: #003cff;" type="button">Показати ще</button>
+    <ul style="display: flex; flex-wrap: wrap; gap: 10px;" class="js-container-t"></ul>
+
+
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="entry">
+        <h1>{{title}}</h1>
+        <div class="body">
+          {{body}}
+        </div>
+      </div>
+    </script>
+
 
     <script src="./car.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -939,6 +966,6 @@
           });
       });
     </script>
-    <script src="./test.js" type="module"></script>
+    <script src="./test.js" type="module" ></script>
   </body>
 </html>
