@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "server": "json-server -w db.json -p 3000"
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "parcel": "^2.13.3"
+  }
+}
