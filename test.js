@@ -525,17 +525,24 @@ user2.showContext(); // window
 // import Handlebars from 'handlebars';
 
 import NewsApiService from './news-service.js';
+import LoadMoreBtn from './btn-load-more.js';
 
 const refs = {
   searchQuery: document.querySelector('.js-form'),
   containerEl: document.querySelector('.js-container-t'),
-  loadMoreBtn: document.querySelector('.js-load-btn'),
+  // loadMoreBtn: document.querySelector('.js-load-btn'),
 };
 
 const newsApiService = new NewsApiService();
 
+const loadMoreBtn = new LoadMoreBtn({
+  selector: '[data-action="load-more"]',
+  hidden: true,
+});
+
 refs.searchQuery.addEventListener('submit', onSearch);
-refs.loadMoreBtn.addEventListener('click', onLoadMore);
+loadMoreBtn.refs.button.addEventListener('click', fetchArticles);
+// refs.loadMoreBtn.addEventListener('click', onLoadMore);
 
 // let searchQueryInput = '';
 
@@ -548,15 +555,32 @@ function onSearch(e) {
     return alert('Введите щось нормальне');
   }
 
+  loadMoreBtn.show();
   newsApiService.resetPage();
-  newsApiService.fetchArticles().then(articles => {
-    clearContainer();
-    onMarkup(articles);
-  });
+  clearContainer();
+  fetchArticles();
+  // loadMoreBtn.disabled();
+  // newsApiService.fetchArticles().then(articles => {
+  //   onMarkup(articles);
+  //   loadMoreBtn.enable();
+  // });
 }
 
-function onLoadMore() {
-  newsApiService.fetchArticles().then(onMarkup);
+// function onLoadMore() {
+//   fetchArticles();
+//   // loadMoreBtn.disabled();
+//   // newsApiService.fetchArticles().then(articles => {
+//   //   onMarkup(articles);
+//   //   loadMoreBtn.enable();
+//   // });
+// }
+
+function fetchArticles() {
+  loadMoreBtn.disable();
+  newsApiService.fetchArticles().then(articles => {
+    onMarkup(articles);
+    loadMoreBtn.enable();
+  });
 }
 
 // function appendArticlesMarkup(articles) {

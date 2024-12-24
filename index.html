@@ -856,11 +856,16 @@
       <button style="background-color: #ffea00;" type="submit">Шукати</button>
     </form>
 
-    <button style="background-color: aqua;">Загрузка...</button>
-
-    <button class="js-load-btn" style="background-color: #003cff;" type="button">Показати ще</button>
+    <!-- <button style="background-color: aqua;">Загрузка...</button> -->
+    
+    
     <ul style="display: flex; flex-wrap: wrap; gap: 10px;" class="js-container-t"></ul>
-
+    
+    <button class="js-load-btn button hidden" style="background-color: #003cff;" 
+    type="button" data-action="load-more" disabled>
+      <span class=" spinner is-hidden"></span>
+      <span class="label">Показати ще</span>
+    </button>
 
     <script id="entry-template" type="text/x-handlebars-template">
       <div class="entry">

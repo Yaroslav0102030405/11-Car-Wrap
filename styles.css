@@ -1791,3 +1791,42 @@ h4 {
   width: 250px;
   height: 130px;
 }
+
+.spinner {
+  opacity: 1;
+  margin-right: 15px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  display: block;
+  width: 190px;
+  padding: 10px;
+}
+
+.button > .spiner.is-hidden {
+  display: none;
+  /* opacity: 0; */
+}
+
+.is-hidden {
+  display: none;
+  opacity: 0;
+}
