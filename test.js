@@ -517,3 +517,150 @@ user2.showContext = showThis2;
 user2.showContext(); // window
 
 // ⚠️ стрілки не можуть бути методами об'екту
+
+// Конструкція try...catch
+// використовується при асинхроному коді запиту щоб не впав скрипт (програма сайт) і обробити помилкі
+// використовуэться в випадка коли ви парсите джейсон і коли ви читаєте з локалсторідж
+const validJSON = '{ "name": "Mango", "age": 20 }';
+const invalidJSON = '{ бекенд повернув таке чудо}';
+
+try {
+  console.log(JSON.parse(validJSON));
+} catch (error) {
+  console.log('Помилка');
+}
+
+try {
+  console.log(JSON.parse(invalidJSON));
+} catch {
+  console.log('Помилка');
+}
+
+// асинхроні функції async/await
+// async/await це синтаксичний сахар надростайка яка робить розробку удобною
+// async/await це синтаксичний сахар для роботи з промісами (з асинхроним кодом)
+// класи це синтаксичний сахар для фукнціями констуктори
+// Promis.resolve() - мнговено виполняється проміс,
+// Promis.reject() - проміс якій не виполняеться,
+// Promis.all() - запроси йдуть паралельно (підходить коли треба зробити несколько http запитів на сервер)
+// async - це робить функцію асинхроною (це значить що ця функція повертає проміс)
+// асинхрона функція завжди повертає проміс
+// async/await - позволяє писати код який буде виконуватися асинхрноно но буде виглядити сінхроно
+// і не потрібно використовувати then/error
+// що стоъть с права от awwait повертає проміс
+
+function getFruit(name) {
+  const fruits = {
+    strawberry: '🍓',
+    kiwi: '🥝',
+    apple: '🍎',
+  };
+  return new Promise((resolve, reject) =>
+    setTimeout(() => resolve(fruits[name]), 500),
+  );
+}
+
+async function makeSmoothie() {
+  try {
+    // const apple = await getFruit('apple');
+    // // console.log(apple);
+    // const kiwi = await getFruit('kiwi');
+    // console.log(kiwi);
+    // console.time('makeSmoothie');
+    const apple = getFruit('apple');
+    const kiwi = getFruit('kiwi');
+    const strawberry = getFruit('strawberry');
+
+    // зробити запроси паралельними
+    const fruits = await Promise.all([apple, kiwi, strawberry]);
+    console.log(fruits);
+    // console.timeEnd('makeSmoothie');
+
+    return fruits;
+  } catch (error) {
+    console.log('Помилка', error);
+  }
+}
+
+makeSmoothie().then(fruits => console.log(fruits));
+
+// практика
+const BASE_URL = 'http://localhost:3000';
+
+// const newBook = {
+//   title: 'Sass',
+//   views: 100,
+// };
+
+async function addBook(book) {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(book),
+  };
+
+  const responce = await fetch(`${BASE_URL}/books`, options);
+  const newBook = await responce.json();
+
+  return newBook;
+}
+
+async function addBookUpdateUI() {
+  try {
+    const book = await addBook({});
+    console.log(book);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+addBookUpdateUI();
+
+// якщо хочете визвати async/awit функцію то до нею обов'язково добавляете this catch
+// async/awit нельзя використовувати вне функції
+// addBook().then().catch();
+
+const BASE_URL2 = 'http://localhost:3000/books';
+
+async function fetchBooks() {
+  const responce = await fetch(`${BASE_URL2}`);
+  const newBook = await responce.json();
+
+  return newBook;
+}
+
+async function addRenderBook() {
+  try {
+    const book = await fetchBooks({});
+    console.log(book);
+  } catch (error) {
+    console.log(error);
+  }
+}
+// fetchBooks()
+//   .then(responce => console.log(responce))
+//   .catch(error => console.log(error));
+
+async function fetchBooksId(id) {
+  const responce = await fetch(`${BASE_URL}/${id}`);
+  const bookId = await responce.json();
+
+  return bookId;
+}
+
+async function renderBookId() {
+  try {
+    const bookId = await fetchBooksId(2);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// fetchBooksId(2)
+//   .then(responce => console.log(responce))
+//   .catch(error => console.log(error));
+// fetchBooksId(3)
+//   .then(responce => console.log(responce))
+//   .catch(error => console.log(error));
